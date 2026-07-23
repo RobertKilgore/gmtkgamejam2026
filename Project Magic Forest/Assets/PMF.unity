@@ -204,7 +204,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1035,7 +1035,7 @@ GameObject:
   - component: {fileID: 1871534491}
   - component: {fileID: 1871534490}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: TemperatureTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1053,7 +1053,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb749f3898b9b849bb4a4b90886bca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  timeRemaining: 180
+  timeRemaining: 0
+  timerSlider: {fileID: 233932528}
   defaultTempTime: 180
 --- !u!4 &1871534491
 Transform:

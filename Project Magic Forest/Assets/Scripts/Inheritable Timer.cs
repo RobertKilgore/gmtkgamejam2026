@@ -3,7 +3,7 @@ using UnityEngine;
 public abstract class InheritableTimer : MonoBehaviour
 {
     [Header("Timer")]
-    [SerializeField] private float timeRemaining;
+    [SerializeField] public float timeRemaining;
     private bool timerIsRunning = false;
    
 
@@ -29,33 +29,37 @@ public abstract class InheritableTimer : MonoBehaviour
                 //Incase of negative
                 timeRemaining = 0;
                 timerIsRunning = false;
-                onTimerEnd();
+                OnTimerEnd();
             }
         }
+        OnUpdate();
     }
 
-    public virtual void onTimerEnd()
+    public virtual void OnTimerEnd()
     {
-        timerEndEffect();
+        TimerEndEffect();
     }
 
-    public virtual void timerEndEffect()
+    public virtual void TimerEndEffect()
     {
         
     }
-
+    public virtual void OnUpdate()
+    {
+        
+    }
     
-    public virtual void onTimerStart()
+    public virtual void OnTimerStart()
     {
         timerIsRunning = true;
-        timerStartEffect();
+        TimerStartEffect();
     }
 
-    public virtual void timerStartEffect()
+    public virtual void TimerStartEffect()
     {
         
     }
-    public virtual void setTimer(float newTime)
+    public virtual void SetTimer(float newTime)
     {
         timeRemaining = newTime;
     }
