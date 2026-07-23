@@ -4,6 +4,7 @@ public abstract class InheritableTimer : MonoBehaviour
 {
     [Header("Timer")]
     [SerializeField] public float timeRemaining;
+    public float timeSpeedMultiplier = 1;
     private bool timerIsRunning = false;
    
 
@@ -20,7 +21,7 @@ public abstract class InheritableTimer : MonoBehaviour
             if (timeRemaining > 0)
             {
 
-                timeRemaining -= Time.deltaTime;
+                timeRemaining -= Time.deltaTime * timeSpeedMultiplier;
 
             }
             else
@@ -63,4 +64,10 @@ public abstract class InheritableTimer : MonoBehaviour
     {
         timeRemaining = newTime;
     }
+    public virtual void TimerModifier()
+    {
+        
+    }
 }
+
+

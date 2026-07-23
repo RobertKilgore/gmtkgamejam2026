@@ -19,7 +19,10 @@ public class TempTimer : InheritableTimer
         SetTimer(defaultTempTime);
         OnTimerStart();
     }
-    
+     override public void TimerModifier()
+    {
+        
+    }
     override public void OnUpdate()
     {
         timerSlider.value = timeRemaining;
