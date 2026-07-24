@@ -1,16 +1,17 @@
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
+
 {
 
     public float playerSpeed = 5;
     public Rigidbody2D rb;
 
+    private float baseSpeed;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        
+        baseSpeed = playerSpeed;
     }
 
     // Update is called once per frame
@@ -20,5 +21,15 @@ public class playerMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         rb.linearVelocity = new Vector2(horizontal, vertical) * playerSpeed;
+    }
+
+    public void MultiplySpeed(float multiplier)
+    {
+        playerSpeed = baseSpeed * multiplier;
+    }
+
+    public void ResetSpeed()
+    {
+        playerSpeed = baseSpeed;
     }
 }

@@ -37,7 +37,13 @@ public sealed class PoiBehaviour : Interactable
         }
 
         Debug.Log($"[POI] Interacting with {definition.DisplayName}");
-        PoiContext context = new(inventory, player, transform.position);
+        PlayerTimers playerTimers = player != null ? player.GetComponent<PlayerTimers>() : null;
+        if (playerTimers == null)
+        {
+            playerTimers = player != null ? player.GetComponentInChildren<PlayerTimers>() : null;
+        }
+
+        PoiContext context = new(inventory, player, transform.position, playerTimers);
         bool appliedAnyEffect = false;
 
         foreach (PoiEffect effect in definition.Effects)
