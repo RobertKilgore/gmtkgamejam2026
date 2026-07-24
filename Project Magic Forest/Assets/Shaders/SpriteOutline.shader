@@ -54,7 +54,7 @@ Shader "Magic Forest/SpriteOutline"
             fixed4 frag(v2f i) : SV_Target
             {
                 float2 uv = i.uv;
-                float outlineSteps = 8.0;
+                float outlineSteps = 12.0;
                 float maxAlpha = 0.0;
 
                 // Sample alpha in a circle around the current pixel
@@ -67,11 +67,15 @@ Shader "Magic Forest/SpriteOutline"
 
                 fixed4 col = tex2D(_MainTex, uv);
                 
-                // If there's alpha around us but not at this pixel, draw outline
-                if (col.a < 0.5 && maxAlpha > 0.5)
+                // Use smoothstep for softer edge transitions
+                float outlineAlpha = smoothstep(0.3, 0.7, maxAlpha);
+                float spriteAlpha = smoothstep(0.3, 0.7, col.a);
+                
+                // If there's alpha around us but not at this pixel, draw outline with smooth falloff
+                if (spriteAlpha < 0.5 && outlineAlpha > 0.0)
                 {
                     col = _OutlineColor;
-                    col.a = maxAlpha;
+                    col.a = outlineAlpha * (1.0 - spriteAlpha);
                 }
                 
                 // Apply vertex color

@@ -11,8 +11,15 @@ GameObject:
   - component: {fileID: 958419376636845326}
   - component: {fileID: 4911215566156623112}
   - component: {fileID: 1040044444864504839}
-  - component: {fileID: 237868596614689654}
   - component: {fileID: 950389964505472862}
+  - component: {fileID: 7859935686336777854}
+  - component: {fileID: 9101683519673426928}
+  - component: {fileID: 8448268910478578167}
+  - component: {fileID: 3721753585158164557}
+  - component: {fileID: 5180352636087188644}
+  - component: {fileID: 2054225454369310991}
+  - component: {fileID: 2685394635083329825}
+  - component: {fileID: 6194387327112801844}
   m_Layer: 0
   m_Name: Temp Character
   m_TagString: Untagged
@@ -30,7 +37,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.707, y: 4.38, z: 0}
-  m_LocalScale: {x: 0.55265945, y: 0.48020336, z: 1}
+  m_LocalScale: {x: 0.26, y: 0.22591284, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,8 +91,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.8792453, g: 0.2040512, b: 0.6519928, a: 1}
+  m_Sprite: {fileID: 1025596343022489538, guid: 662aa36132f228c4d86f4ec964007473, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -116,13 +123,153 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &237868596614689654
-CapsuleCollider2D:
+--- !u!114 &950389964505472862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678230820388406271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edf47b231733204b9a9f399d4859188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::playerMovement
+  playerSpeed: 5
+  rb: {fileID: 1040044444864504839}
+  spriteRenderer: {fileID: 4911215566156623112}
+  upSprite: {fileID: 1025596343022489538, guid: 662aa36132f228c4d86f4ec964007473, type: 3}
+  downSprite: {fileID: -3551334853096095377, guid: 662aa36132f228c4d86f4ec964007473, type: 3}
+  leftSprite: {fileID: -723573536117106484, guid: 662aa36132f228c4d86f4ec964007473, type: 3}
+  rightSprite: {fileID: 777253889754496724, guid: 662aa36132f228c4d86f4ec964007473, type: 3}
+--- !u!114 &7859935686336777854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678230820388406271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06cfcde40c8aa44aacfafe3678241f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
+  startingItems: []
+--- !u!114 &9101683519673426928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678230820388406271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e1cb90ef2ec544c991080f738ff3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
+  inventory: {fileID: 7859935686336777854}
+  poiLayerMask: 9
+  mainCamera: {fileID: 0}
+--- !u!114 &8448268910478578167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678230820388406271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6302aaa17b7f86e4c9a8c211bf209ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FoodTimer
+  timerKey: Food
+  timeRemaining: 0
+  startDuration: 60
+  maxTime: Infinity
+  startOnAwake: 1
+  playerTimers: {fileID: 0}
+  targetTimerName: Temperature
+  modifierId: food
+  temperatureModifierPerSecond: -1
+--- !u!114 &3721753585158164557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678230820388406271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165c5779db93420478b50d96f3c8e45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SleepTimer
+  timerKey: Sleep
+  timeRemaining: 0
+  startDuration: 10
+  maxTime: Infinity
+  startOnAwake: 1
+  playerTimers: {fileID: 0}
+--- !u!114 &5180352636087188644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678230820388406271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ecbd5d5d86ec84b9a44adbf98a68ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeatTimer
+  timerKey: Heat
+  timeRemaining: 0
+  startDuration: 10
+  maxTime: Infinity
+  startOnAwake: 1
+  playerTimers: {fileID: 0}
+--- !u!114 &2054225454369310991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678230820388406271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7087dfef28a171d4594277a84593faa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TemperatureTimer
+  timerKey: Temperature
+  timeRemaining: 0
+  startDuration: 60
+  maxTime: Infinity
+  startOnAwake: 1
+  playerToKill: {fileID: 0}
+--- !u!114 &2685394635083329825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678230820388406271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee137b9cc290e44b9a08dbd4c348933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerTimers
+  temperatureTimer: {fileID: 0}
+  foodTimer: {fileID: 0}
+  sleepTimer: {fileID: 0}
+  heatTimer: {fileID: 0}
+  injuryTimer: {fileID: 0}
+  diseaseTimer: {fileID: 0}
+--- !u!58 &6194387327112801844
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -155,20 +302,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
---- !u!114 &950389964505472862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7678230820388406271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1edf47b231733204b9a9f399d4859188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::playerMovement
-  playerSpeed: 5
-  rb: {fileID: 1040044444864504839}
+  m_Offset: {x: 0, y: -2.2619927}
+  m_Radius: 0.9495551

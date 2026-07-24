@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5284b20cc678a80429009574484b3c53, type: 3}
-  m_Name: Campfire
+  m_Name: Fairy Fountain
   m_EditorClassIdentifier: Assembly-CSharp::PoiDefinition
   poiId: 
-  displayName: Campfire
+  displayName: Fairy Fountain
   activationMode: 0
   oneShot: 1
   effects:
-  - {fileID: 11400000, guid: 680882d62a40ba3438d577cdc355f7e4, type: 2}
+  - {fileID: 11400000, guid: a70f105c3f259b4418325c3c140734e1, type: 2}
