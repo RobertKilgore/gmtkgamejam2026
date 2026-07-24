@@ -124,7 +124,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 512
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ecbd5d5d86ec84b9a44adbf98a68ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeatTimer
-  timerKey: Heat
+  timerKey: Fuel
   timeRemaining: 0
   startDuration: 10
   maxTime: Infinity
@@ -246,8 +246,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TemperatureTimer
   timerKey: Temperature
   timeRemaining: 0
-  startDuration: 60
-  maxTime: Infinity
+  startDuration: 120
+  maxTime: 120
   startOnAwake: 1
   playerToKill: {fileID: 0}
 --- !u!114 &2685394635083329825
