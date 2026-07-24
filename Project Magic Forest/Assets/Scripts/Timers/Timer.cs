@@ -43,7 +43,7 @@ public class Timer : MonoBehaviour
             float deltaTime = Time.deltaTime;
             float speedMultiplier = GetEffectiveSpeedMultiplier();
             float depletion = deltaTime * speedMultiplier;
-            Debug.Log($"[Timer] {timerKey} - DeltaTime: {deltaTime}, SpeedMultiplier: {speedMultiplier}, Depletion: {depletion}, TimeRemaining: {timeRemaining}");
+            //Debug.Log($"[Timer] {timerKey} - DeltaTime: {deltaTime}, SpeedMultiplier: {speedMultiplier}, Depletion: {depletion}, TimeRemaining: {timeRemaining}");
             timeRemaining = Mathf.Max(0f, timeRemaining - depletion);
 
             if (!float.IsInfinity(maxTime) && !float.IsNaN(maxTime))
@@ -118,6 +118,16 @@ public class Timer : MonoBehaviour
 
     public bool HasExpired => hasExpired;
     public string TimerKey => timerKey;
+    public float TimeRemaining => timeRemaining;
+
+    public virtual void AddTime(float amount)
+    {
+        timeRemaining = Mathf.Max(0f, timeRemaining + amount);
+        if (timeRemaining > 0f && hasExpired)
+        {
+            hasExpired = false;
+        }
+    }
 
     public virtual void AddAdditiveModifier(string id, float value)
     {

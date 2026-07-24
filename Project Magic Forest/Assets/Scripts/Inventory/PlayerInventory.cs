@@ -38,6 +38,12 @@ public sealed class PlayerInventory : MonoBehaviour
             return false;
         }
 
+        if (item is UniqueItemDefinition && Has(item, 1f))
+        {
+            Debug.Log($"[Inventory] Unique item '{item.DisplayName}' already owned. Skipping add.");
+            return false;
+        }
+
         InventoryEntry entry = FindEntry(item);
         if (entry == null)
         {
