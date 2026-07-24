@@ -7,11 +7,14 @@ public class TransitionManager : MonoBehaviour
     public GameObject exitBlocker;
     public float checker;
     public GameObject cabinCamera;
+    public GameObject playerCamera;
     public bool transitionRunning;
     public bool transitionReady;
     BoxCollider2D _exitBlocker;
     public GameObject SnowIn; 
     public GameObject SnowOut; 
+
+
     
     
     void Start()
@@ -21,18 +24,19 @@ public class TransitionManager : MonoBehaviour
         checker = 1; 
 
     }
-
-    
-    
     // Update is called once per frame
     void Update()
     {
-        if (cabinCamera.activeSelf == true && transitionRunning == false)
+        if (cabinCamera.activeSelf == true && transitionRunning == false && transitionReady == true)
         {
             checker = 2;
 
             StartTransition();
 
+        }
+        if (playerCamera.activeSelf == true)
+        {
+            transitionReady = true;
         }
     }
     void StartTransition()
@@ -43,21 +47,21 @@ public class TransitionManager : MonoBehaviour
       transitionReady = false;
       //AnimationStart
     SnowIn.SetActive(true);
-    Invoke(nameof(WorldRandomizer), 1f);
+    Invoke(nameof(WorldRandomizer), 2f);
+    }
+    void WorldRandomizer()
+    {
+        Debug.Log("Works");
+        SnowOut.SetActive(true);
+        SnowIn.SetActive(false);
+        TransitionEnd();
     }
 
-   
-    void TransitionEnd()
+      void TransitionEnd()
     {
         transitionRunning = false;
         _exitBlocker.enabled = false;
 
-    }
-    
-
-    void WorldRandomizer()
-    {
-        Debug.Log("Works");
     }
 
 
