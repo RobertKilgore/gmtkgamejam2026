@@ -6,6 +6,9 @@ public class CameraManager : MonoBehaviour
     public GameObject cabinCamera;
     public GameObject playerCamera;
     public GameObject roof;
+     BoxCollider2D bc_roof;
+     
+  
    
 
 
@@ -14,7 +17,8 @@ public class CameraManager : MonoBehaviour
     void Update()
     
     {
-        if(roof.activeSelf == true)
+        bc_roof = roof.GetComponent<BoxCollider2D>();
+        if(bc_roof.enabled == true)
         {
             PlayerCam();
         }
