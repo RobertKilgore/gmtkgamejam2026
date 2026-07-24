@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -74,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -116,12 +116,12 @@ TextureImporter:
       name: Tile Combo v2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2889
-        height: 1923
+        x: 60
+        y: 1623
+        width: 300
+        height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -134,11 +134,1177 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_1
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1623
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdda00a06a1c52c4eb9757ab69ad0b18
+      internalID: 776126729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_2
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1623
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7ff271fe8a06c4b9cef20441fedd3b
+      internalID: 2002153666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1623
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef1b539abc822e4da172207e8498fae
+      internalID: 146331704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_4
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 1623
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a9ab428d5653f3468ff29aeec4f768c
+      internalID: -539255911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_5
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1623
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03680a8e28dbc8149ab9e4edf95d7e02
+      internalID: -181333352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_6
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1623
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7892f895c95368b4c980429382ee32f9
+      internalID: 372113395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_7
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1623
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05980534749dbc47a91f8a6b79d7246
+      internalID: 338461272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_8
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 1623
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65009cf07f8739a4b81101d20607494c
+      internalID: 1772133222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_9
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1323
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b98962c6d1f3264f9641d4a47720636
+      internalID: -433835364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_10
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1323
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cdb219507c21d745995f4ce0a455a5e
+      internalID: 748995307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_11
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1323
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4bd048620128e8438392600fd0afa96
+      internalID: 450770404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_12
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1323
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28cd9d6ce8184942ad80ff4e3f8f804
+      internalID: -321287430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_13
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 1323
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a01f92c630c1c48b65091a1fdaa097
+      internalID: -425379174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_14
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1323
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c051ff82bafbdc843b6a0c3bff74e54b
+      internalID: -943686553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_15
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1323
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcc30c9169205c46af9317f630ebff6
+      internalID: -1809576143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_16
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1323
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72177269d33e20741b8afb3054d9b317
+      internalID: 1957389046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_17
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 1323
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a988de97d4a4f2a40b67b84685b928b0
+      internalID: 742203679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_18
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1023
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a9191328c0e72498bc1f93d628ac02
+      internalID: -150725191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_19
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1023
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c3162f0cb9c594392e8d2bd15775bd
+      internalID: -1045081707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_20
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1023
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a666b9dd97467f740a59b07633d807cd
+      internalID: 1691583424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_21
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1023
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8690e23dd331c1441bbd450db79717e5
+      internalID: 1042385851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_22
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 1023
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e46a5602532ed4cbcfd75fa1177da6
+      internalID: -1045065217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_23
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1023
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbac660c7b56b14498e1d90496aed1db
+      internalID: 457707588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_24
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1023
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c041fe2f42cc948a11a1342f4b98db
+      internalID: 959724585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_25
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1023
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3353f3254170ac549ad1213ec083b684
+      internalID: -1944102982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_26
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 1023
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ab49b644654d84191c851a1ff3788f
+      internalID: -280806566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_27
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 723
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4345afd534d3644f89fd604227e9781
+      internalID: 960630422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_28
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 723
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c990ad87a21115e4daa8e964a1bb3740
+      internalID: 355245021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_29
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 723
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91b275d43374cc45bad12bf941781ad
+      internalID: 2022834623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_30
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 723
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031e6921b9135944392a2f8a4b79c42c
+      internalID: -1709430408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_31
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 723
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fe970de8b485f4fa5f0e9f5bfb5bdc
+      internalID: 2024663919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_32
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 723
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb99f4248e09454ebaf1d3b5c68356b
+      internalID: -786755157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_33
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 723
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cdee67bd8ede1441af7f8aeafa8bb32
+      internalID: 1659261114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_34
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 723
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3ffb00b1f1fcc4eacc7b15f79b05d8
+      internalID: -1479284892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_35
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 723
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16753bea578ba3543a3d75176d82a69e
+      internalID: 572775817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_36
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 423
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d50a28028d12e24ea27cf0194390ab2
+      internalID: -1515922605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_37
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 423
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b092326b5f9ba14b97521ca140ba0d0
+      internalID: -251929677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_38
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 423
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f98a73e067dd51449fbaf916c7b6fd3
+      internalID: 2087039731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_39
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 423
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d38bfd3b00f1d41b4624d6c8372c78
+      internalID: 1153912226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_40
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 423
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1056b4a4116c6a4394e774b71d4347b
+      internalID: -1808340033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_41
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 423
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c33abbadf288c40ab42b59a84e3d6b
+      internalID: 1640557124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_42
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 423
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d0acf32ddea0d439934c96a4662512
+      internalID: 1360466567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_43
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 423
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19775441b5bfd44db1aa43b0fe6960d
+      internalID: 1753483972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_44
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 423
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed40db6eb75f0f1459e046d8c5f715a9
+      internalID: 1145914560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_45
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 123
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62752e3267eb5ba429dc9a07dfebb1f0
+      internalID: 927343327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_46
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 123
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2234f19b796f4af44897120c8a0775a3
+      internalID: 1509176001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_47
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 123
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911c555880717fe4abbaec5146605224
+      internalID: 218117331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_48
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 123
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227577a9d4f5af748a412c02138949b9
+      internalID: -1649101834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_49
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 123
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43d2de1098b2564f9c5e986a1daa70a
+      internalID: -35504954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_50
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 123
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7786890e449aded418dcdd3e88465177
+      internalID: -1390326766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_51
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 123
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa907a58eaae6b84e8e9ec99290f6aac
+      internalID: -1710720983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_52
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 123
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab2aa29879cdfe4999163d4233d7d8e
+      internalID: -750851545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Combo v2_53
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 123
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac0cd13f8671ee418f7c4b2efc38de5
+      internalID: -622216630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f7ff77f28299ec7428dbae849acba6af
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +1312,64 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":300.0,"y":300.0},"gridSpriteOffset":{"x":60.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Tile Combo v2_0: 7500838775961657064
+      Tile Combo v2_1: 776126729
+      Tile Combo v2_10: 748995307
+      Tile Combo v2_11: 450770404
+      Tile Combo v2_12: -321287430
+      Tile Combo v2_13: -425379174
+      Tile Combo v2_14: -943686553
+      Tile Combo v2_15: -1809576143
+      Tile Combo v2_16: 1957389046
+      Tile Combo v2_17: 742203679
+      Tile Combo v2_18: -150725191
+      Tile Combo v2_19: -1045081707
+      Tile Combo v2_2: 2002153666
+      Tile Combo v2_20: 1691583424
+      Tile Combo v2_21: 1042385851
+      Tile Combo v2_22: -1045065217
+      Tile Combo v2_23: 457707588
+      Tile Combo v2_24: 959724585
+      Tile Combo v2_25: -1944102982
+      Tile Combo v2_26: -280806566
+      Tile Combo v2_27: 960630422
+      Tile Combo v2_28: 355245021
+      Tile Combo v2_29: 2022834623
+      Tile Combo v2_3: 146331704
+      Tile Combo v2_30: -1709430408
+      Tile Combo v2_31: 2024663919
+      Tile Combo v2_32: -786755157
+      Tile Combo v2_33: 1659261114
+      Tile Combo v2_34: -1479284892
+      Tile Combo v2_35: 572775817
+      Tile Combo v2_36: -1515922605
+      Tile Combo v2_37: -251929677
+      Tile Combo v2_38: 2087039731
+      Tile Combo v2_39: 1153912226
+      Tile Combo v2_4: -539255911
+      Tile Combo v2_40: -1808340033
+      Tile Combo v2_41: 1640557124
+      Tile Combo v2_42: 1360466567
+      Tile Combo v2_43: 1753483972
+      Tile Combo v2_44: 1145914560
+      Tile Combo v2_45: 927343327
+      Tile Combo v2_46: 1509176001
+      Tile Combo v2_47: 218117331
+      Tile Combo v2_48: -1649101834
+      Tile Combo v2_49: -35504954
+      Tile Combo v2_5: -181333352
+      Tile Combo v2_50: -1390326766
+      Tile Combo v2_51: -1710720983
+      Tile Combo v2_52: -750851545
+      Tile Combo v2_53: -622216630
+      Tile Combo v2_6: 372113395
+      Tile Combo v2_7: 338461272
+      Tile Combo v2_8: 1772133222
+      Tile Combo v2_9: -433835364
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

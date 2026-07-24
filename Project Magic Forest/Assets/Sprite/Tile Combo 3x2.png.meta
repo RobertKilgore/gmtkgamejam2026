@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 960
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,9 +117,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1493
-        width: 430
-        height: 430
+        y: 963
+        width: 960
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,10 +138,10 @@ TextureImporter:
       name: Tile Combo 3x2_1
       rect:
         serializedVersion: 2
-        x: 430
-        y: 1493
-        width: 430
-        height: 430
+        x: 960
+        y: 963
+        width: 960
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: Tile Combo 3x2_2
       rect:
         serializedVersion: 2
-        x: 860
-        y: 1493
-        width: 430
-        height: 430
+        x: 1920
+        y: 963
+        width: 960
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: Tile Combo 3x2_3
       rect:
         serializedVersion: 2
-        x: 1290
-        y: 1493
-        width: 430
-        height: 430
+        x: 0
+        y: 3
+        width: 960
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +204,10 @@ TextureImporter:
       name: Tile Combo 3x2_4
       rect:
         serializedVersion: 2
-        x: 1720
-        y: 1493
-        width: 430
-        height: 430
+        x: 960
+        y: 3
+        width: 960
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: Tile Combo 3x2_5
       rect:
         serializedVersion: 2
-        x: 2150
-        y: 1493
-        width: 430
-        height: 430
+        x: 1920
+        y: 3
+        width: 960
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,402 +240,6 @@ TextureImporter:
       bones: []
       spriteID: 71debf7d464800b459445b7a5c009014
       internalID: 842797403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1063
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d352751fdeb3c148ab1cc2af8aea96d
-      internalID: 848725061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_7
-      rect:
-        serializedVersion: 2
-        x: 430
-        y: 1063
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f5cab6c1078627478d8147ab0f7c08e
-      internalID: 159181070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_8
-      rect:
-        serializedVersion: 2
-        x: 860
-        y: 1063
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97e1e1089ac381440bb78370099e99dd
-      internalID: -873431636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_9
-      rect:
-        serializedVersion: 2
-        x: 1290
-        y: 1063
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 297a298b1618c6546bbe115edff04354
-      internalID: -63147240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_10
-      rect:
-        serializedVersion: 2
-        x: 1720
-        y: 1063
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0553f4c74f68fab479176de3935a21c3
-      internalID: 1285870750
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_11
-      rect:
-        serializedVersion: 2
-        x: 2150
-        y: 1063
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca12cccc6097fd441ad8bb4cac7ef444
-      internalID: 590365181
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 633
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9fe6b5267fe8064ebe6ff2e6319319a
-      internalID: -972969819
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_13
-      rect:
-        serializedVersion: 2
-        x: 430
-        y: 633
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 885dfe00cae7e304d8b49a7500be5b90
-      internalID: -144032731
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_14
-      rect:
-        serializedVersion: 2
-        x: 860
-        y: 633
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 325b5044d1a33254a94309c51917a485
-      internalID: 1941491193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_15
-      rect:
-        serializedVersion: 2
-        x: 1290
-        y: 633
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2e36513a8042b34596ea71fab536fa8
-      internalID: 1599155861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_16
-      rect:
-        serializedVersion: 2
-        x: 1720
-        y: 633
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6945790ddcfa9cf47a53c4670e12e534
-      internalID: 1987748656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_17
-      rect:
-        serializedVersion: 2
-        x: 2150
-        y: 633
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00cd6ebfb436d01409bdd324d4bb7f2d
-      internalID: 244919966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_18
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 203
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80b0708984746684aa836232a7a9c7b3
-      internalID: 1641917176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_19
-      rect:
-        serializedVersion: 2
-        x: 430
-        y: 203
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ccc834eecc8363245ac4a661e57961a1
-      internalID: -1448426065
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_20
-      rect:
-        serializedVersion: 2
-        x: 860
-        y: 203
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 770201f126b96574ab79f4f95f13b439
-      internalID: 1966128214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_21
-      rect:
-        serializedVersion: 2
-        x: 1290
-        y: 203
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62c53ee166735b94c89dc543b872681c
-      internalID: 187334303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_22
-      rect:
-        serializedVersion: 2
-        x: 1720
-        y: 203
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8753a9401a9211742b209b529aeae94e
-      internalID: 622958146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tile Combo 3x2_23
-      rect:
-        serializedVersion: 2
-        x: 2150
-        y: 203
-        width: 430
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09df9e5bf23dc7749bcdd0170aaa3e4d
-      internalID: 1526120290
       vertices: []
       indices: 
       edges: []
@@ -654,32 +258,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":430.0,"y":430.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":960.0,"y":960.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Tile Combo 3x2_0: -665046718890741213
       Tile Combo 3x2_1: -1515257639
-      Tile Combo 3x2_10: 1285870750
-      Tile Combo 3x2_11: 590365181
-      Tile Combo 3x2_12: -972969819
-      Tile Combo 3x2_13: -144032731
-      Tile Combo 3x2_14: 1941491193
-      Tile Combo 3x2_15: 1599155861
-      Tile Combo 3x2_16: 1987748656
-      Tile Combo 3x2_17: 244919966
-      Tile Combo 3x2_18: 1641917176
-      Tile Combo 3x2_19: -1448426065
       Tile Combo 3x2_2: 884200770
-      Tile Combo 3x2_20: 1966128214
-      Tile Combo 3x2_21: 187334303
-      Tile Combo 3x2_22: 622958146
-      Tile Combo 3x2_23: 1526120290
       Tile Combo 3x2_3: -428414617
       Tile Combo 3x2_4: -112660609
       Tile Combo 3x2_5: 842797403
-      Tile Combo 3x2_6: 848725061
-      Tile Combo 3x2_7: 159181070
-      Tile Combo 3x2_8: -873431636
-      Tile Combo 3x2_9: -63147240
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
