@@ -119,6 +119,7 @@ public class Timer : MonoBehaviour
     public bool HasExpired => hasExpired;
     public string TimerKey => timerKey;
     public float TimeRemaining => timeRemaining;
+    public float MaxTime => maxTime;
 
     public virtual void AddTime(float amount)
     {

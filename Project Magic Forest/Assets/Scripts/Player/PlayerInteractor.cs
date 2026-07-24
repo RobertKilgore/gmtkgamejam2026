@@ -8,8 +8,8 @@ public sealed class PlayerInteractor : MonoBehaviour
     [SerializeField] private int poiLayerMask = Physics2D.AllLayers;
     [SerializeField] private Camera mainCamera;
 
-    private readonly List<PoiBehaviour> nearbyPois = new();
-    private PoiBehaviour currentClickTarget;
+    private readonly List<Interactable> nearbyInteractables = new();
+    private Interactable currentClickTarget;
 
     public PoiBehaviour CurrentPoi { get; private set; }
 
@@ -30,6 +30,7 @@ public sealed class PlayerInteractor : MonoBehaviour
     {
         UpdateHighlightState();
         HandleClickInput();
+        HandleButtonInput();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -39,48 +40,89 @@ public sealed class PlayerInteractor : MonoBehaviour
             return;
         }
 
-        PoiBehaviour poi = other.GetComponentInParent<PoiBehaviour>();
-        if (poi == null || nearbyPois.Contains(poi))
+        Interactable interactable = other.GetComponentInParent<Interactable>();
+        if (interactable == null || nearbyInteractables.Contains(interactable))
         {
             return;
         }
 
-        nearbyPois.Add(poi);
+        nearbyInteractables.Add(interactable);
 
-        if (poi.Definition != null && poi.Definition.ActivationMode == PoiActivationMode.Proximity)
+        if (interactable.InteractMode == InteractMode.Proximity)
         {
-            poi.Interact(inventory, gameObject);
+            interactable.OnClicked();
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        PoiBehaviour poi = other.GetComponentInParent<PoiBehaviour>();
-        if (poi == null)
+        Interactable interactable = other.GetComponentInParent<Interactable>();
+        if (interactable == null)
         {
             return;
         }
 
-        nearbyPois.Remove(poi);
-        poi.IsHighlighted = false;
+        nearbyInteractables.Remove(interactable);
+        interactable.SetHighlighted(false);
     }
 
     private void UpdateHighlightState()
     {
-        // Remove invalid entries
-        nearbyPois.RemoveAll(poi => poi == null);
+        nearbyInteractables.RemoveAll(interactable => interactable == null);
 
-        // Update highlight for all nearby POIs based on distance and interaction state
-        foreach (PoiBehaviour poi in nearbyPois)
+        List<Interactable> inRangeInteractables = new();
+        foreach (Interactable interactable in nearbyInteractables)
         {
-            if (poi != null && poi.CanInteract && poi.IsInHighlightRange(transform.position))
+            if (interactable == null)
             {
-                poi.IsHighlighted = true;
+                continue;
             }
-            else if (poi != null)
+
+            bool inRange = interactable.IsInHighlightRange(transform.position);
+            if (interactable.CanInteract() && inRange)
             {
-                poi.IsHighlighted = false;
+                inRangeInteractables.Add(interactable);
             }
+            else
+            {
+                interactable.SetHighlighted(false);
+            }
+        }
+
+        if (inRangeInteractables.Count == 0)
+        {
+            return;
+        }
+
+        bool hasButtonPress = false;
+        Interactable closestButtonInteractable = null;
+        float closestButtonDistance = float.PositiveInfinity;
+
+        foreach (Interactable interactable in inRangeInteractables)
+        {
+            if (interactable.InteractMode != InteractMode.ButtonPress)
+            {
+                interactable.SetHighlighted(true);
+                continue;
+            }
+
+            hasButtonPress = true;
+            float distance = Vector2.Distance(interactable.transform.position, transform.position);
+            if (distance < closestButtonDistance)
+            {
+                closestButtonDistance = distance;
+                closestButtonInteractable = interactable;
+            }
+        }
+
+        if (!hasButtonPress || closestButtonInteractable == null)
+        {
+            return;
+        }
+
+        foreach (Interactable interactable in inRangeInteractables)
+        {
+            interactable.SetHighlighted(interactable == closestButtonInteractable);
         }
     }
 
@@ -91,35 +133,50 @@ public sealed class PlayerInteractor : MonoBehaviour
             return;
         }
 
-        // Get mouse position (works with new InputSystem)
         Vector3 mousePos = Mouse.current?.position.ReadValue() ?? Vector3.zero;
         Vector2 worldPos = mainCamera.ScreenToWorldPoint(mousePos);
 
-        // Raycast for interactables
-        RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero, 1f, poiLayerMask);
+        Collider2D hitCollider = Physics2D.OverlapPoint(worldPos, poiLayerMask);
 
-        if (hit.collider != null)
+        if (hitCollider != null)
         {
-            Interactable interactable = hit.collider.GetComponentInParent<Interactable>();
-            currentClickTarget = interactable as PoiBehaviour;
-
-            // On left click, interact
-            if (Mouse.current?.leftButton.wasPressedThisFrame == true)
-            {
-                if (currentClickTarget != null && currentClickTarget.CanInteract)
-                {
-                    Debug.Log($"[PlayerInteractor] Clicked POI: {currentClickTarget.Definition?.DisplayName ?? "Unknown"}");
-                    currentClickTarget.TryInteract(inventory, gameObject);
-                }
-                else if (currentClickTarget != null)
-                {
-                    Debug.LogWarning($"[PlayerInteractor] Clicked POI but it cannot interact: {currentClickTarget.Definition?.DisplayName ?? "Unknown"}");
-                }
-            }
+            Interactable interactable = hitCollider.GetComponentInParent<Interactable>();
+            currentClickTarget = interactable;
         }
         else
         {
             currentClickTarget = null;
+        }
+
+        bool clicked = Mouse.current?.leftButton.wasPressedThisFrame == true || Input.GetMouseButtonDown(0);
+        if (!clicked || currentClickTarget == null)
+        {
+            return;
+        }
+
+        if ((currentClickTarget.InteractMode != InteractMode.Click && currentClickTarget.InteractMode != InteractMode.ClickAndButton) || !currentClickTarget.IsHighlighted || !currentClickTarget.CanInteract())
+        {
+            return;
+        }
+
+        currentClickTarget.TryInteract(inventory, gameObject);
+    }
+
+    private void HandleButtonInput()
+    {
+        for (int i = 0; i < nearbyInteractables.Count; i++)
+        {
+            Interactable interactable = nearbyInteractables[i];
+            if (interactable == null || (interactable.InteractMode != InteractMode.ButtonPress && interactable.InteractMode != InteractMode.ClickAndButton) || !interactable.IsHighlighted || !interactable.CanInteract())
+            {
+                continue;
+            }
+
+            if (Input.GetKeyDown(interactable.InteractionKey))
+            {
+                interactable.TryInteract(inventory, gameObject);
+                return;
+            }
         }
     }
 

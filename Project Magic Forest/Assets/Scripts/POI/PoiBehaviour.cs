@@ -4,35 +4,39 @@ using UnityEngine;
 public sealed class PoiBehaviour : Interactable
 {
     [SerializeField] private PoiDefinition definition;
-    [SerializeField] private float maxHighlightDistance = float.PositiveInfinity;
     private bool hasBeenUsed;
 
     public event Action<PoiBehaviour> BecameAvailable;
     public event Action<PoiBehaviour> Completed;
 
     public PoiDefinition Definition => definition;
-    public bool CanInteract => definition != null && (!definition.OneShot || !hasBeenUsed);
 
-    public override void OnClicked()
+    public override bool CanInteract()
     {
-        base.OnClicked();
-
-        if (definition != null && definition.ActivationMode == PoiActivationMode.Manual)
-        {
-            // Manual POIs are triggered via TryInteract
-        }
+        return definition != null && (!definition.OneShot || !hasBeenUsed);
     }
 
-    public bool TryInteract(PlayerInventory inventory, GameObject player)
+    protected override void HandleInteraction(PlayerInventory inventory, GameObject player)
+    {
+        if (!Interact(inventory, player))
+        {
+            return;
+        }
+
+        base.HandleInteraction(inventory, player);
+    }
+
+    public override bool TryInteract(PlayerInventory inventory, GameObject player)
     {
         return Interact(inventory, player);
     }
 
     public bool Interact(PlayerInventory inventory, GameObject player)
     {
-        if (!CanInteract || inventory == null || player == null)
+        bool canInteract = CanInteract();
+        if (!canInteract || inventory == null || player == null)
         {
-            Debug.LogWarning($"[POI] Cannot interact with {Definition?.DisplayName ?? "Unknown"}: CanInteract={CanInteract}");
+            Debug.LogWarning($"[POI] Cannot interact with {Definition?.DisplayName ?? "Unknown"}: CanInteract={canInteract}");
             return false;
         }
 
@@ -73,9 +77,8 @@ public sealed class PoiBehaviour : Interactable
         BecameAvailable?.Invoke(this);
     }
 
-    public bool IsInHighlightRange(Vector3 playerPosition)
+    public override bool IsInHighlightRange(Vector3 playerPosition)
     {
-        float distance = (transform.position - playerPosition).magnitude;
-        return distance <= maxHighlightDistance;
+        return base.IsInHighlightRange(playerPosition);
     }
 }

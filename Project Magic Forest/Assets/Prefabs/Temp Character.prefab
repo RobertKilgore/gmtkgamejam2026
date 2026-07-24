@@ -100,7 +100,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &1040044444864504839
 Rigidbody2D:
   serializedVersion: 5
@@ -302,5 +302,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -2.2619927}
+  m_Offset: {x: 0, y: 0}
   m_Radius: 0.9495551
