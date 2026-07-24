@@ -6,6 +6,8 @@ public class RoofScript : MonoBehaviour
     BoxCollider2D[] bc_roof;
     public GameObject roof;
     public GameObject door;
+
+    public GameObject outdoorDimmer;
    
 
     void OnTriggerEnter2D(Collider2D other)
@@ -21,11 +23,11 @@ public class RoofScript : MonoBehaviour
        bc_roof[2].enabled = false;
        bc_roof = roof.GetComponents<BoxCollider2D>();
        bc_roof[3].enabled = false;
+       outdoorDimmer.SetActive(true);
+
+
        Debug.Log("1");
        
     }
-    public void OnAnimationEnd()
-    {
-        
-    }
+   
 }
