@@ -54,13 +54,15 @@ public class TransitionManager : MonoBehaviour
         Debug.Log("Works");
         SnowOut.SetActive(true);
         SnowIn.SetActive(false);
-        TransitionEnd();
+        Invoke(nameof(TransitionEnd), 2f);
     }
 
       void TransitionEnd()
     {
         transitionRunning = false;
         _exitBlocker.enabled = false;
+         SnowOut.SetActive(false);
+
 
     }
 
