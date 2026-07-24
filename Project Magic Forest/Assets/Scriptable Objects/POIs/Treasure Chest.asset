@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Treasure Chest
   m_EditorClassIdentifier: Assembly-CSharp::PoiDefinition
   poiId: 
-  displayName: 
+  displayName: Treasure Chest
   activationMode: 0
   oneShot: 1
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: d42081f6df16bf842bb8f3751ee8992c, type: 2}

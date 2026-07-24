@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff749293560f44782422b9d77aa7ad, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: Assembly-CSharp::UniqueItemDefinition
-  itemId: 
-  displayName: 
+  itemId: 1
+  displayName: Axe

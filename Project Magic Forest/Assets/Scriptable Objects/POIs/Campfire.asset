@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Campfire
   m_EditorClassIdentifier: Assembly-CSharp::PoiDefinition
   poiId: 
-  displayName: 
+  displayName: Campfire
   activationMode: 0
   oneShot: 1
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 680882d62a40ba3438d577cdc355f7e4, type: 2}

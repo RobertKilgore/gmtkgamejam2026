@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3341f804ca83785498f690771f867cf7, type: 3}
   m_Name: Item Pool
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItemPoolDefinition
-  possibleItems: []
+  possibleItems:
+  - {fileID: 11400000, guid: 837acfcc982dacc49a1683d52bd32a80, type: 2}
