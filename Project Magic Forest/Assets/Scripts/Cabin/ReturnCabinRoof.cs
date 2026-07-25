@@ -9,6 +9,7 @@ public class ReturnCabinRoof : MonoBehaviour
     public GameObject player;
     public string playerTag = "Player";
     public string interiorSortingLayer = "Default";
+    public GameObject doorGlow;
 
     private SpriteRenderer sr_roof;
     private BoxCollider2D bc_roof;
@@ -50,6 +51,10 @@ public class ReturnCabinRoof : MonoBehaviour
         if (outdoorDimmer != null)
         {
             outdoorDimmer.SetActive(false);
+        }
+        if (doorGlow != null)
+        {
+            doorGlow.SetActive(true);
         }
         // Re-enable interior colliders when returning the roof
         if (interior != null)

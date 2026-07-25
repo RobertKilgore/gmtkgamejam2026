@@ -6,6 +6,7 @@ public class RoofScript : MonoBehaviour
     public GameObject interior;
     public GameObject player;
     public GameObject outdoorDimmer;
+    public GameObject doorGlow;
     public string playerTag = "Player";
     public string interiorSortingLayer = "Default";
 
@@ -44,6 +45,11 @@ public class RoofScript : MonoBehaviour
         if (outdoorDimmer != null)
         {
             outdoorDimmer.SetActive(true);
+        }
+        if (doorGlow != null)
+        {
+            doorGlow.SetActive(false);
+            Debug.Log("[RoofScript] Door glow disabled");
         }
 
         if (bc_roof != null)
