@@ -8,6 +8,7 @@ public class ReturnCabinRoof : MonoBehaviour
     public GameObject interior;
     public GameObject player;
     public string playerTag = "Player";
+    public string interiorSortingLayer = "Default";
 
     private SpriteRenderer sr_roof;
     private BoxCollider2D bc_roof;
@@ -72,15 +73,34 @@ public class ReturnCabinRoof : MonoBehaviour
 
     private void SetInteriorSortingOrder(int order)
     {
+        SetInteriorSortingLayerAndOrder(interiorSortingLayer, order);
+    }
+
+    private void SetInteriorSortingLayerAndOrder(string layerName, int order)
+    {
         if (interior == null)
         {
             return;
         }
 
-        var sortingGroup = interior.GetComponent<UnityEngine.Rendering.SortingGroup>();
-        if (sortingGroup != null)
+        var sortingGroups = interior.GetComponentsInChildren<UnityEngine.Rendering.SortingGroup>(true);
+        foreach (var sortingGroup in sortingGroups)
         {
-            sortingGroup.sortingOrder = order;
+            if (sortingGroup != null)
+            {
+                sortingGroup.sortingLayerName = layerName;
+                sortingGroup.sortingOrder = order;
+            }
+        }
+
+        var renderers = interior.GetComponentsInChildren<Renderer>(true);
+        foreach (var renderer in renderers)
+        {
+            if (renderer != null)
+            {
+                renderer.sortingLayerName = layerName;
+                renderer.sortingOrder = order;
+            }
         }
     }
 }

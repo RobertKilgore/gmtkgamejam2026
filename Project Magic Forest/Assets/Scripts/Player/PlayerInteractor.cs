@@ -68,30 +68,22 @@ public sealed class PlayerInteractor : MonoBehaviour
             return null;
         }
 
-        // Prefer parent lookup so colliders on child objects still resolve.
-        Interactable interactable = collider.GetComponentInParent<Interactable>();
+        // Prefer the interactable on the collider's own GameObject first.
+        Interactable interactable = collider.GetComponent<Interactable>();
         if (interactable != null)
         {
             return interactable;
         }
 
-        // If the collider is on the base object and the Interactable is on a child, search downward as well.
-        interactable = collider.GetComponentInChildren<Interactable>(true);
+        // Parent colliders should not resolve to child interactables.
+        // Child colliders may still resolve to a parent interactable.
+        interactable = collider.GetComponentInParent<Interactable>();
         if (interactable != null)
         {
             return interactable;
         }
 
-        if (collider.attachedRigidbody != null)
-        {
-            interactable = collider.attachedRigidbody.GetComponentInChildren<Interactable>(true);
-            if (interactable != null)
-            {
-                return interactable;
-            }
-        }
-
-        return collider.transform.root.GetComponentInChildren<Interactable>(true);
+        return null;
     }
 
     private void UpdateHighlightState()
@@ -169,8 +161,7 @@ public sealed class PlayerInteractor : MonoBehaviour
 
         if (hitCollider != null)
         {
-            Interactable interactable = hitCollider.GetComponentInParent<Interactable>();
-            currentClickTarget = interactable;
+            currentClickTarget = ResolveInteractableFromCollider(hitCollider);
         }
         else
         {
