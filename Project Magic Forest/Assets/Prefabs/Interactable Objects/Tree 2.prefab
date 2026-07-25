@@ -25,9 +25,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4484943194851607941}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.07504864, y: -0.27788162, z: 0}
+  m_LocalScale: {x: 2.988341, y: 2.988341, z: 2.988341}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6024898411787531904}
@@ -113,9 +113,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5137446072587924481}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.07504864, y: -0.27788162, z: 0}
+  m_LocalScale: {x: 2.988341, y: 2.988341, z: 2.988341}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6024898411787531904}
@@ -182,8 +182,8 @@ Transform:
   m_GameObject: {fileID: 7679335357484254152}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.96355253, y: 0.96355253, z: 0}
+  m_LocalPosition: {x: -0.07504864, y: -0.27788162, z: 0}
+  m_LocalScale: {x: 2.8794236, y: 2.8794236, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6024898411787531904}
@@ -263,7 +263,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.9, y: 5.733, z: 0}
-  m_LocalScale: {x: 1.4732981, y: 1.4732981, z: 1.4732981}
+  m_LocalScale: {x: 0.493016, y: 0.493016, z: 0.493016}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8563140794530050793}
@@ -320,7 +320,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2249915519335348110, guid: 0b8252fa1df25a7458ae2af63f88bbe4, type: 3}
+  m_Sprite: {fileID: -1775279060087578069, guid: 8ba08350d4e5697448dc946d65197d1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -350,6 +350,10 @@ MonoBehaviour:
   clickCollider: {fileID: 0}
   timerKey: Fuel
   timeToAdd: 10
+  untouchedSprite: {fileID: 0}
+  hitOnceSprite: {fileID: 0}
+  hitTwiceSprite: {fileID: 0}
+  fallenSprite: {fileID: 0}
   destroyOnInteract: 1
   requiresPlayer: 1
   invokeHookOnInteract: 0

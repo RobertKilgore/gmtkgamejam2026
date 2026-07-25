@@ -1,11 +1,26 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+
+public enum TreeState
+{
+    Untouched = 0,
+    HitOnce = 1,
+    HitTwice = 2,
+    Fallen = 3
+}
 
 public class TreeInteractable : Interactable
 {
     [Header("Timer")]
     [SerializeField] private string timerKey = "";
     [SerializeField] private float timeToAdd = 10f;
+
+    [Header("Tree Sprites")]
+    [SerializeField] private Sprite untouchedSprite;
+    [SerializeField] private Sprite hitOnceSprite;
+    [SerializeField] private Sprite hitTwiceSprite;
+    [SerializeField] private Sprite fallenSprite;
 
     [Header("Interaction")]
     [SerializeField] private bool destroyOnInteract = true;
@@ -15,9 +30,21 @@ public class TreeInteractable : Interactable
     [SerializeField] private bool invokeHookOnInteract = false;
 
     private PlayerTimers playerTimers;
-    private bool hasBeenInteractedWith;
+    private SpriteRenderer spriteRenderer;
+    private TreeState currentTreeState = TreeState.Untouched;
+
+    private static readonly HashSet<TreeInteractable> dirtyTrees = new HashSet<TreeInteractable>();
+
+    public static IReadOnlyCollection<TreeInteractable> DirtyTrees => dirtyTrees;
 
     public event Action<TreeInteractable> Interacted;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        spriteRenderer = GetComponent<SpriteRenderer>() ?? GetComponentInChildren<SpriteRenderer>(true);
+        ApplyState((int)currentTreeState);
+    }
 
     public bool TryInteract()
     {
@@ -36,7 +63,7 @@ public class TreeInteractable : Interactable
 
     private bool TryPerformInteraction()
     {
-        if (hasBeenInteractedWith)
+        if (!CanInteract())
         {
             return false;
         }
@@ -51,7 +78,39 @@ public class TreeInteractable : Interactable
             }
         }
 
-        if (playerTimers != null)
+        AdvanceTreeState();
+        return true;
+    }
+
+    private void AdvanceTreeState()
+    {
+        if (currentTreeState == TreeState.Fallen)
+        {
+            return;
+        }
+
+        currentTreeState++;
+        SetState((int)currentTreeState);
+
+        if (currentTreeState != TreeState.Untouched)
+        {
+            MarkDirty();
+        }
+
+        if (currentTreeState == TreeState.Fallen)
+        {
+            GrantFinalEffect();
+        }
+    }
+
+    private void GrantFinalEffect()
+    {
+        if (requiresPlayer && playerTimers == null)
+        {
+            playerTimers = FindFirstObjectByType<PlayerTimers>();
+        }
+
+        if (playerTimers != null && !string.IsNullOrEmpty(timerKey))
         {
             Timer timer = playerTimers.FindTimer(timerKey);
             if (timer != null)
@@ -62,11 +121,9 @@ public class TreeInteractable : Interactable
             else
             {
                 Debug.LogWarning($"[TreeInteractable] Timer '{timerKey}' not found.");
-                return false;
             }
         }
 
-        hasBeenInteractedWith = true;
         Interacted?.Invoke(this);
 
         if (invokeHookOnInteract)
@@ -78,8 +135,6 @@ public class TreeInteractable : Interactable
         {
             Destroy(gameObject);
         }
-
-        return true;
     }
 
     protected virtual void OnInteractHook()
@@ -88,12 +143,62 @@ public class TreeInteractable : Interactable
 
     public override bool CanInteract()
     {
-        return !hasBeenInteractedWith;
+        return currentTreeState != TreeState.Fallen;
+    }
+
+    public override void SetState(int stateIndex)
+    {
+        base.SetState(stateIndex);
+        currentTreeState = (TreeState)Mathf.Clamp(stateIndex, 0, 3);
+    }
+
+    protected override void ApplyState(int stateIndex)
+    {
+        currentTreeState = (TreeState)Mathf.Clamp(stateIndex, 0, 3);
+
+        if (spriteRenderer == null)
+        {
+            return;
+        }
+
+        switch (currentTreeState)
+        {
+            case TreeState.Untouched:
+                spriteRenderer.sprite = untouchedSprite;
+                break;
+            case TreeState.HitOnce:
+                spriteRenderer.sprite = hitOnceSprite;
+                break;
+            case TreeState.HitTwice:
+                spriteRenderer.sprite = hitTwiceSprite;
+                break;
+            case TreeState.Fallen:
+                spriteRenderer.sprite = fallenSprite;
+                break;
+        }
     }
 
     public override void ResetState()
     {
         base.ResetState();
-        hasBeenInteractedWith = false;
+        currentTreeState = TreeState.Untouched;
+        SetState((int)TreeState.Untouched);
+        UnmarkDirty();
+    }
+
+    [ContextMenu("Reset Tree")]
+    private void ResetTreeContextMenu()
+    {
+        ResetState();
+    }
+
+    private void MarkDirty()
+    {
+        dirtyTrees.Add(this);
+    }
+
+    private void UnmarkDirty()
+    {
+        dirtyTrees.Remove(this);
     }
 }

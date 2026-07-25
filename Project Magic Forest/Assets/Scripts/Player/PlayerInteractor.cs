@@ -35,12 +35,7 @@ public sealed class PlayerInteractor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if ((poiLayerMask & (1 << other.gameObject.layer)) == 0)
-        {
-            return;
-        }
-
-        Interactable interactable = other.GetComponentInParent<Interactable>();
+        Interactable interactable = ResolveInteractableFromCollider(other);
         if (interactable == null || nearbyInteractables.Contains(interactable))
         {
             return;
@@ -56,7 +51,7 @@ public sealed class PlayerInteractor : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Interactable interactable = other.GetComponentInParent<Interactable>();
+        Interactable interactable = ResolveInteractableFromCollider(other);
         if (interactable == null)
         {
             return;
@@ -64,6 +59,31 @@ public sealed class PlayerInteractor : MonoBehaviour
 
         nearbyInteractables.Remove(interactable);
         interactable.SetHighlighted(false);
+    }
+
+    private Interactable ResolveInteractableFromCollider(Collider2D collider)
+    {
+        if (collider == null)
+        {
+            return null;
+        }
+
+        // Prefer the interactable on the collider's own GameObject first.
+        Interactable interactable = collider.GetComponent<Interactable>();
+        if (interactable != null)
+        {
+            return interactable;
+        }
+
+        // Parent colliders should not resolve to child interactables.
+        // Child colliders may still resolve to a parent interactable.
+        interactable = collider.GetComponentInParent<Interactable>();
+        if (interactable != null)
+        {
+            return interactable;
+        }
+
+        return null;
     }
 
     private void UpdateHighlightState()
@@ -141,8 +161,7 @@ public sealed class PlayerInteractor : MonoBehaviour
 
         if (hitCollider != null)
         {
-            Interactable interactable = hitCollider.GetComponentInParent<Interactable>();
-            currentClickTarget = interactable;
+            currentClickTarget = ResolveInteractableFromCollider(hitCollider);
         }
         else
         {
