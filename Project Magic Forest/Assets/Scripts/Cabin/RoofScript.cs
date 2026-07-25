@@ -45,6 +45,9 @@ public class RoofScript : MonoBehaviour
         {
             outdoorDimmer.SetActive(true);
         }
+
+        Debug.Log("[RoofScript] Triggered");
+        Debug.Log(doorGlow);
         if (doorGlow != null)
         {
             doorGlow.SetActive(false);
