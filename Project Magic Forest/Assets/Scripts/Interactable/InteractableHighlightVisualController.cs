@@ -19,7 +19,7 @@ public sealed class InteractableHighlightVisualController : MonoBehaviour
         if (spriteRenderer != null)
         {
             originalMaterial = spriteRenderer.material;
-            Debug.Log($"[Highlight] Found SpriteRenderer on {gameObject.name}");
+            //Debug.Log($"[Highlight] Found SpriteRenderer on {gameObject.name}");
             CreateOutlineMaterial();
         }
         else
@@ -40,7 +40,7 @@ public sealed class InteractableHighlightVisualController : MonoBehaviour
         outlineMaterial = new Material(outlineShader);
         outlineMaterial.SetColor("_OutlineColor", outlineColor);
         outlineMaterial.SetFloat("_OutlineWidth", outlineWidth);
-        Debug.Log($"[Highlight] Created outline material on {gameObject.name}");
+        //Debug.Log($"[Highlight] Created outline material on {gameObject.name}");
     }
 
     private void OnEnable()
@@ -48,7 +48,7 @@ public sealed class InteractableHighlightVisualController : MonoBehaviour
         if (interactable != null)
         {
             interactable.HighlightChanged += OnHighlightChanged;
-            Debug.Log($"[Highlight] Subscribed to HighlightChanged event on {gameObject.name}");
+            //Debug.Log($"[Highlight] Subscribed to HighlightChanged event on {gameObject.name}");
         }
         else
         {
@@ -61,7 +61,7 @@ public sealed class InteractableHighlightVisualController : MonoBehaviour
         if (interactable != null)
         {
             interactable.HighlightChanged -= OnHighlightChanged;
-            Debug.Log($"[Highlight] Unsubscribed from HighlightChanged event on {gameObject.name}");
+            //Debug.Log($"[Highlight] Unsubscribed from HighlightChanged event on {gameObject.name}");
         }
 
         ResetVisuals();
@@ -71,12 +71,12 @@ public sealed class InteractableHighlightVisualController : MonoBehaviour
     {
         if (source.IsHighlighted)
         {
-            Debug.Log($"[Highlight] {gameObject.name} highlighted.");
+            //Debug.Log($"[Highlight] {gameObject.name} highlighted.");
             ApplyHighlight();
         }
         else
         {
-            Debug.Log($"[Highlight] {gameObject.name} unhighlighted.");
+            //Debug.Log($"[Highlight] {gameObject.name} unhighlighted.");
             ResetVisuals();
         }
     }
@@ -90,7 +90,7 @@ public sealed class InteractableHighlightVisualController : MonoBehaviour
         }
 
         spriteRenderer.material = outlineMaterial;
-        Debug.Log($"[Highlight] Applied outline to {gameObject.name}");
+        //Debug.Log($"[Highlight] Applied outline to {gameObject.name}");
     }
 
     private void ResetVisuals()
@@ -101,6 +101,6 @@ public sealed class InteractableHighlightVisualController : MonoBehaviour
         }
 
         spriteRenderer.material = originalMaterial;
-        Debug.Log($"[Highlight] Reset outline on {gameObject.name}");
+        //Debug.Log($"[Highlight] Reset outline on {gameObject.name}");
     }
 }

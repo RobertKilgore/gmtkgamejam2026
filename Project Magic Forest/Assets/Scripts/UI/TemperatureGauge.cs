@@ -5,6 +5,7 @@ public class TemperatureGauge : MonoBehaviour
 {
     [Header("Timer")]
     [SerializeField] private Timer timer;
+    [SerializeField] private string timerKey = "Temperature";
 
     [Header("UI")]
     [SerializeField] private Slider slider;
@@ -28,11 +29,7 @@ public class TemperatureGauge : MonoBehaviour
         {
             fillImage = slider.fillRect != null ? slider.fillRect.GetComponent<Image>() : null;
         }
-
-        if (timer == null)
-        {
-            timer = GetComponentInParent<Timer>();
-        }
+        // Timer resolution is performed in Start() to allow PlayerTimers to finish registering.
 
         if (slider != null)
         {
@@ -40,6 +37,45 @@ public class TemperatureGauge : MonoBehaviour
             slider.minValue = minValue;
             slider.maxValue = resolvedMax;
             slider.wholeNumbers = false;
+        }
+    }
+
+    private void Start()
+    {
+        if (timer == null && !string.IsNullOrEmpty(timerKey))
+        {
+            StartCoroutine(ResolveTimerCoroutine());
+        }
+    }
+
+    private System.Collections.IEnumerator ResolveTimerCoroutine()
+    {
+        const int maxFrames = 120; // try for up to 2 seconds at 60fps
+        int attempts = 0;
+        while (attempts < maxFrames && timer == null)
+        {
+            var playerTimers = FindFirstObjectByType<PlayerTimers>();
+            if (playerTimers != null && playerTimers.TrackedTimers != null && playerTimers.TrackedTimers.Count > 0)
+            {
+                timer = playerTimers.FindTimer(timerKey);
+                if (timer != null)
+                {
+                    // update slider max to match the timer
+                    if (slider != null)
+                    {
+                        slider.maxValue = GetMaxValue();
+                    }
+                    yield break;
+                }
+            }
+
+            attempts++;
+            yield return null;
+        }
+
+        if (timer == null)
+        {
+            Debug.LogWarning($"[TemperatureGauge] Timer with key '{timerKey}' could not be resolved from PlayerTimers after waiting. Gauge will remain disabled.");
         }
     }
 

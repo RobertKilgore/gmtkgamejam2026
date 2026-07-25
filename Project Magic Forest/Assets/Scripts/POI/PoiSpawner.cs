@@ -140,6 +140,17 @@ public class PoiSpawner : MonoBehaviour
         return spawnedPoi;
     }
 
+    public void SetSpawningEnabled(bool enabled)
+    {
+        spawningEnabled = enabled;
+    }
+
+    public void ResetSpawner()
+    {
+        spawningEnabled = true;
+        hasSpawned = false;
+    }
+
     [ContextMenu("Test Spawn")]
     private void TestSpawn()
     {

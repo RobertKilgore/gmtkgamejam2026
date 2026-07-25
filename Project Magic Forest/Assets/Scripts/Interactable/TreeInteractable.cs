@@ -90,4 +90,10 @@ public class TreeInteractable : Interactable
     {
         return !hasBeenInteractedWith;
     }
+
+    public override void ResetState()
+    {
+        base.ResetState();
+        hasBeenInteractedWith = false;
+    }
 }

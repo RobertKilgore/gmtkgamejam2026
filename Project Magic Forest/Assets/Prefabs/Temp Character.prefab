@@ -20,9 +20,10 @@ GameObject:
   - component: {fileID: 2054225454369310991}
   - component: {fileID: 2685394635083329825}
   - component: {fileID: 6194387327112801844}
+  - component: {fileID: 4355483178808122555}
   m_Layer: 0
   m_Name: Temp Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,10 +144,33 @@ MonoBehaviour:
   playerSpeed: 5
   rb: {fileID: 1040044444864504839}
   spriteRenderer: {fileID: 4911215566156623112}
-  upSprite: {fileID: 1025596343022489538, guid: 662aa36132f228c4d86f4ec964007473, type: 3}
-  downSprite: {fileID: -3551334853096095377, guid: 662aa36132f228c4d86f4ec964007473, type: 3}
-  leftSprite: {fileID: -723573536117106484, guid: 662aa36132f228c4d86f4ec964007473, type: 3}
-  rightSprite: {fileID: 777253889754496724, guid: 662aa36132f228c4d86f4ec964007473, type: 3}
+  walkUpSprites:
+  - {fileID: -1907819391525643046, guid: a79a5f3ac68c6d141acd8343eb7e252b, type: 3}
+  - {fileID: -3214306401435126140, guid: a79a5f3ac68c6d141acd8343eb7e252b, type: 3}
+  - {fileID: 6361032163174589695, guid: a79a5f3ac68c6d141acd8343eb7e252b, type: 3}
+  - {fileID: -4164078356186210700, guid: a79a5f3ac68c6d141acd8343eb7e252b, type: 3}
+  walkDownSprites:
+  - {fileID: -5105795334800164498, guid: 4d3f34f0c111e744193f4defe31bda04, type: 3}
+  - {fileID: -901529757626313802, guid: 4d3f34f0c111e744193f4defe31bda04, type: 3}
+  - {fileID: 8871262208240574761, guid: 4d3f34f0c111e744193f4defe31bda04, type: 3}
+  - {fileID: 9150495724160706961, guid: 4d3f34f0c111e744193f4defe31bda04, type: 3}
+  walkLeftSprites:
+  - {fileID: -6791214099404687484, guid: e551b4bf74769c946a351764fe85cb18, type: 3}
+  - {fileID: -2220866826999708456, guid: e551b4bf74769c946a351764fe85cb18, type: 3}
+  - {fileID: 3267252561075065229, guid: e551b4bf74769c946a351764fe85cb18, type: 3}
+  - {fileID: 7507857491802826544, guid: e551b4bf74769c946a351764fe85cb18, type: 3}
+  walkRightSprites:
+  - {fileID: 4949662519498220239, guid: fb116539d1e00de43a74a29860c248c9, type: 3}
+  - {fileID: 1550382765041623750, guid: fb116539d1e00de43a74a29860c248c9, type: 3}
+  - {fileID: -2504007115242108253, guid: fb116539d1e00de43a74a29860c248c9, type: 3}
+  - {fileID: 5358543088686631413, guid: fb116539d1e00de43a74a29860c248c9, type: 3}
+  idleUpSprite: {fileID: -1907819391525643046, guid: a79a5f3ac68c6d141acd8343eb7e252b, type: 3}
+  idleDownSprite: {fileID: -5105795334800164498, guid: 4d3f34f0c111e744193f4defe31bda04, type: 3}
+  idleLeftSprite: {fileID: 3267252561075065229, guid: e551b4bf74769c946a351764fe85cb18, type: 3}
+  idleRightSprite: {fileID: -2504007115242108253, guid: fb116539d1e00de43a74a29860c248c9, type: 3}
+  walkFrameRate: 4
+  useAnimator: 0
+  animator: {fileID: 0}
 --- !u!114 &7859935686336777854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +197,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
   inventory: {fileID: 7859935686336777854}
-  poiLayerMask: 9
+  poiLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   mainCamera: {fileID: 0}
 --- !u!114 &8448268910478578167
 MonoBehaviour:
@@ -304,3 +330,23 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.9495551
+--- !u!114 &4355483178808122555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678230820388406271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cfce3cdae0807041a5f053d5d3aac5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerPoiSpawnManager
+  checkInterval: 0.25
+  checkRadius: 30
+  spawnerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  playerTag: Player
+  autoDetectSpawners: 1
+  logDebug: 1
