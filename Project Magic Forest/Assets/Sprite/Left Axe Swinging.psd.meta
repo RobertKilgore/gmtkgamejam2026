@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 40f6a7e0b22afba47b99db4e9c1fda80
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4566190607383077653
+    second: Left Axe Swinging_0
+  - first:
+      213: 6843323016572348190
+    second: Left Axe Swinging_1
+  - first:
+      213: -5562433765993586990
+    second: Left Axe Swinging_2
+  - first:
+      213: 7042898289768786111
+    second: Left Axe Swinging_3
+  - first:
+      213: 6920222425615896128
+    second: Left Axe Swinging_4
+  - first:
+      213: -929751048287685168
+    second: Left Axe Swinging_5
+  - first:
+      213: -1030827422966106622
+    second: Left Axe Swinging_6
+  - first:
+      213: -7185631521663389575
+    second: Left Axe Swinging_7
+  - first:
+      213: 2520145789781067770
+    second: Left Axe Swinging_8
+  - first:
+      213: -2275727109678626565
+    second: Left Axe Swinging_9
+  - first:
+      213: -7583770897691033978
+    second: Left Axe Swinging_10
+  - first:
+      213: 248310210246068854
+    second: Left Axe Swinging_11
+  - first:
+      213: 3138747082069009692
+    second: Left Axe Swinging_12
+  - first:
+      213: -7519866051114633188
+    second: Left Axe Swinging_13
+  - first:
+      213: 7597680338409146199
+    second: Left Axe Swinging_14
+  - first:
+      213: 8105611904082488165
+    second: Left Axe Swinging_15
+  - first:
+      213: 2854175872769724758
+    second: Left Axe Swinging_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Left Axe Swinging_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 604
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: becd436d5d1a1a0c0800000000000000
+      internalID: -4566190607383077653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 107
+        width: 327
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17ac0ea60e58fe50800000000000000
+      internalID: 6843323016572348190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_2
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 108
+        width: 443
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de505bf5f34ec2b0800000000000000
+      internalID: -5562433765993586990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_3
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 107
+        width: 433
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb8efdefda66db160800000000000000
+      internalID: 7042898289768786111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_4
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 107
+        width: 391
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e078591a1990060800000000000000
+      internalID: 6920222425615896128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 551
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d5f34df85cd813f0800000000000000
+      internalID: -929751048287685168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_6
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 473
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 206bf5d9be3c1b1f0800000000000000
+      internalID: -1030827422966106622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_7
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 482
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9707760c332874c90800000000000000
+      internalID: -7185631521663389575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_8
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 452
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af7c8165e3b59f220800000000000000
+      internalID: 2520145789781067770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_9
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 38
+        width: 71
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf801e5404efa60e0800000000000000
+      internalID: -2275727109678626565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_10
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 23
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e3e219c8801c690800000000000000
+      internalID: -7583770897691033978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_11
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 24
+        width: 91
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ac1d312dc227300800000000000000
+      internalID: 248310210246068854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_12
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 28
+        width: 77
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c15648267d11f8b20800000000000000
+      internalID: 3138747082069009692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_13
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 22
+        width: 146
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18fac02ba114a790800000000000000
+      internalID: -7519866051114633188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_14
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 22
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757c8d77302607960800000000000000
+      internalID: 7597680338409146199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_15
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 22
+        width: 91
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ba306d41bec7070800000000000000
+      internalID: 8105611904082488165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swinging_16
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 22
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6511eee85d11c9720800000000000000
+      internalID: 2854175872769724758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Left Axe Swinging_0: -4566190607383077653
+      Left Axe Swinging_1: 6843323016572348190
+      Left Axe Swinging_10: -7583770897691033978
+      Left Axe Swinging_11: 248310210246068854
+      Left Axe Swinging_12: 3138747082069009692
+      Left Axe Swinging_13: -7519866051114633188
+      Left Axe Swinging_14: 7597680338409146199
+      Left Axe Swinging_15: 8105611904082488165
+      Left Axe Swinging_16: 2854175872769724758
+      Left Axe Swinging_2: -5562433765993586990
+      Left Axe Swinging_3: 7042898289768786111
+      Left Axe Swinging_4: 6920222425615896128
+      Left Axe Swinging_5: -929751048287685168
+      Left Axe Swinging_6: -1030827422966106622
+      Left Axe Swinging_7: -7185631521663389575
+      Left Axe Swinging_8: 2520145789781067770
+      Left Axe Swinging_9: -2275727109678626565
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -35,12 +35,7 @@ public sealed class PlayerInteractor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if ((poiLayerMask & (1 << other.gameObject.layer)) == 0)
-        {
-            return;
-        }
-
-        Interactable interactable = other.GetComponentInParent<Interactable>();
+        Interactable interactable = ResolveInteractableFromCollider(other);
         if (interactable == null || nearbyInteractables.Contains(interactable))
         {
             return;
@@ -56,7 +51,7 @@ public sealed class PlayerInteractor : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Interactable interactable = other.GetComponentInParent<Interactable>();
+        Interactable interactable = ResolveInteractableFromCollider(other);
         if (interactable == null)
         {
             return;
@@ -64,6 +59,39 @@ public sealed class PlayerInteractor : MonoBehaviour
 
         nearbyInteractables.Remove(interactable);
         interactable.SetHighlighted(false);
+    }
+
+    private Interactable ResolveInteractableFromCollider(Collider2D collider)
+    {
+        if (collider == null)
+        {
+            return null;
+        }
+
+        // Prefer parent lookup so colliders on child objects still resolve.
+        Interactable interactable = collider.GetComponentInParent<Interactable>();
+        if (interactable != null)
+        {
+            return interactable;
+        }
+
+        // If the collider is on the base object and the Interactable is on a child, search downward as well.
+        interactable = collider.GetComponentInChildren<Interactable>(true);
+        if (interactable != null)
+        {
+            return interactable;
+        }
+
+        if (collider.attachedRigidbody != null)
+        {
+            interactable = collider.attachedRigidbody.GetComponentInChildren<Interactable>(true);
+            if (interactable != null)
+            {
+                return interactable;
+            }
+        }
+
+        return collider.transform.root.GetComponentInChildren<Interactable>(true);
     }
 
     private void UpdateHighlightState()

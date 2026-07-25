@@ -28,13 +28,17 @@ public class MapResetManager : MonoBehaviour
 
     private void ResetTrees()
     {
-        var trees = FindObjectsOfType<TreeInteractable>(true);
-        foreach (var tree in trees)
+        int resetCount = 0;
+        foreach (var tree in TreeInteractable.DirtyTrees)
         {
-            tree.ResetState();
+            if (tree != null)
+            {
+                tree.ResetState();
+                resetCount++;
+            }
         }
 
-        Debug.Log($"[MapResetManager] Reset {trees.Length} trees.");
+        Debug.Log($"[MapResetManager] Reset {resetCount} dirty tree(s).");
     }
 
     private void ClearSpawnedPois()
