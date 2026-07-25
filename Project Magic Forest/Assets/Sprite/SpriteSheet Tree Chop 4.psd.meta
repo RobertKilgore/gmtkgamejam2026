@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 8ba08350d4e5697448dc946d65197d1d
+guid: b0e4120823473f846a43b7a63cbd1a46
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1775279060087578069
-    second: SpriteSheet Tree Chop 1_0
+      213: -7809708389347338842
+    second: SpriteSheet Tree Chop 4_0
   - first:
-      213: -126624560458902785
-    second: SpriteSheet Tree Chop 1_1
+      213: 7683909986794106630
+    second: SpriteSheet Tree Chop 4_1
   - first:
-      213: 3569479702500339053
-    second: SpriteSheet Tree Chop 1_2
+      213: -7550112624985732020
+    second: SpriteSheet Tree Chop 4_2
   - first:
-      213: -6412705602024538834
-    second: SpriteSheet Tree Chop 1_3
+      213: 5990321956311085353
+    second: SpriteSheet Tree Chop 4_3
   - first:
-      213: -8955740618460608285
-    second: SpriteSheet Tree Chop 1_4
+      213: 7763364902012567017
+    second: SpriteSheet Tree Chop 4_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,89 +125,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpriteSheet Tree Chop 1_0
+      name: SpriteSheet Tree Chop 4_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 478
-        height: 816
-      alignment: 9
-      pivot: {x: 0.508323, y: 0.236726}
+        x: 145
+        y: 149
+        width: 361
+        height: 527
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b226a46c911fc57e0800000000000000
-      internalID: -1775279060087578069
+      spriteID: 6a55095f8975e9390800000000000000
+      internalID: -7809708389347338842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet Tree Chop 1_1
+      name: SpriteSheet Tree Chop 4_1
       rect:
         serializedVersion: 2
-        x: 478
-        y: 0
-        width: 478
-        height: 816
-      alignment: 9
-      pivot: {x: 0.508323, y: 0.236726}
+        x: 634
+        y: 140
+        width: 360
+        height: 529
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff2d10612a32e3ef0800000000000000
-      internalID: -126624560458902785
+      spriteID: 60f60f00c6bb2aa60800000000000000
+      internalID: 7683909986794106630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet Tree Chop 1_2
+      name: SpriteSheet Tree Chop 4_2
       rect:
         serializedVersion: 2
-        x: 956
-        y: 0
-        width: 478
-        height: 816
-      alignment: 9
-      pivot: {x: 0.508323, y: 0.236726}
+        x: 1122
+        y: 141
+        width: 361
+        height: 528
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6def74a0e6598130800000000000000
-      internalID: 3569479702500339053
+      spriteID: c4c888dd19c983790800000000000000
+      internalID: -7550112624985732020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet Tree Chop 1_3
+      name: SpriteSheet Tree Chop 4_3
       rect:
         serializedVersion: 2
-        x: 1434
-        y: 0
-        width: 478
-        height: 816
-      alignment: 9
-      pivot: {x: 0.508323, y: 0.23672612}
+        x: 1611
+        y: 162
+        width: 156
+        height: 528
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2d7b2e1b3e7107a0800000000000000
-      internalID: -6412705602024538834
+      spriteID: 9213528c416e12350800000000000000
+      internalID: 5990321956311085353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet Tree Chop 4_4
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 261
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9edb13e0f330dbb60800000000000000
+      internalID: 7763364902012567017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet Tree Chop 4_5
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 271
+        width: 42
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b011610b071b245bb89a75f43fc0f3
+      internalID: -1070877870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet Tree Chop 4_6
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 267
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e6ef441af02c7468897432cfdccb4c
+      internalID: -2069643169
       vertices: []
       indices: 
       edges: []
@@ -216,7 +282,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4f301ecd3b638524e902d2c033096a76
+    spriteID: 6b1ad96805efac742ad72de5db1ca18e
     internalID: 0
     vertices: []
     indices: 
@@ -226,12 +292,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":478.0,"y":816.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":478.0,"y":816.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      SpriteSheet Tree Chop 1_0: -1775279060087578069
-      SpriteSheet Tree Chop 1_1: -126624560458902785
-      SpriteSheet Tree Chop 1_2: 3569479702500339053
-      SpriteSheet Tree Chop 1_3: -6412705602024538834
+      SpriteSheet Tree Chop 4_0: -7809708389347338842
+      SpriteSheet Tree Chop 4_1: 7683909986794106630
+      SpriteSheet Tree Chop 4_2: -7550112624985732020
+      SpriteSheet Tree Chop 4_3: 5990321956311085353
+      SpriteSheet Tree Chop 4_4: 7763364902012567017
+      SpriteSheet Tree Chop 4_5: -1070877870
+      SpriteSheet Tree Chop 4_6: -2069643169
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
