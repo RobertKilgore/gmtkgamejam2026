@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8547809089519633122}
   - component: {fileID: 4316856895539351590}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Click Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 2132654029020515955}
   m_Layer: 0
   m_Name: Fairy Fountain
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,7 +202,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.3791, y: 5.7813, z: 0}
-  m_LocalScale: {x: 0.07412098, y: 0.07412098, z: 0.07412098}
+  m_LocalScale: {x: 0.09920353, y: 0.09920353, z: 0.09920353}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8547809089519633122}
@@ -280,8 +280,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59c2238d0f8b9f4d9e5e36ebebacbf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PoiBehaviour
-  definition: {fileID: 11400000, guid: cf66c1c7b5668e042975c08d85951c39, type: 2}
+  interactMode: 0
+  interactionKey: 101
+  buttonPrompt: {fileID: 0}
+  showPromptOnlyForButtonMode: 1
   maxHighlightDistance: Infinity
+  clickCollider: {fileID: 0}
+  definition: {fileID: 11400000, guid: cf66c1c7b5668e042975c08d85951c39, type: 2}
 --- !u!114 &1044167830658360161
 MonoBehaviour:
   m_ObjectHideFlags: 0

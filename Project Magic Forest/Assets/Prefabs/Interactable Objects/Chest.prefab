@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8606931375479943538}
   m_Layer: 0
   m_Name: Chest
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,8 +108,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59c2238d0f8b9f4d9e5e36ebebacbf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PoiBehaviour
-  definition: {fileID: 11400000, guid: d316e050f5c0dee4b836c6a0ccae7031, type: 2}
+  interactMode: 0
+  interactionKey: 101
+  buttonPrompt: {fileID: 0}
+  showPromptOnlyForButtonMode: 1
   maxHighlightDistance: Infinity
+  clickCollider: {fileID: 0}
+  definition: {fileID: 11400000, guid: d316e050f5c0dee4b836c6a0ccae7031, type: 2}
 --- !u!114 &6749802881795014191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2934153491657326474}
   - component: {fileID: 7113333821330275605}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Click Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +227,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

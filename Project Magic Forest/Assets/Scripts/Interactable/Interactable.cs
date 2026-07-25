@@ -17,6 +17,8 @@ public abstract class Interactable : MonoBehaviour
     [SerializeField] private GameObject buttonPrompt;
     [SerializeField] private bool showPromptOnlyForButtonMode = true;
     [SerializeField] private float maxHighlightDistance = 2.5f;
+    [Header("Click")]
+    [SerializeField] private Collider2D clickCollider;
 
     private bool isHighlighted;
     private bool isActive;
@@ -47,6 +49,12 @@ public abstract class Interactable : MonoBehaviour
     protected virtual void Awake()
     {
         UpdatePromptVisibility();
+        // Auto-assign the click collider if not manually set: prefer a collider on the same GameObject,
+        // otherwise pick the first Collider2D in children (including inactive).
+        if (clickCollider == null)
+        {
+            clickCollider = GetComponent<Collider2D>() ?? GetComponentInChildren<Collider2D>(true);
+        }
     }
 
     protected virtual void OnEnable()
@@ -126,6 +134,12 @@ public abstract class Interactable : MonoBehaviour
     public void SetHighlighted(bool highlighted)
     {
         IsHighlighted = highlighted;
+    }
+
+    // Expose the cached click collider so click-handling code can use it directly.
+    public Collider2D GetClickCollider()
+    {
+        return clickCollider;
     }
 
     protected bool CanAcceptInteraction()
