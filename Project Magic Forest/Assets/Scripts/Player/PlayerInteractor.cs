@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public sealed class PlayerInteractor : MonoBehaviour
 {
     [SerializeField] private PlayerInventory inventory;
-    [SerializeField] private int poiLayerMask = Physics2D.AllLayers;
+    [SerializeField] private LayerMask poiLayerMask = Physics2D.AllLayers;
     [SerializeField] private Camera mainCamera;
 
     private readonly List<Interactable> nearbyInteractables = new();
@@ -136,6 +136,7 @@ public sealed class PlayerInteractor : MonoBehaviour
         Vector3 mousePos = Mouse.current?.position.ReadValue() ?? Vector3.zero;
         Vector2 worldPos = mainCamera.ScreenToWorldPoint(mousePos);
 
+        // Use the configured poi layer mask for click detection (no editor assignment required).
         Collider2D hitCollider = Physics2D.OverlapPoint(worldPos, poiLayerMask);
 
         if (hitCollider != null)

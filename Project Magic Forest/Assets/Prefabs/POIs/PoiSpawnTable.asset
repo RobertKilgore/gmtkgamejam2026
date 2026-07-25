@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc429ffa9a1baf34ca35993586262b86, type: 3}
+  m_Name: PoiSpawnTable
+  m_EditorClassIdentifier: Assembly-CSharp::PoiSpawnTable
+  entries:
+  - prefab: {fileID: 1143594659712691425, guid: a7b805970d2527a458471b0ecf22efd0, type: 3}
+    weight: 100

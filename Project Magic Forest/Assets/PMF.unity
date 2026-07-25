@@ -1063,10 +1063,33 @@ MonoBehaviour:
   playerSpeed: 5
   rb: {fileID: 870372607}
   spriteRenderer: {fileID: 0}
-  upSprite: {fileID: 0}
-  downSprite: {fileID: 0}
-  leftSprite: {fileID: 0}
-  rightSprite: {fileID: 0}
+  walkUpSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  walkDownSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  walkLeftSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  walkRightSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  idleUpSprite: {fileID: 0}
+  idleDownSprite: {fileID: 0}
+  idleLeftSprite: {fileID: 0}
+  idleRightSprite: {fileID: 0}
+  walkFrameRate: 10
+  useAnimator: 0
+  animator: {fileID: 0}
 --- !u!1 &1129332125
 GameObject:
   m_ObjectHideFlags: 0
