@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: ef5f4d0596787d44e8e5ea8a080f12c5
+guid: 97cc5fb604e75f344a63bed6fe691fbd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7636826689359212395
-    second: SpriteSheet Fire_0
+      213: 5422264731304102022
+    second: SpriteSheet Fire Stove_0
   - first:
-      213: -742091880959854169
-    second: SpriteSheet Fire_1
+      213: -248302513427763797
+    second: SpriteSheet Fire Stove_1
   - first:
-      213: 1308907003687190491
-    second: SpriteSheet Fire_2
+      213: 8608337564845047215
+    second: SpriteSheet Fire Stove_2
   - first:
-      213: -6460774941273814895
-    second: SpriteSheet Fire_3
+      213: 3686799426575617556
+    second: SpriteSheet Fire Stove_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,89 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpriteSheet Fire_0
+      name: SpriteSheet Fire Stove_0
       rect:
         serializedVersion: 2
         x: 79
-        y: 164
-        width: 402
-        height: 421
+        y: 163
+        width: 403
+        height: 423
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5909581769a840690800000000000000
-      internalID: -7636826689359212395
+      spriteID: 68882837b01cf3b40800000000000000
+      internalID: 5422264731304102022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet Fire_1
+      name: SpriteSheet Fire Stove_1
       rect:
         serializedVersion: 2
-        x: 554
-        y: 164
-        width: 402
-        height: 421
+        x: 553
+        y: 163
+        width: 404
+        height: 423
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a9bfa4bd5f83b5f0800000000000000
-      internalID: -742091880959854169
+      spriteID: bad2d4afd2add8cf0800000000000000
+      internalID: -248302513427763797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet Fire_2
+      name: SpriteSheet Fire Stove_2
       rect:
         serializedVersion: 2
-        x: 1029
-        y: 164
-        width: 402
-        height: 421
+        x: 1028
+        y: 163
+        width: 404
+        height: 423
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bdfbbc62cfb2a2210800000000000000
-      internalID: 1308907003687190491
+      spriteID: fad7d330865f67770800000000000000
+      internalID: 8608337564845047215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet Fire_3
+      name: SpriteSheet Fire Stove_3
       rect:
         serializedVersion: 2
-        x: 1504
-        y: 164
-        width: 402
-        height: 421
+        x: 1503
+        y: 163
+        width: 404
+        height: 423
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19801abeb67b656a0800000000000000
-      internalID: -6460774941273814895
+      spriteID: 41e47238b842a2330800000000000000
+      internalID: 3686799426575617556
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: beae2dfb5e1a75f438632cdc655bb3a3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -221,14 +221,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":375.0,"y":500.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      SpriteSheet Fire_0: -7636826689359212395
-      SpriteSheet Fire_1: -742091880959854169
-      SpriteSheet Fire_2: 1308907003687190491
-      SpriteSheet Fire_3: -6460774941273814895
+      SpriteSheet Fire Stove_0: 5422264731304102022
+      SpriteSheet Fire Stove_1: -248302513427763797
+      SpriteSheet Fire Stove_2: 8608337564845047215
+      SpriteSheet Fire Stove_3: 3686799426575617556
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
