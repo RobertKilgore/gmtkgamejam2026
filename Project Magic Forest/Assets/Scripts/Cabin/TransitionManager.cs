@@ -46,8 +46,8 @@ public class TransitionManager : MonoBehaviour
       transitionRunning = true;
       transitionReady = false;
       //AnimationStart
-    SnowIn.SetActive(true);
-    Invoke(nameof(WorldRandomizer), 2f);
+        SnowIn.SetActive(true);
+        Invoke(nameof(WorldRandomizer), 2f);
     }
     void WorldRandomizer()
     {

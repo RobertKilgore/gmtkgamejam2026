@@ -2,32 +2,91 @@ using UnityEngine;
 
 public class RoofScript : MonoBehaviour
 {
-    SpriteRenderer sr_roof;
-    BoxCollider2D[] bc_roof;
     public GameObject roof;
-    public GameObject door;
-
+    public GameObject interior;
+    public GameObject player;
     public GameObject outdoorDimmer;
-   
+    public string playerTag = "Player";
+
+    private SpriteRenderer sr_roof;
+    private BoxCollider2D[] bc_roof;
+
+    private void Awake()
+    {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag(playerTag);
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        EnsurePlayerExists();
 
-       sr_roof = roof.GetComponent<SpriteRenderer>();
-       sr_roof.enabled = false;
-       bc_roof = roof.GetComponents<BoxCollider2D>();
-       bc_roof[0].enabled = false;
-       bc_roof = roof.GetComponents<BoxCollider2D>();
-       bc_roof[1].enabled = false;
-       bc_roof = roof.GetComponents<BoxCollider2D>();
-       bc_roof[2].enabled = false;
-       bc_roof = roof.GetComponents<BoxCollider2D>();
-       bc_roof[3].enabled = false;
-       outdoorDimmer.SetActive(true);
+        SetInteriorSortingOrder(3);
+        if (player != null)
+        {
+            var playerSprite = player.GetComponent<SpriteRenderer>();
+            if (playerSprite != null)
+            {
+                playerSprite.sortingOrder = 4;
+            }
+        }
 
+        sr_roof = roof != null ? roof.GetComponent<SpriteRenderer>() : null;
+        if (sr_roof != null)
+        {
+            sr_roof.enabled = false;
+        }
 
-       Debug.Log("1");
-       
+        bc_roof = roof != null ? roof.GetComponents<BoxCollider2D>() : null;
+        if (outdoorDimmer != null)
+        {
+            outdoorDimmer.SetActive(true);
+        }
+
+        if (bc_roof != null)
+        {
+            foreach (BoxCollider2D collider in bc_roof)
+            {
+                if (collider != null)
+                {
+                    collider.enabled = false;
+                }
+            }
+        }
+        // Disable interior colliders so player can enter interior without colliding with interior geometry
+        if (interior != null)
+        {
+            var interiorColliders = interior.GetComponentsInChildren<Collider2D>(true);
+            foreach (var c in interiorColliders)
+            {
+                if (c != null)
+                    c.enabled = true;
+            }
+        }
     }
-   
+
+    private void EnsurePlayerExists()
+    {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag(playerTag);
+        }
+    }
+
+    private void SetInteriorSortingOrder(int order)
+    {
+        if (interior == null)
+        {
+            return;
+        }
+
+        var sortingGroup = interior.GetComponent<UnityEngine.Rendering.SortingGroup>();
+        if (sortingGroup != null)
+        {
+            Debug.Log($"[RoofScript] Setting interior sorting order to {order}");
+            sortingGroup.sortingOrder = order;
+        }
+    }
 }
