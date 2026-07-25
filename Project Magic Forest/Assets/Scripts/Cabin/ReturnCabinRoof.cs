@@ -12,7 +12,7 @@ public class ReturnCabinRoof : MonoBehaviour
     public GameObject doorGlow;
 
     private SpriteRenderer sr_roof;
-    private BoxCollider2D bc_roof;
+    private BoxCollider2D[] bc_roof;
 
     private void Awake()
     {
@@ -42,11 +42,7 @@ public class ReturnCabinRoof : MonoBehaviour
             sr_roof.enabled = true;
         }
 
-        bc_roof = roof != null ? roof.GetComponent<BoxCollider2D>() : null;
-        if (bc_roof != null)
-        {
-            bc_roof.enabled = true;
-        }
+        bc_roof = roof != null ? roof.GetComponents<BoxCollider2D>() : null;
 
         if (outdoorDimmer != null)
         {
@@ -56,7 +52,18 @@ public class ReturnCabinRoof : MonoBehaviour
         {
             doorGlow.SetActive(true);
         }
-        // Re-enable interior colliders when returning the roof
+
+        if (bc_roof != null)
+        {
+            foreach (BoxCollider2D collider in bc_roof)
+            {
+                if (collider != null)
+                {
+                    collider.enabled = true;
+                }
+            }
+        }
+        // Disable interior colliders so player can enter interior without colliding with interior geometry
         if (interior != null)
         {
             var interiorColliders = interior.GetComponentsInChildren<Collider2D>(true);

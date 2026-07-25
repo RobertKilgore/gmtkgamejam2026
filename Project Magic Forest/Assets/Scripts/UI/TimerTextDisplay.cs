@@ -18,6 +18,8 @@ public class TimerTextDisplay : MonoBehaviour
     [SerializeField] private Color lowColor = Color.red;
     [SerializeField] private Color highColor = Color.white;
 
+    private Timer timer;
+
     private void Awake()
     {
         if (playerTimers == null)
@@ -38,9 +40,10 @@ public class TimerTextDisplay : MonoBehaviour
             return;
         }
 
-        Timer timer = playerTimers.FindTimer(timerKey);
+        
         if (timer == null)
         {
+            timer = playerTimers.FindTimer(timerKey);
             textComponent.text = "--";
             return;
         }
