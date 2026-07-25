@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 91e08ad2198c65b448b325a7d8fe48f7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2017511535862481467
+    second: whisperwoodwidow2_w_ice_0
+  - first:
+      213: 3633159614978202753
+    second: whisperwoodwidow2_w_ice_1
+  - first:
+      213: 3914849859173710368
+    second: whisperwoodwidow2_w_ice_2
+  - first:
+      213: 7131382401041870309
+    second: whisperwoodwidow2_w_ice_3
+  - first:
+      213: -7184930825872354033
+    second: whisperwoodwidow2_w_ice_4
+  - first:
+      213: 4883167861664789690
+    second: whisperwoodwidow2_w_ice_5
+  - first:
+      213: -7585687363751679616
+    second: whisperwoodwidow2_w_ice_6
+  - first:
+      213: 2631632257316164612
+    second: whisperwoodwidow2_w_ice_7
+  - first:
+      213: -104382072524254336
+    second: whisperwoodwidow2_w_ice_8
+  - first:
+      213: 6843111763319813087
+    second: whisperwoodwidow2_w_ice_9
+  - first:
+      213: -4853909004389978140
+    second: whisperwoodwidow2_w_ice_10
+  - first:
+      213: 8618381891704407074
+    second: whisperwoodwidow2_w_ice_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: whisperwoodwidow2_w_ice_0
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 1224
+        width: 346
+        height: 631
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cdf9a682fb5004e0800000000000000
+      internalID: -2017511535862481467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whisperwoodwidow2_w_ice_1
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 1343
+        width: 262
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c1217ab639b6230800000000000000
+      internalID: 3633159614978202753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whisperwoodwidow2_w_ice_2
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 1408
+        width: 127
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a79058437545630800000000000000
+      internalID: 3914849859173710368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whisperwoodwidow2_w_ice_3
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1408
+        width: 295
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eda2939282c7f260800000000000000
+      internalID: 7131382401041870309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whisperwoodwidow2_w_ice_4
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 1408
+        width: 277
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f05df143b7ff94c90800000000000000
+      internalID: -7184930825872354033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whisperwoodwidow2_w_ice_5
+      rect:
+        serializedVersion: 2
+        x: 2378
+        y: 1281
+        width: 246
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4322d4c4f74c340800000000000000
+      internalID: 4883167861664789690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whisperwoodwidow2_w_ice_6
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 1116
+        width: 281
+        height: 754
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089696a88893ab690800000000000000
+      internalID: -7585687363751679616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whisperwoodwidow2_w_ice_7
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 222
+        width: 480
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4041ac4589f658420800000000000000
+      internalID: 2631632257316164612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whisperwoodwidow2_w_ice_8
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 289
+        width: 161
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 083d54ede092d8ef0800000000000000
+      internalID: -104382072524254336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whisperwoodwidow2_w_ice_9
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 392
+        width: 296
+        height: 921
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd379f274ed97fe50800000000000000
+      internalID: 6843111763319813087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whisperwoodwidow2_w_ice_10
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 67
+        width: 326
+        height: 1246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4efe3454a7373acb0800000000000000
+      internalID: -4853909004389978140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whisperwoodwidow2_w_ice_11
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 317
+        width: 414
+        height: 1003
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22443b91ba4aa9770800000000000000
+      internalID: 8618381891704407074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      whisperwoodwidow2_w_ice_0: -2017511535862481467
+      whisperwoodwidow2_w_ice_1: 3633159614978202753
+      whisperwoodwidow2_w_ice_10: -4853909004389978140
+      whisperwoodwidow2_w_ice_11: 8618381891704407074
+      whisperwoodwidow2_w_ice_2: 3914849859173710368
+      whisperwoodwidow2_w_ice_3: 7131382401041870309
+      whisperwoodwidow2_w_ice_4: -7184930825872354033
+      whisperwoodwidow2_w_ice_5: 4883167861664789690
+      whisperwoodwidow2_w_ice_6: -7585687363751679616
+      whisperwoodwidow2_w_ice_7: 2631632257316164612
+      whisperwoodwidow2_w_ice_8: -104382072524254336
+      whisperwoodwidow2_w_ice_9: 6843111763319813087
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
