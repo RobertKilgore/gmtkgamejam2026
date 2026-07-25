@@ -350,11 +350,11 @@ MonoBehaviour:
   clickCollider: {fileID: 0}
   timerKey: Fuel
   timeToAdd: 10
-  untouchedSprite: {fileID: 0}
-  hitOnceSprite: {fileID: 0}
-  hitTwiceSprite: {fileID: 0}
-  fallenSprite: {fileID: 0}
-  destroyOnInteract: 1
+  untouchedSprite: {fileID: -1775279060087578069, guid: 8ba08350d4e5697448dc946d65197d1d, type: 3}
+  hitOnceSprite: {fileID: -126624560458902785, guid: 8ba08350d4e5697448dc946d65197d1d, type: 3}
+  hitTwiceSprite: {fileID: 3569479702500339053, guid: 8ba08350d4e5697448dc946d65197d1d, type: 3}
+  fallenSprite: {fileID: -6412705602024538834, guid: 8ba08350d4e5697448dc946d65197d1d, type: 3}
+  destroyOnInteract: 0
   requiresPlayer: 1
   invokeHookOnInteract: 0
 --- !u!114 &1582380336926026383
