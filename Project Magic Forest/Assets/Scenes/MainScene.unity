@@ -104670,6 +104670,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2054225454369310991, guid: 842fdddf8df30ce4ebbe301f4a95f58e, type: 3}
+      propertyPath: SnowIn
+      value: 
+      objectReference: {fileID: 1964614673}
     - target: {fileID: 3721753585158164557, guid: 842fdddf8df30ce4ebbe301f4a95f58e, type: 3}
       propertyPath: startDuration
       value: 60
@@ -121001,7 +121005,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402432295}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e42425fd36cedcd44b3332094d556d75, type: 3}
   m_Name: 
@@ -121033,7 +121037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TemperatureTimerSceneTransition
   playerTimers: {fileID: 1096169725}
   temperatureTimer: {fileID: 1402432345}
-  sceneName: Game Lose
+  sceneName: Main Menui
   useSceneFlowManager: 1
 --- !u!1001 &1407467463
 PrefabInstance:
@@ -134433,6 +134437,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7430207309076654904, guid: 7ab260da06f3ca54cb649896a8c46d74, type: 3}
   m_PrefabInstance: {fileID: 591600619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1964614673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6827130493612435372, guid: 416b5fdf1566b5b4490346a1ea8684ef, type: 3}
+  m_PrefabInstance: {fileID: 3887686735168586373}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1964666672 stripped
 Transform:
