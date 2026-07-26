@@ -10,7 +10,7 @@ public class TemperatureTimer : Timer
         SceneFlowManager sceneFlowManager = SceneFlowManager.Instance ?? FindFirstObjectByType<SceneFlowManager>();
         if (sceneFlowManager != null)
         {
-            sceneFlowManager.LoadStartScene();
+            sceneFlowManager.LoadScene("Main Menu");
             return;
         }
 
