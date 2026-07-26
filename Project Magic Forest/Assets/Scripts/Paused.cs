@@ -1,102 +1,347 @@
+using System;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Paused : MonoBehaviour
 {
-   public GameObject pauseMenu;
-   public GameObject mainMenu;
-   public Slider musicControl;
-   public Slider sfxControl;
-   public AudioMixer audioMixer;
+    public GameObject pauseMenu;
+    public GameObject pauseBackground;
+    public GameObject pauseMainPanel;
+    public GameObject settingsPanel;
+    public GameObject gameplayUI;
+    public GameObject pauseRoot;
+    public GameObject mainMenu;
+    public Slider masterControl;
+    public Slider musicControl;
+    public Slider sfxControl;
 
-    // Update is called once per frame
-   void Start()
+    private bool isPaused;
+    private float previousTimeScale = 1f;
+    private playerMovement playerMovementController;
+    private PlayerInteractor playerInteractor;
+    private bool isDraggingVolumeSlider;
+    private float pendingMasterVolume = 1f;
+    private float pendingMusicVolume = 1f;
+    private float pendingSfxVolume = 1f;
+    private int frameCounter;
+
+    private void Start()
     {
-        AudioManager audioManager = AudioManager.Instance != null ? AudioManager.Instance : AudioManager.EnsureInstance();
+        CachePlayerControlComponents();
+        ConnectVolumeSliders();
+        RefreshSliderValues();
+        Close();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+            {
+                Close();
+            }
+            else
+            {
+                OpenPauseMenu();
+            }
+        }
+
+        if (!isPaused && !isDraggingVolumeSlider)
+        {
+            frameCounter++;
+            if (frameCounter >= 10)
+            {
+                frameCounter = 0;
+                RefreshSliderValues();
+            }
+        }
+    }
+
+    public void OpenPauseMenu()
+    {
+        previousTimeScale = Time.timeScale;
+        isPaused = true;
+        isDraggingVolumeSlider = false;
+        Time.timeScale = 0f;
+        RefreshSliderValues();
+        SetPlayerControlsEnabled(false);
+        if (gameplayUI != null)
+        {
+            gameplayUI.SetActive(false);
+        }
+        SetPauseMenuVisible(true);
+        SetPauseBackgroundVisible(true);
+        SetPausePanelVisible(true);
+        SetSettingsPanelVisible(false);
+    }
+
+    public void ResumeButton()
+    {
+        Close();
+    }
+
+    public void ShowOptionsMenu()
+    {
+        if (pauseMenu != null)
+        {
+            pauseMenu.SetActive(true);
+        }
+
+        if (pauseBackground != null)
+        {
+            pauseBackground.SetActive(true);
+        }
+
+        RefreshSliderValues();
+        SetPausePanelVisible(false);
+        SetSettingsPanelVisible(true);
+    }
+
+    public void Close()
+    {
+        isPaused = false;
+        SetSettingsPanelVisible(false);
+        SetPausePanelVisible(false);
+        SetPauseBackgroundVisible(false);
+        SetPauseMenuVisible(false);
+        if (gameplayUI != null)
+        {
+            gameplayUI.SetActive(true);
+        }
+        SetPlayerControlsEnabled(true);
+        Time.timeScale = previousTimeScale <= 0f ? 1f : previousTimeScale;
+    }
+
+    public void MenuButton()
+    {
+        Time.timeScale = 1f;
+        if (mainMenu != null)
+        {
+            mainMenu.SetActive(false);
+        }
+
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void UpdateMasterVolume(float value)
+    {
+        AudioManager audioManager = GetAudioManager();
         if (audioManager != null)
         {
-            musicControl.value = audioManager.GetMusicVolume() * 100f;
-            sfxControl.value = audioManager.GetSfxVolume() * 100f;
+            pendingMasterVolume = NormalizeVolume(value);
+            if (isDraggingVolumeSlider)
+            {
+                audioManager.SetMasterVolume(pendingMasterVolume);
+            }
+            else
+            {
+                RefreshSliderValues();
+            }
         }
-        else
-        {
-            musicControl.value = 50f;
-            sfxControl.value = 50f;
-        }
-    }
-   
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            pauseMenu.SetActive(!pauseMenu.activeSelf);
-            // Toggle pause state
-            Time.timeScale = 0;
-        }
-    }
-
-    private float NormalizeVolume(float value)
-    {
-        if (value > 1f)
-        {
-            return Mathf.Clamp01(value / 100f);
-        }
-
-        return Mathf.Clamp01(value);
-    }
-
-    private float ConvertLinearToDecibels(float linear)
-    {
-        if (linear <= 0f)
-        {
-            return -80f;
-        }
-
-        return Mathf.Log10(linear) * 20f;
     }
 
     public void UpdateMusicVolume(float value)
     {
-        float normalized = NormalizeVolume(value);
-
-        if (AudioManager.Instance != null)
+        AudioManager audioManager = GetAudioManager();
+        if (audioManager != null)
         {
-            AudioManager.Instance.SetMusicVolume(normalized);
-        }
-
-        if (audioMixer != null)
-        {
-            audioMixer.SetFloat("MusicVolume", ConvertLinearToDecibels(normalized));
+            pendingMusicVolume = NormalizeVolume(value);
+            if (isDraggingVolumeSlider)
+            {
+                audioManager.SetMusicVolume(pendingMusicVolume);
+            }
+            else
+            {
+                RefreshSliderValues();
+            }
         }
     }
 
     public void UpdateSfxVolume(float value)
     {
-        float normalized = NormalizeVolume(value);
-
-        if (AudioManager.Instance != null)
+        AudioManager audioManager = GetAudioManager();
+        if (audioManager != null)
         {
-            AudioManager.Instance.SetSfxVolume(normalized);
-        }
-
-        if (audioMixer != null)
-        {
-            audioMixer.SetFloat("SfxVolume", ConvertLinearToDecibels(normalized));
+            pendingSfxVolume = NormalizeVolume(value);
+            if (isDraggingVolumeSlider)
+            {
+                audioManager.SetSfxVolume(pendingSfxVolume);
+            }
+            else
+            {
+                RefreshSliderValues();
+            }
         }
     }
 
-
-    public void ResumeButton()
+    private void ConnectVolumeSliders()
     {
-        pauseMenu.SetActive(false);
-        Time.timeScale = 1;
+        AttachVolumeSlider(masterControl, UpdateMasterVolume);
+        AttachVolumeSlider(musicControl, UpdateMusicVolume);
+        AttachVolumeSlider(sfxControl, UpdateSfxVolume);
     }
-    public void MenuButton()
+
+    private void AttachVolumeSlider(Slider slider, Action<float> valueChangedHandler)
     {
-        mainMenu.SetActive(false);
-        SceneManager.LoadScene("MainMenu");
-        Time.timeScale = 1;
-    }   
+        if (slider == null)
+        {
+            return;
+        }
+
+        slider.onValueChanged.RemoveAllListeners();
+        slider.onValueChanged.AddListener(new UnityEngine.Events.UnityAction<float>(valueChangedHandler));
+
+        EventTrigger trigger = slider.GetComponent<EventTrigger>() ?? slider.gameObject.AddComponent<EventTrigger>();
+        trigger.triggers.Clear();
+
+        EventTrigger.Entry pointerDown = new EventTrigger.Entry
+        {
+            eventID = EventTriggerType.PointerDown
+        };
+        pointerDown.callback.AddListener(_ => isDraggingVolumeSlider = true);
+
+        EventTrigger.Entry pointerUp = new EventTrigger.Entry
+        {
+            eventID = EventTriggerType.PointerUp
+        };
+        pointerUp.callback.AddListener(_ =>
+        {
+            isDraggingVolumeSlider = false;
+            ApplyPendingVolumeValues();
+        });
+
+        trigger.triggers.Add(pointerDown);
+        trigger.triggers.Add(pointerUp);
+    }
+
+    private void ApplyPendingVolumeValues()
+    {
+        AudioManager audioManager = GetAudioManager();
+        if (audioManager == null)
+        {
+            return;
+        }
+
+        audioManager.SetMasterVolume(pendingMasterVolume);
+        audioManager.SetMusicVolume(pendingMusicVolume);
+        audioManager.SetSfxVolume(pendingSfxVolume);
+
+        if (masterControl != null)
+        {
+            masterControl.value = pendingMasterVolume;
+        }
+
+        if (musicControl != null)
+        {
+            musicControl.value = pendingMusicVolume;
+        }
+
+        if (sfxControl != null)
+        {
+            sfxControl.value = pendingSfxVolume;
+        }
+    }
+
+    private void CachePlayerControlComponents()
+    {
+        if (playerMovementController == null)
+        {
+            playerMovementController = FindFirstObjectByType<playerMovement>();
+        }
+
+        if (playerInteractor == null)
+        {
+            playerInteractor = FindFirstObjectByType<PlayerInteractor>();
+        }
+    }
+
+    private void SetPlayerControlsEnabled(bool enabled)
+    {
+        CachePlayerControlComponents();
+
+        if (playerMovementController != null)
+        {
+            playerMovementController.enabled = enabled;
+        }
+
+        if (playerInteractor != null)
+        {
+            playerInteractor.enabled = enabled;
+        }
+    }
+
+    private float NormalizeVolume(float value)
+    {
+        return Mathf.Clamp01(value);
+    }
+
+    private AudioManager GetAudioManager()
+    {
+        return AudioManager.Instance != null ? AudioManager.Instance : AudioManager.EnsureInstance();
+    }
+
+    private void SetPauseMenuVisible(bool visible)
+    {
+        if (pauseMenu != null)
+        {
+            pauseMenu.SetActive(visible);
+        }
+    }
+
+    private void SetPauseBackgroundVisible(bool visible)
+    {
+        if (pauseBackground != null)
+        {
+            pauseBackground.SetActive(visible);
+        }
+    }
+
+    private void SetPausePanelVisible(bool visible)
+    {
+        if (pauseMainPanel != null)
+        {
+            pauseMainPanel.SetActive(visible);
+        }
+    }
+
+    private void SetSettingsPanelVisible(bool visible)
+    {
+        if (settingsPanel != null)
+        {
+            settingsPanel.SetActive(visible);
+        }
+    }
+
+    private void RefreshSliderValues()
+    {
+        AudioManager audioManager = GetAudioManager();
+        if (audioManager == null)
+        {
+            return;
+        }
+
+        if (!isDraggingVolumeSlider && !isPaused)
+        {
+            if (masterControl != null)
+            {
+                masterControl.value = audioManager.GetMasterVolume();
+                pendingMasterVolume = audioManager.GetMasterVolume();
+            }
+
+            if (musicControl != null)
+            {
+                musicControl.value = audioManager.GetMusicVolume();
+                pendingMusicVolume = audioManager.GetMusicVolume();
+            }
+
+            if (sfxControl != null)
+            {
+                sfxControl.value = audioManager.GetSfxVolume();
+                pendingSfxVolume = audioManager.GetSfxVolume();
+            }
+        }
+    }
 }
