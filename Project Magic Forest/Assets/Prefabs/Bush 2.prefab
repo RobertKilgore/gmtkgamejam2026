@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4456796109406486681}
   - component: {fileID: 659728149029066593}
+  - component: {fileID: 4863418760604685446}
   m_Layer: 0
   m_Name: Bush 2
   m_TagString: Untagged
@@ -81,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5522511598190119577, guid: dddc66be6826c7340a14d73810cb76c3, type: 3}
+  m_Sprite: {fileID: 2684949561721197851, guid: b15334f920359d3428b5bb61ea4480a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,3 +92,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &4863418760604685446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2264150635365207112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d287df5c3b872dd45967dd7d5f8b9f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteLoopAnimator
+  sprites:
+  - {fileID: 2684949561721197851, guid: b15334f920359d3428b5bb61ea4480a9, type: 3}
+  - {fileID: -2163948587936860240, guid: b15334f920359d3428b5bb61ea4480a9, type: 3}
+  - {fileID: 8334025417287465075, guid: b15334f920359d3428b5bb61ea4480a9, type: 3}
+  - {fileID: -7222128290609651068, guid: b15334f920359d3428b5bb61ea4480a9, type: 3}
+  - {fileID: -7149926821392593812, guid: b15334f920359d3428b5bb61ea4480a9, type: 3}
+  - {fileID: 0}
+  framesPerSecond: 10
