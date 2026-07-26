@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1143594659712691425
+--- !u!1 &2264150635365207112
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7430207309076654904}
-  - component: {fileID: 4056558871731370817}
-  - component: {fileID: 5934428548488933462}
-  m_Layer: 8
-  m_Name: POI Placemat
+  - component: {fileID: 4456796109406486681}
+  - component: {fileID: 659728149029066593}
+  m_Layer: 0
+  m_Name: Bush 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7430207309076654904
+--- !u!4 &4456796109406486681
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143594659712691425}
+  m_GameObject: {fileID: 2264150635365207112}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.09, y: 2.42, z: 0}
-  m_LocalScale: {x: 26.228077, y: 15.693849, z: 21.498423}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.40109688, y: -0.036319945, z: 0}
+  m_LocalScale: {x: 0.006725777, y: 0.01124034, z: 0.008205448}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4056558871731370817
+--- !u!212 &659728149029066593
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143594659712691425}
-  m_Enabled: 0
+  m_GameObject: {fileID: 2264150635365207112}
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -80,34 +79,15 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.6679245, g: 0.6418804, b: 0.31631893, a: 1}
+  m_Sprite: {fileID: 5522511598190119577, guid: dddc66be6826c7340a14d73810cb76c3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 14.68, y: 11.96167}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &5934428548488933462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143594659712691425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92879f90e41e5774181f4a46d81268fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PoiSpawner
-  spawnTable: {fileID: 11400000, guid: aa5cb72b4d93d1e49963ff68cb760e19, type: 2}
-  spawningEnabled: 1
-  spawnOnAwake: 0
-  disableAfterSpawn: 1
-  logDebug: 1
-  resetSpawnLockDuration: 0.25
-  useRendererOrColliderCenter: 1

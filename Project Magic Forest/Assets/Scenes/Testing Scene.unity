@@ -75433,7 +75433,7 @@ SpriteRenderer:
   m_Size: {x: 35, y: 35}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &401025929
 Transform:
@@ -268922,10 +268922,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1ea2914c0fc854d82c3b23467d57b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundMusicPlayer
-  musicClip: {fileID: 8300000, guid: 175c7664e5b66904fa18ff5b000df3fa, type: 3}
+  titleTheme: {fileID: 0}
+  cabinColdTheme: {fileID: 0}
+  cabinWarmTheme: {fileID: 0}
+  creditsTheme: {fileID: 0}
+  backgroundThemeA: {fileID: 0}
+  backgroundThemeB: {fileID: 0}
   playOnStart: 1
   loop: 1
   stopOnDisable: 1
+  transitionDuration: 0.75
 --- !u!82 &942053855
 AudioSource:
   m_ObjectHideFlags: 0
@@ -269036,6 +269042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicSource: {fileID: 942053855}
+  secondaryMusicSource: {fileID: 0}
   sfxSource: {fileID: 942053855}
   audioClips: {fileID: 0}
   preventSfxOverlap: 1
