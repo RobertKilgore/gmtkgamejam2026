@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.6679245, g: 0.6418804, b: 0.31631893, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,8 +107,7 @@ MonoBehaviour:
   spawnTable: {fileID: 11400000, guid: aa5cb72b4d93d1e49963ff68cb760e19, type: 2}
   spawningEnabled: 1
   spawnOnAwake: 0
-  spawnOnProximity: 1
-  proximityDistance: 10
   disableAfterSpawn: 1
   logDebug: 1
+  resetSpawnLockDuration: 0.25
   useRendererOrColliderCenter: 1
