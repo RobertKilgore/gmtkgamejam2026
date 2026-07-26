@@ -103,6 +103,8 @@ public class TemperatureGauge : MonoBehaviour
         }
 
         float resolvedMax = GetMaxValue();
+        slider.maxValue = resolvedMax;
+
         float value = Mathf.Clamp(timer.TimeRemaining, minValue, resolvedMax);
         slider.value = value;
 

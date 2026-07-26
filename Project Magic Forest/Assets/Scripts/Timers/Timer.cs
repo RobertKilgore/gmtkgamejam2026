@@ -121,6 +121,20 @@ public class Timer : MonoBehaviour
     public float TimeRemaining => timeRemaining;
     public float MaxTime => maxTime;
 
+    public void SetMaxTime(float newMaxTime)
+    {
+        maxTime = Mathf.Max(0f, newMaxTime);
+        if (timeRemaining > maxTime)
+        {
+            timeRemaining = maxTime;
+        }
+    }
+
+    public void AddMaxTime(float additionalTime)
+    {
+        SetMaxTime(maxTime + additionalTime);
+    }
+
     public virtual void AddTime(float amount)
     {
         timeRemaining = Mathf.Max(0f, timeRemaining + amount);

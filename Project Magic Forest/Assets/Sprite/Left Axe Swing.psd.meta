@@ -174,8 +174,8 @@ TextureImporter:
         y: 0
         width: 1280
         height: 1280
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,8 +196,8 @@ TextureImporter:
         y: 0
         width: 1280
         height: 1280
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -218,8 +218,8 @@ TextureImporter:
         y: 0
         width: 1280
         height: 1280
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -240,8 +240,8 @@ TextureImporter:
         y: 0
         width: 1280
         height: 1280
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -250,6 +250,50 @@ TextureImporter:
       bones: []
       spriteID: e28125ae331015ff0800000000000000
       internalID: -49256798438156242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swing_4
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 4999
+        height: 1280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc534f0e50e0f994c982495613b05c30
+      internalID: -1666574949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Axe Swing_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 206
+        width: 5120
+        height: 1074
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e16f7e47b3e034a917c14335cb1bbc
+      internalID: -2047001895
       vertices: []
       indices: 
       edges: []
@@ -274,6 +318,8 @@ TextureImporter:
       Left Axe Swing_1: -3589916321630921203
       Left Axe Swing_2: -1736636599660990777
       Left Axe Swing_3: -49256798438156242
+      Left Axe Swing_4: -1666574949
+      Left Axe Swing_5: -2047001895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
