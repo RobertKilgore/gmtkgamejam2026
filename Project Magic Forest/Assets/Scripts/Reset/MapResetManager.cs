@@ -3,117 +3,176 @@ using UnityEngine;
 
 public class MapResetManager : MonoBehaviour
 {
-    [Header("Cabin Placement")]
-    [SerializeField] private GameObject cabinPrefab;
-    [SerializeField] private Transform[] poiPlaceMats;
-    [SerializeField] private bool disableSelectedMatSpawner = true;
+    [Header("Cabin")]
+    [SerializeField] private GameObject cabinObject;
+    [SerializeField] private Transform playerCharacter;
 
-    [Header("POI Reset")]
-    [SerializeField] private bool destroyAllPoiBehaviours = true;
-    [SerializeField] private Transform poiRoot;
+    [Header("POI Placements")]
+    [SerializeField] private Transform[] poiPlaceMats;
+
+    private Transform selectedPlaceMat;
+    private Transform originalPlayerParent;
 
     public void ResetMap()
     {
-        ResetTrees();
-        ClearSpawnedPois();
-        ResetSpawners();
+        ResetDirtyTrees();
+        DestroyAllPoiObjects();
+        DisableAllPoiSpawners();
         SelectRandomPoiPlaceMat();
+        ParentPlayerToCabin();
+        MoveCabinToSelectedPlace();
+        EnableAllPoiSpawnersExceptSelected();
+        UnparentPlayerFromCabin();
     }
 
-    [ContextMenu("Reset Map")]
-    private void ResetMapContextMenu()
+    private void ResetDirtyTrees()
     {
-        ResetMap();
-    }
-
-    private void ResetTrees()
-    {
-        int resetCount = 0;
-        foreach (var tree in TreeInteractable.DirtyTrees)
+        var dirtyTrees = new List<TreeInteractable>(TreeInteractable.DirtyTrees);
+        foreach (var tree in dirtyTrees)
         {
             if (tree != null)
             {
                 tree.ResetState();
-                resetCount++;
             }
         }
-
-        Debug.Log($"[MapResetManager] Reset {resetCount} dirty tree(s).");
     }
 
-    private void ClearSpawnedPois()
+    private void DestroyAllPoiObjects()
     {
-        if (!destroyAllPoiBehaviours)
+        var poiObjects = GameObject.FindGameObjectsWithTag("POI");
+        foreach (var poiObject in poiObjects)
         {
-            return;
-        }
-
-        IEnumerable<PoiBehaviour> pois = poiRoot != null
-            ? poiRoot.GetComponentsInChildren<PoiBehaviour>(true)
-            : FindObjectsOfType<PoiBehaviour>(true);
-
-        int count = 0;
-        foreach (var poi in pois)
-        {
-            if (poi != null)
+            if (poiObject != null)
             {
-                DestroyImmediate(poi.gameObject);
-                count++;
+                Destroy(poiObject);
             }
         }
-
-        Debug.Log($"[MapResetManager] Removed {count} spawned POI prefab(s).");
     }
 
-    private void ResetSpawners()
+    private void DisableAllPoiSpawners()
     {
-        var spawners = FindObjectsOfType<PoiSpawner>(true);
+        var spawners = FindObjectsByType<PoiSpawner>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         foreach (var spawner in spawners)
         {
-            spawner.ResetSpawner();
+            if (spawner != null)
+            {
+                spawner.SetSpawningEnabled(false);
+            }
         }
-
-        Debug.Log($"[MapResetManager] Reset {spawners.Length} POI spawner(s).");
     }
 
     private void SelectRandomPoiPlaceMat()
     {
-        if (poiPlaceMats == null || poiPlaceMats.Length == 0)
+        var placeMats = GetPoiPlaceMats();
+        if (placeMats == null || placeMats.Length == 0)
         {
-            Debug.LogWarning("[MapResetManager] No POI place mats assigned.");
+            selectedPlaceMat = null;
             return;
         }
 
-        Transform selectedMat = poiPlaceMats[Random.Range(0, poiPlaceMats.Length)];
-        if (selectedMat == null)
+        selectedPlaceMat = placeMats[Random.Range(0, placeMats.Length)];
+    }
+
+    private void ParentPlayerToCabin()
+    {
+        if (playerCharacter == null)
         {
-            Debug.LogWarning("[MapResetManager] Selected POI place mat is null.");
+            playerCharacter = FindPlayerCharacter();
+        }
+
+        if (playerCharacter == null || cabinObject == null)
+        {
             return;
         }
 
-        if (disableSelectedMatSpawner)
+        originalPlayerParent = playerCharacter.parent;
+        playerCharacter.SetParent(cabinObject.transform, true);
+    }
+
+    private void MoveCabinToSelectedPlace()
+    {
+        if (cabinObject == null || selectedPlaceMat == null)
         {
-            var selectedSpawner = selectedMat.GetComponent<PoiSpawner>() ?? selectedMat.GetComponentInChildren<PoiSpawner>(true);
+            return;
+        }
+
+        cabinObject.transform.position = selectedPlaceMat.position;
+        cabinObject.transform.rotation = selectedPlaceMat.rotation;
+    }
+
+    private void EnableAllPoiSpawnersExceptSelected()
+    {
+        var spawners = FindObjectsByType<PoiSpawner>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (var spawner in spawners)
+        {
+            if (spawner == null)
+            {
+                continue;
+            }
+
+            if (spawner.transform == selectedPlaceMat || spawner.gameObject == cabinObject || spawner.gameObject == playerCharacter?.gameObject)
+            {
+                continue;
+            }
+
+            spawner.SetSpawningEnabled(true);
+        }
+
+        if (selectedPlaceMat != null)
+        {
+            var selectedSpawner = selectedPlaceMat.GetComponent<PoiSpawner>() ?? selectedPlaceMat.GetComponentInChildren<PoiSpawner>(true);
             if (selectedSpawner != null)
             {
                 selectedSpawner.SetSpawningEnabled(false);
-                Debug.Log($"[MapResetManager] Disabled spawning for selected place mat '{selectedMat.name}'.");
-            }
-            else
-            {
-                Debug.LogWarning($"[MapResetManager] Selected place mat '{selectedMat.name}' has no PoiSpawner.");
             }
         }
+    }
 
-        if (cabinPrefab != null)
+    private void UnparentPlayerFromCabin()
+    {
+        if (playerCharacter == null)
         {
-            cabinPrefab.transform.position = selectedMat.position;
-            cabinPrefab.transform.rotation = selectedMat.rotation;
-            Debug.Log($"[MapResetManager] Moved cabin prefab to '{selectedMat.name}'.");
+            playerCharacter = FindPlayerCharacter();
+        }
+
+        if (playerCharacter == null)
+        {
+            return;
+        }
+
+        if (originalPlayerParent != null)
+        {
+            playerCharacter.SetParent(originalPlayerParent, true);
         }
         else
         {
-            Debug.LogWarning("[MapResetManager] Cabin prefab is not assigned.");
+            playerCharacter.SetParent(null, true);
         }
+    }
+
+    private Transform FindPlayerCharacter()
+    {
+        var playerObject = GameObject.FindGameObjectWithTag("Player");
+        return playerObject != null ? playerObject.transform : null;
+    }
+
+    private Transform[] GetPoiPlaceMats()
+    {
+        if (poiPlaceMats != null && poiPlaceMats.Length > 0)
+        {
+            return poiPlaceMats;
+        }
+
+        var discoveredSpawners = FindObjectsByType<PoiSpawner>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        var discoveredPlaceMats = new List<Transform>();
+        foreach (var spawner in discoveredSpawners)
+        {
+            if (spawner != null)
+            {
+                discoveredPlaceMats.Add(spawner.transform);
+            }
+        }
+
+        return discoveredPlaceMats.ToArray();
     }
 }

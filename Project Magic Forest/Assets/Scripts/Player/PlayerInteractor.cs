@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,6 +8,7 @@ public sealed class PlayerInteractor : MonoBehaviour
     [SerializeField] private PlayerInventory inventory;
     [SerializeField] private LayerMask poiLayerMask = Physics2D.AllLayers;
     [SerializeField] private Camera mainCamera;
+    [SerializeField] private playerMovement playerMovement;
 
     private readonly List<Interactable> nearbyInteractables = new();
     private Interactable currentClickTarget;
@@ -24,6 +26,11 @@ public sealed class PlayerInteractor : MonoBehaviour
         {
             mainCamera = Camera.main;
         }
+
+        if (playerMovement == null)
+        {
+            playerMovement = GetComponent<playerMovement>() ?? GetComponentInChildren<playerMovement>(true);
+        }
     }
 
     private void Update()
@@ -36,7 +43,7 @@ public sealed class PlayerInteractor : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Interactable interactable = ResolveInteractableFromCollider(other);
-        if (interactable == null || nearbyInteractables.Contains(interactable))
+        if (interactable == null || !interactable.enabled || nearbyInteractables.Contains(interactable))
         {
             return;
         }
@@ -70,7 +77,7 @@ public sealed class PlayerInteractor : MonoBehaviour
 
         // Prefer the interactable on the collider's own GameObject first.
         Interactable interactable = collider.GetComponent<Interactable>();
-        if (interactable != null)
+        if (interactable != null && interactable.enabled)
         {
             return interactable;
         }
@@ -78,7 +85,7 @@ public sealed class PlayerInteractor : MonoBehaviour
         // Parent colliders should not resolve to child interactables.
         // Child colliders may still resolve to a parent interactable.
         interactable = collider.GetComponentInParent<Interactable>();
-        if (interactable != null)
+        if (interactable != null && interactable.enabled)
         {
             return interactable;
         }
@@ -88,7 +95,7 @@ public sealed class PlayerInteractor : MonoBehaviour
 
     private void UpdateHighlightState()
     {
-        nearbyInteractables.RemoveAll(interactable => interactable == null);
+        nearbyInteractables.RemoveAll(interactable => interactable == null || !interactable.enabled);
 
         List<Interactable> inRangeInteractables = new();
         foreach (Interactable interactable in nearbyInteractables)
@@ -156,16 +163,46 @@ public sealed class PlayerInteractor : MonoBehaviour
         Vector3 mousePos = Mouse.current?.position.ReadValue() ?? Vector3.zero;
         Vector2 worldPos = mainCamera.ScreenToWorldPoint(mousePos);
 
-        // Use the configured poi layer mask for click detection (no editor assignment required).
-        Collider2D hitCollider = Physics2D.OverlapPoint(worldPos, poiLayerMask);
+        // Prefer the interactable's dedicated click collider and fall back to the configured mask.
+        Collider2D[] hitColliders = Physics2D.OverlapPointAll(worldPos, poiLayerMask);
+        currentClickTarget = null;
 
-        if (hitCollider != null)
+        if (hitColliders == null || hitColliders.Length == 0)
         {
-            currentClickTarget = ResolveInteractableFromCollider(hitCollider);
+            hitColliders = Physics2D.OverlapPointAll(worldPos);
         }
-        else
+
+        if (hitColliders != null && hitColliders.Length > 0)
         {
-            currentClickTarget = null;
+            Interactable bestTarget = null;
+            float bestDistance = float.PositiveInfinity;
+
+            for (int i = 0; i < hitColliders.Length; i++)
+            {
+                Collider2D hitCollider = hitColliders[i];
+                Interactable resolvedInteractable = ResolveInteractableFromCollider(hitCollider);
+                if (resolvedInteractable == null || !resolvedInteractable.enabled)
+                {
+                    continue;
+                }
+
+                Collider2D clickCollider = resolvedInteractable.GetClickCollider();
+                bool directHit = clickCollider != null && clickCollider.OverlapPoint(worldPos);
+                if (directHit)
+                {
+                    bestTarget = resolvedInteractable;
+                    break;
+                }
+
+                float distance = Vector2.Distance(worldPos, resolvedInteractable.transform.position);
+                if (distance < bestDistance)
+                {
+                    bestDistance = distance;
+                    bestTarget = resolvedInteractable;
+                }
+            }
+
+            currentClickTarget = bestTarget;
         }
 
         bool clicked = Mouse.current?.leftButton.wasPressedThisFrame == true || Input.GetMouseButtonDown(0);
@@ -174,7 +211,15 @@ public sealed class PlayerInteractor : MonoBehaviour
             return;
         }
 
-        if ((currentClickTarget.InteractMode != InteractMode.Click && currentClickTarget.InteractMode != InteractMode.ClickAndButton) || !currentClickTarget.IsHighlighted || !currentClickTarget.CanInteract())
+        bool directClickHit = currentClickTarget.GetClickCollider() != null && currentClickTarget.GetClickCollider().OverlapPoint(worldPos);
+        bool canUseDirectClick = currentClickTarget.IsHighlighted || directClickHit;
+
+        if ((currentClickTarget.InteractMode != InteractMode.Click && currentClickTarget.InteractMode != InteractMode.ClickAndButton) || !canUseDirectClick || !currentClickTarget.CanInteract())
+        {
+            return;
+        }
+
+        if (TryHandleTreeInteraction(currentClickTarget))
         {
             return;
         }
@@ -194,10 +239,46 @@ public sealed class PlayerInteractor : MonoBehaviour
 
             if (Input.GetKeyDown(interactable.InteractionKey))
             {
+                if (TryHandleTreeInteraction(interactable))
+                {
+                    return;
+                }
+
                 interactable.TryInteract(inventory, gameObject);
                 return;
             }
         }
+    }
+
+    private bool TryHandleTreeInteraction(Interactable interactable)
+    {
+        if (interactable is not TreeInteractable treeInteractable)
+        {
+            return false;
+        }
+
+        if (playerMovement != null && playerMovement.IsPlayingAxeAnimation)
+        {
+            return true;
+        }
+
+        if (playerMovement != null && playerMovement.PlayAxeSwingAnimation())
+        {
+            StartCoroutine(DelayTreeInteraction(treeInteractable));
+            return true;
+        }
+
+        return false;
+    }
+
+    private IEnumerator DelayTreeInteraction(TreeInteractable treeInteractable)
+    {
+        if (playerMovement != null)
+        {
+            yield return new WaitUntil(() => !playerMovement.IsPlayingAxeAnimation);
+        }
+
+        treeInteractable.TryInteract(inventory, gameObject);
     }
 
     public bool TryInteract(PoiBehaviour poi)

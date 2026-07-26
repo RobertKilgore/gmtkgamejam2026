@@ -77,7 +77,7 @@ public abstract class Interactable : MonoBehaviour
 
     public virtual bool TryInteract(PlayerInventory inventory, GameObject player)
     {
-        if (!CanInteract() || !CanAcceptInteraction())
+        if (!enabled || !CanInteract() || !CanAcceptInteraction())
         {
             return false;
         }
@@ -98,7 +98,7 @@ public abstract class Interactable : MonoBehaviour
 
     public virtual bool CanInteract()
     {
-        return true;
+        return enabled;
     }
 
     public virtual bool IsInHighlightRange(Vector3 playerPosition)

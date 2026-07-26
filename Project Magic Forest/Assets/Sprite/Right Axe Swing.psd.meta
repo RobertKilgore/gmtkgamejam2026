@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 37223d5f062c3294da901b6cb7229b7f
+guid: b2f18271669b1b94886da0ef4436cea0
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -170,12 +170,12 @@ TextureImporter:
       name: Right Axe Swing_0
       rect:
         serializedVersion: 2
-        x: 62
-        y: 108
-        width: 378
-        height: 604
+        x: 61
+        y: 107
+        width: 380
+        height: 606
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -192,12 +192,12 @@ TextureImporter:
       name: Right Axe Swing_1
       rect:
         serializedVersion: 2
-        x: 395
-        y: 605
-        width: 15
-        height: 26
+        x: 394
+        y: 604
+        width: 17
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -214,12 +214,12 @@ TextureImporter:
       name: Right Axe Swing_2
       rect:
         serializedVersion: 2
-        x: 509
-        y: 109
-        width: 441
-        height: 604
+        x: 508
+        y: 108
+        width: 444
+        height: 606
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -236,12 +236,12 @@ TextureImporter:
       name: Right Axe Swing_3
       rect:
         serializedVersion: 2
-        x: 1033
-        y: 109
-        width: 421
-        height: 603
+        x: 1032
+        y: 107
+        width: 424
+        height: 606
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -258,20 +258,20 @@ TextureImporter:
       name: Right Axe Swing_4
       rect:
         serializedVersion: 2
-        x: 1523
-        y: 108
-        width: 380
-        height: 604
+        x: 1522
+        y: 107
+        width: 383
+        height: 606
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2f30b81f15620f040be27bcd09036a83
-      internalID: 1047183283
+      spriteID: c517bbff0da149a60800000000000000
+      internalID: 7679792749519532380
       vertices: []
       indices: 
       edges: []
@@ -280,20 +280,20 @@ TextureImporter:
       name: Right Axe Swing_5
       rect:
         serializedVersion: 2
-        x: 392
-        y: 524
-        width: 17
-        height: 41
+        x: 391
+        y: 523
+        width: 19
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: adff6f395b508b540aac129cbeaef69b
-      internalID: -118349836
+      spriteID: c233cb372f5ebb290800000000000000
+      internalID: -7873446694040620244
       vertices: []
       indices: 
       edges: []
@@ -302,20 +302,20 @@ TextureImporter:
       name: Right Axe Swing_6
       rect:
         serializedVersion: 2
-        x: 964
-        y: 473
-        width: 16
-        height: 17
+        x: 963
+        y: 472
+        width: 18
+        height: 19
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3a310abaeb128a640876ac8d88d8b9ea
-      internalID: 716136169
+      spriteID: ba65395b62fdb96c0800000000000000
+      internalID: -4135466475461585237
       vertices: []
       indices: 
       edges: []
@@ -324,20 +324,20 @@ TextureImporter:
       name: Right Axe Swing_7
       rect:
         serializedVersion: 2
-        x: 958
-        y: 453
-        width: 4
-        height: 5
+        x: 957
+        y: 452
+        width: 6
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 20baac1f136434045a9e8f9f0498f666
-      internalID: -373646398
+      spriteID: f7fedcbee56b22fb0800000000000000
+      internalID: -4673972944457830529
       vertices: []
       indices: 
       edges: []
@@ -346,20 +346,20 @@ TextureImporter:
       name: Right Axe Swing_8
       rect:
         serializedVersion: 2
-        x: 1464
-        y: 337
-        width: 17
-        height: 17
+        x: 1463
+        y: 336
+        width: 19
+        height: 19
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 31ba9ed23a65276498e71ad682c89f6d
-      internalID: -5273791
+      spriteID: c5b895694232d6440800000000000000
+      internalID: 4930635807088806748
       vertices: []
       indices: 
       edges: []
@@ -368,20 +368,20 @@ TextureImporter:
       name: Right Axe Swing_9
       rect:
         serializedVersion: 2
-        x: 444
-        y: 22
-        width: 50
-        height: 46
+        x: 443
+        y: 21
+        width: 52
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2720fd4ccad37ed409dc8b47741f88f9
-      internalID: 169397217
+      spriteID: 3b09f8493b6e310a0800000000000000
+      internalID: -6911927344117608269
       vertices: []
       indices: 
       edges: []
@@ -390,20 +390,20 @@ TextureImporter:
       name: Right Axe Swing_10
       rect:
         serializedVersion: 2
-        x: 544
-        y: 22
-        width: 90
-        height: 21
+        x: 543
+        y: 21
+        width: 92
+        height: 23
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8eb1d65794dc98f43a66884368033dbb
-      internalID: 773929552
+      spriteID: 3c9eff56c8e0fef10800000000000000
+      internalID: 2301073930779093443
       vertices: []
       indices: 
       edges: []
@@ -412,20 +412,20 @@ TextureImporter:
       name: Right Axe Swing_11
       rect:
         serializedVersion: 2
-        x: 748
-        y: 22
-        width: 25
-        height: 24
+        x: 747
+        y: 21
+        width: 27
+        height: 26
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 66e85c6e8b40e1641835b8e375a8a1dc
-      internalID: -2081073852
+      spriteID: adb6ed5780c936400800000000000000
+      internalID: 316267958997248986
       vertices: []
       indices: 
       edges: []
@@ -434,20 +434,20 @@ TextureImporter:
       name: Right Axe Swing_12
       rect:
         serializedVersion: 2
-        x: 941
-        y: 23
-        width: 49
-        height: 45
+        x: 940
+        y: 22
+        width: 51
+        height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 001d0f32cbbdd7c4dac378d21a6a614d
-      internalID: 603781772
+      spriteID: c4fd24306bc0648c0800000000000000
+      internalID: -4015508041875923124
       vertices: []
       indices: 
       edges: []
@@ -456,20 +456,20 @@ TextureImporter:
       name: Right Axe Swing_13
       rect:
         serializedVersion: 2
-        x: 1041
-        y: 23
-        width: 89
-        height: 21
+        x: 1040
+        y: 22
+        width: 91
+        height: 23
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 88660d26dcd6f3b4b9ac2810b01c71cf
-      internalID: 1476700857
+      spriteID: 0766cb8a90ac780a0800000000000000
+      internalID: -6879307762950707600
       vertices: []
       indices: 
       edges: []
@@ -478,20 +478,20 @@ TextureImporter:
       name: Right Axe Swing_14
       rect:
         serializedVersion: 2
-        x: 1245
-        y: 23
-        width: 25
-        height: 24
+        x: 1244
+        y: 22
+        width: 27
+        height: 26
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b25834d4914993b45839b7276154eee9
-      internalID: 2146122473
+      spriteID: d5a5b186488ce2ce0800000000000000
+      internalID: -1427983560822007203
       vertices: []
       indices: 
       edges: []
@@ -500,20 +500,20 @@ TextureImporter:
       name: Right Axe Swing_15
       rect:
         serializedVersion: 2
-        x: 1415
-        y: 23
-        width: 50
-        height: 45
+        x: 1414
+        y: 22
+        width: 52
+        height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 33b749ceff7ef594881304e0c8a3006e
-      internalID: 1551447756
+      spriteID: 2bd640d835fd4a390800000000000000
+      internalID: -7807870304012440142
       vertices: []
       indices: 
       edges: []
@@ -522,20 +522,20 @@ TextureImporter:
       name: Right Axe Swing_16
       rect:
         serializedVersion: 2
-        x: 1515
-        y: 23
-        width: 90
-        height: 20
+        x: 1514
+        y: 22
+        width: 92
+        height: 22
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 702127cc0863b9a48921cae5aeb3eee2
-      internalID: -796427855
+      spriteID: 4b3b41017232a9000800000000000000
+      internalID: 43385797093929908
       vertices: []
       indices: 
       edges: []
@@ -544,20 +544,20 @@ TextureImporter:
       name: Right Axe Swing_17
       rect:
         serializedVersion: 2
-        x: 1719
-        y: 23
-        width: 25
-        height: 24
+        x: 1718
+        y: 22
+        width: 27
+        height: 26
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 60b26efbe5a6051488b41506cdd2b67c
-      internalID: -619458396
+      spriteID: b68cb15fae8e94c20800000000000000
+      internalID: 3191337906800937067
       vertices: []
       indices: 
       edges: []
@@ -566,20 +566,20 @@ TextureImporter:
       name: Right Axe Swing_18
       rect:
         serializedVersion: 2
-        x: 1905
-        y: 22
-        width: 7
-        height: 36
+        x: 1904
+        y: 21
+        width: 8
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ea9362756037f924a9f5c924a9126074
-      internalID: 2014019096
+      spriteID: 4048a34285808b010800000000000000
+      internalID: 1204722074979566596
       vertices: []
       indices: 
       edges: []
@@ -588,7 +588,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 229fd3fab1a525447b8105cbb6196133
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -596,29 +596,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":478.0,"y":816.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
       Right Axe Swing_0: -312910899501335680
       Right Axe Swing_1: -8767862158388064676
-      Right Axe Swing_10: 773929552
-      Right Axe Swing_11: -2081073852
-      Right Axe Swing_12: 603781772
-      Right Axe Swing_13: 1476700857
-      Right Axe Swing_14: 2146122473
-      Right Axe Swing_15: 1551447756
-      Right Axe Swing_16: -796427855
-      Right Axe Swing_17: -619458396
-      Right Axe Swing_18: 2014019096
+      Right Axe Swing_10: 2301073930779093443
+      Right Axe Swing_11: 316267958997248986
+      Right Axe Swing_12: -4015508041875923124
+      Right Axe Swing_13: -6879307762950707600
+      Right Axe Swing_14: -1427983560822007203
+      Right Axe Swing_15: -7807870304012440142
+      Right Axe Swing_16: 43385797093929908
+      Right Axe Swing_17: 3191337906800937067
+      Right Axe Swing_18: 1204722074979566596
       Right Axe Swing_2: -5168156157354627240
       Right Axe Swing_3: -2808498971939053693
-      Right Axe Swing_4: 1047183283
-      Right Axe Swing_5: -118349836
-      Right Axe Swing_6: 716136169
-      Right Axe Swing_7: -373646398
-      Right Axe Swing_8: -5273791
-      Right Axe Swing_9: 169397217
+      Right Axe Swing_4: 7679792749519532380
+      Right Axe Swing_5: -7873446694040620244
+      Right Axe Swing_6: -4135466475461585237
+      Right Axe Swing_7: -4673972944457830529
+      Right Axe Swing_8: 4930635807088806748
+      Right Axe Swing_9: -6911927344117608269
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

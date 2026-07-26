@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5486038506253722415}
   m_Layer: 0
   m_Name: Chest POI
-  m_TagString: Untagged
+  m_TagString: POI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
