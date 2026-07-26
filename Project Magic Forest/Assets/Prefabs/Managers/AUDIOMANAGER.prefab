@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1ea2914c0fc854d82c3b23467d57b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundMusicPlayer
-  titleTheme: {fileID: 8300000, guid: 77171e2bb0fd0454eaf153869200df91, type: 3}
+  titleTheme: {fileID: 8300000, guid: e5331cb38cee3774fb5827b6fb45eaf1, type: 3}
   cabinColdTheme: {fileID: 8300000, guid: 4ebbd93a8f6d6cc4da1b12c7720120cc, type: 3}
   cabinWarmTheme: {fileID: 8300000, guid: 8a2dbe902fccb124a9bb55b90b8032b3, type: 3}
   creditsTheme: {fileID: 8300000, guid: 217130a7bc4ca07459512bddb6be41f8, type: 3}
