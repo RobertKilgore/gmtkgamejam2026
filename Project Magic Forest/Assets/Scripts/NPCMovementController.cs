@@ -30,7 +30,7 @@ public class NPCMovementController : MonoBehaviour
         else
         {
             Node[] nodes = FindObjectsOfType<Node>();
-            while(path == null ||path.Count == 0)
+            while(path == null || path.Count == 0)
             {
                 path = A_StarManager.instance.GeneratePath(currentNode, nodes[Random.Range(0, nodes.Length)]);
             }
