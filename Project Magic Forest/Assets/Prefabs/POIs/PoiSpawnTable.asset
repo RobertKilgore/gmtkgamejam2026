@@ -13,5 +13,17 @@ MonoBehaviour:
   m_Name: PoiSpawnTable
   m_EditorClassIdentifier: Assembly-CSharp::PoiSpawnTable
   entries:
-  - prefab: {fileID: 1143594659712691425, guid: a7b805970d2527a458471b0ecf22efd0, type: 3}
+  - prefab: {fileID: 3778024160421330758, guid: 2d19c5880210d7b498aacee9df77ea51, type: 3}
+    weight: 100
+  - prefab: {fileID: 5707025433984403555, guid: ecea07f9e1e4dea40a4179a476afaca3, type: 3}
+    weight: 100
+  - prefab: {fileID: 8298492706964700087, guid: b5b1a189e2f82ed4ea18de7a3d613180, type: 3}
+    weight: 100
+  - prefab: {fileID: 4037889477105434232, guid: fb85baa44b83e7646b0bbf45c55a9b54, type: 3}
+    weight: 100
+  - prefab: {fileID: 1650002836424241946, guid: 75db88cc74c264d49938940f455ad9bf, type: 3}
+    weight: 100
+  - prefab: {fileID: 7450936003008724326, guid: 4ea74d20a79c2d740b98f1e1a1e7949b, type: 3}
+    weight: 100
+  - prefab: {fileID: 1650002836424241946, guid: 75db88cc74c264d49938940f455ad9bf, type: 3}
     weight: 100
