@@ -17,6 +17,7 @@ public class MouseOverUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     [Header("Text")]
     [SerializeField] private TMP_Text textComponent;
     [SerializeField] private float threshold = 10f;
+    public GameObject iconTooltip;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
      private void Awake()
     {
@@ -36,6 +37,7 @@ public class MouseOverUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
          timer = playerTimers.FindTimer(timerKey);
         timeDisplay.SetActive(false);
+        iconTooltip.SetActive(false);
         originalScale = transform.localScale;
     }
 
@@ -53,11 +55,14 @@ public class MouseOverUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
      public void OnPointerEnter(PointerEventData eventData)
     {
         timeDisplay.SetActive(true);
+        iconTooltip.SetActive(true);
+        
     }
 
     // Triggered when mouse leaves the UI element
     public void OnPointerExit(PointerEventData eventData)
     {
         timeDisplay.SetActive(false);
+        iconTooltip.SetActive(false);
     }
 }
