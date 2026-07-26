@@ -319,50 +319,50 @@ public class AudioManager : MonoBehaviour
 
     private void PlayInventoryOpenSoundInternal()
     {
-        if (audioClips != null && audioClips.inventoryOpen != null)
+        if (audioClips != null && audioClips.getItemSound != null)
         {
-            Debug.Log("[AudioManager] Playing inventory open sound.");
-            PlaySFX(audioClips.inventoryOpen, channel: "inventory_ui");
+            Debug.Log("[AudioManager] Playing get item sound.");
+            PlaySFX(audioClips.getItemSound, channel: "inventory_ui");
             return;
         }
 
-        Debug.LogWarning("[AudioManager] Inventory open sound clip is not assigned.");
+        Debug.LogWarning("[AudioManager] Get item sound clip is not assigned.");
     }
 
     private void PlayInventoryCloseSoundInternal()
     {
-        if (audioClips != null && audioClips.inventoryClose != null)
+        if (audioClips != null && audioClips.getItemSound != null)
         {
-            Debug.Log("[AudioManager] Playing inventory close sound.");
-            PlaySFX(audioClips.inventoryClose, channel: "inventory_ui");
+            Debug.Log("[AudioManager] Playing get item sound.");
+            PlaySFX(audioClips.getItemSound, channel: "inventory_ui");
             return;
         }
 
-        Debug.LogWarning("[AudioManager] Inventory close sound clip is not assigned.");
+        Debug.LogWarning("[AudioManager] Get item sound clip is not assigned.");
     }
 
     private void PlayPauseOpenSoundInternal()
     {
-        if (audioClips != null && audioClips.uiOpen != null)
+        if (audioClips != null && audioClips.pauseMenuSound != null)
         {
-            Debug.Log("[AudioManager] Playing pause open sound.");
-            PlaySFX(audioClips.uiOpen, channel: "menu_ui");
+            Debug.Log("[AudioManager] Playing pause menu sound.");
+            PlaySFX(audioClips.pauseMenuSound, channel: "menu_ui");
             return;
         }
 
-        Debug.LogWarning("[AudioManager] Pause open sound clip is not assigned.");
+        Debug.LogWarning("[AudioManager] Pause menu sound clip is not assigned.");
     }
 
     private void PlayPauseCloseSoundInternal()
     {
-        if (audioClips != null && audioClips.uiClose != null)
+        if (audioClips != null && audioClips.pauseMenuSound != null)
         {
-            Debug.Log("[AudioManager] Playing pause close sound.");
-            PlaySFX(audioClips.uiClose, channel: "menu_ui");
+            Debug.Log("[AudioManager] Playing pause menu sound.");
+            PlaySFX(audioClips.pauseMenuSound, channel: "menu_ui");
             return;
         }
 
-        Debug.LogWarning("[AudioManager] Pause close sound clip is not assigned.");
+        Debug.LogWarning("[AudioManager] Pause menu sound clip is not assigned.");
     }
 
     private void PlayUIButtonClickSoundInternal()
@@ -379,14 +379,14 @@ public class AudioManager : MonoBehaviour
 
     private void PlayPackageSoundInternal()
     {
-        if (audioClips != null && audioClips.packageSound != null)
+        if (audioClips != null && audioClips.getItemSound != null)
         {
-            Debug.Log("[AudioManager] Playing package sound.");
-            PlaySFX(audioClips.packageSound, channel: "inventory_ui");
+            Debug.Log("[AudioManager] Playing get item sound.");
+            PlaySFX(audioClips.getItemSound, channel: "inventory_ui");
             return;
         }
 
-        Debug.LogWarning("[AudioManager] Package sound clip is not assigned.");
+        Debug.LogWarning("[AudioManager] Get item sound clip is not assigned.");
     }
 
     private void PlaySFXInternal(AudioClip clip, float volumeScale, float pitch, string channel)

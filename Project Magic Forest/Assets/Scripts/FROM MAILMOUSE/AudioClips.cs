@@ -1,18 +1,31 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AudioClips", menuName = "Audio/Audio Clips Database")]
+[CreateAssetMenu(fileName = "AudioClips", menuName = "Audio Clips/Audio Clips Database")]
 public class AudioClips : ScriptableObject
 {
+    [Header("Footsteps")]
+    public AudioClip walkOnWood;
+    public AudioClip walkOnSnow;
+
     [Header("UI")]
     public AudioClip uiClick;
-    public AudioClip uiOpen;
-    public AudioClip uiClose;
+    public AudioClip uiHover;
+    public AudioClip pauseMenuSound;
 
-    [Header("Inventory")]
-    public AudioClip inventoryOpen;
-    public AudioClip inventoryClose;
-    public AudioClip packageSound;
+    [Header("Items & Interaction")]
+    public AudioClip getItemSound;
+    public AudioClip grabFruit;
+    public AudioClip axeHitTree;
+    public AudioClip chestOpen;
 
-    [Header("Music")]
-    public AudioClip mainTheme;
+    [Header("Environmental & Magic")]
+    public AudioClip magicStone;
+    public AudioClip fire;
+    public AudioClip fairyCircleTeleport;
+    public AudioClip fountainSound;
+    public AudioClip willOWispSound;
+
+    [Header("Creatures")]
+    public AudioClip dragonBreathing;
+    public AudioClip dragonAngry;
 }

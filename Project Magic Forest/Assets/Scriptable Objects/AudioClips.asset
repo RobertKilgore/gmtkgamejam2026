@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c0680eee25e71459d39a7231fd3aa7, type: 3}
+  m_Name: AudioClips
+  m_EditorClassIdentifier: Assembly-CSharp::AudioClips
+  walkOnWood: {fileID: 0}
+  walkOnSnow: {fileID: 0}
+  uiClick: {fileID: 0}
+  uiHover: {fileID: 0}
+  pauseMenuSound: {fileID: 0}
+  getItemSound: {fileID: 0}
+  grabFruit: {fileID: 0}
+  axeHitTree: {fileID: 0}
+  chestOpen: {fileID: 0}
+  magicStone: {fileID: 0}
+  fire: {fileID: 0}
+  fairyCircleTeleport: {fileID: 0}
+  fountainSound: {fileID: 0}
+  willOWispSound: {fileID: 0}
+  dragonBreathing: {fileID: 0}
+  dragonAngry: {fileID: 0}

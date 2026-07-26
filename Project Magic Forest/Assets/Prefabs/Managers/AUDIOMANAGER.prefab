@@ -51,7 +51,7 @@ MonoBehaviour:
   musicSource: {fileID: 3201757294874743648}
   secondaryMusicSource: {fileID: 1885150328180485205}
   sfxSource: {fileID: 434883246241168067}
-  audioClips: {fileID: 0}
+  audioClips: {fileID: 11400000, guid: 7b5ee49d15bac2f449c8ace2375e5cb7, type: 2}
   preventSfxOverlap: 1
   overlapCooldown: 0.1
   masterVolume: 1
