@@ -9,6 +9,9 @@ public class CreatureSpawner : MonoBehaviour
     [Range(0, 100)] [SerializeField] private int maxActiveCreatures = 5;
     [SerializeField] private bool spawnOnStart = true;
     [SerializeField] private bool autoStartSpawning = true;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject cabin;
+    [SerializeField] private float playerCabinSpawnDistance = 8f;
 
     private float spawnTimer;
 
@@ -42,6 +45,11 @@ public class CreatureSpawner : MonoBehaviour
             return;
         }
 
+        if (IsPlayerNearCabin())
+        {
+            return;
+        }
+
         if (Random.value * 100f > spawnChancePercent)
         {
             return;
@@ -53,6 +61,16 @@ public class CreatureSpawner : MonoBehaviour
     private int GetActiveCreatureCount()
     {
         return FindObjectsOfType<CameraCreatureMovement>().Length;
+    }
+
+    private bool IsPlayerNearCabin()
+    {
+        if (player == null || cabin == null)
+        {
+            return false;
+        }
+
+        return Vector3.Distance(player.transform.position, cabin.transform.position) <= playerCabinSpawnDistance;
     }
 
     public void SpawnCreature()
