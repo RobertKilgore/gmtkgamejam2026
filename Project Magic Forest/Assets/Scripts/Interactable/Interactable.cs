@@ -16,7 +16,7 @@ public abstract class Interactable : MonoBehaviour
     [SerializeField] private KeyCode interactionKey = KeyCode.E;
     [SerializeField] private GameObject buttonPrompt;
     [SerializeField] private bool showPromptOnlyForButtonMode = true;
-    [SerializeField] private float maxHighlightDistance = 2.5f;
+    [SerializeField] private float maxHighlightDistance = float.PositiveInfinity;
     [Header("Click")]
     [SerializeField] private Collider2D clickCollider;
 
