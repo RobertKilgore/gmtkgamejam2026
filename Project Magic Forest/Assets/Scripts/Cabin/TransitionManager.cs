@@ -1,24 +1,20 @@
-using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class TransitionManager : MonoBehaviour
 {
     public GameObject exitBlocker;
     public float checker;
     public CameraManager cameraManager;
+    public MapResetManager resetManager;
     public bool transitionRunning;
     public bool transitionReady;
     BoxCollider2D _exitBlocker;
-    public GameObject SnowIn; 
-    public GameObject SnowOut; 
+    public GameObject SnowIn;
+    public GameObject SnowOut;
 
-        
     private GameObject cabinCam;
     private GameObject playerCam;
 
-    
-    
     private void Start()
     {
         _exitBlocker = exitBlocker.GetComponent<BoxCollider2D>();
@@ -29,11 +25,17 @@ public class TransitionManager : MonoBehaviour
         {
             cameraManager = FindFirstObjectByType<CameraManager>(FindObjectsInactive.Include);
         }
+
+        if (resetManager == null)
+        {
+            resetManager = FindFirstObjectByType<MapResetManager>(FindObjectsInactive.Include);
+        }
     }
-    // Update is called once per frame
+
     void Update()
     {
-        if (cameraManager == null) {
+        if (cameraManager == null)
+        {
             return;
         }
 
@@ -58,32 +60,42 @@ public class TransitionManager : MonoBehaviour
             transitionReady = true;
         }
     }
+
     void StartTransition()
     {
         _exitBlocker.enabled = true;
         checker = 3;
-      transitionRunning = true;
-      transitionReady = false;
-      //AnimationStart
+        transitionRunning = true;
+        transitionReady = false;
         SnowIn.SetActive(true);
         Invoke(nameof(WorldRandomizer), 2f);
     }
+
     void WorldRandomizer()
     {
         Debug.Log("Works");
         SnowOut.SetActive(true);
         SnowIn.SetActive(false);
         Invoke(nameof(TransitionEnd), 2f);
+        OnTransition();
     }
 
-      void TransitionEnd()
+    void TransitionEnd()
     {
         transitionRunning = false;
         _exitBlocker.enabled = false;
-         SnowOut.SetActive(false);
-
-
+        SnowOut.SetActive(false);
     }
 
-
+    void OnTransition()
+    {
+        if (resetManager != null)
+        {
+            resetManager.ResetMap();
+        }
+        else
+        {
+            Debug.LogWarning("[TransitionManager] Reset manager is not assigned.");
+        }
+    }
 }

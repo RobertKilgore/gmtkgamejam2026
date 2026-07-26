@@ -26,11 +26,13 @@ public class PoiSpawner : MonoBehaviour
     [SerializeField] private bool spawnOnAwake = false;
     [SerializeField] private bool disableAfterSpawn = true;
     [SerializeField] private bool logDebug = true;
+    [SerializeField] private float resetSpawnLockDuration = 0.25f;
 
     [Header("Spawn Position")]
     [SerializeField] private bool useRendererOrColliderCenter = true;
 
     private bool hasSpawned = false;
+    private float spawnLockUntilTime = -1f;
 
     private void Awake()
     {
@@ -101,6 +103,12 @@ public class PoiSpawner : MonoBehaviour
             return false;
         }
 
+        if (Time.time < spawnLockUntilTime)
+        {
+            if (logDebug) Debug.Log("[PoiSpawner] TrySpawn blocked: spawner is still cooling down from reset.");
+            return false;
+        }
+
         if (hasSpawned && disableAfterSpawn)
         {
             if (logDebug) Debug.Log("[PoiSpawner] TrySpawn blocked: already spawned and disabled.");
@@ -145,10 +153,16 @@ public class PoiSpawner : MonoBehaviour
         spawningEnabled = enabled;
     }
 
+    public bool IsSpawningEnabled()
+    {
+        return spawningEnabled;
+    }
+
     public void ResetSpawner()
     {
         spawningEnabled = true;
         hasSpawned = false;
+        spawnLockUntilTime = Time.time + resetSpawnLockDuration;
     }
 
     [ContextMenu("Test Spawn")]
