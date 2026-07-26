@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2713840556248151311}
   - component: {fileID: 8844922285235551636}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 913328929574106785}
   - component: {fileID: 8520120670139706835}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree
   m_TagString: Interactable
   m_Icon: {fileID: 0}

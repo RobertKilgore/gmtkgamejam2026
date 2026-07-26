@@ -24,6 +24,24 @@ public class TimerModifierArea : MonoBehaviour
         isActive = startActive;
     }
 
+    private void OnDisable()
+    {
+        if (playerTimers != null)
+        {
+            RemoveModifier();
+            playerTimers = null;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (playerTimers != null)
+        {
+            RemoveModifier();
+            playerTimers = null;
+        }
+    }
+
     private void Update()
     {
         if (!isActive)
@@ -113,7 +131,11 @@ public class TimerModifierArea : MonoBehaviour
 
         if (!isActive)
         {
-            RemoveModifier();
+            if (playerTimers != null)
+            {
+                RemoveModifier();
+            }
+
             playerTimers = null;
             return;
         }

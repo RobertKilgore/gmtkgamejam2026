@@ -105,15 +105,7 @@ public sealed class BedInteractable : Interactable
             playerMovement = player.GetComponentInChildren<playerMovement>(true);
         }
 
-        if (disablePlayerMovementWhileSleeping && playerMovement != null)
-        {
-            playerMovement.enabled = false;
-            Rigidbody2D rb = playerMovement.GetComponent<Rigidbody2D>();
-            if (rb != null)
-            {
-                rb.linearVelocity = Vector2.zero;
-            }
-        }
+        SetPlayerMovementEnabled(false);
 
         transitionRoutine = StartCoroutine(TransitionToSleep(sleepTimeScale, 1f));
     }
@@ -130,11 +122,7 @@ public sealed class BedInteractable : Interactable
             playerTimers.SleepTimer.RemoveAdditiveModifier("bed_sleep_gain");
         }
 
-        if (disablePlayerMovementWhileSleeping && playerMovement != null)
-        {
-            playerMovement.enabled = true;
-        }
-
+        SetPlayerMovementEnabled(false);
         transitionRoutine = StartCoroutine(TransitionToSleep(originalTimeScale, 0f));
     }
 
@@ -142,24 +130,52 @@ public sealed class BedInteractable : Interactable
     {
         float startTimeScale = Time.timeScale;
         float startAlpha = fadeCanvasGroup != null ? fadeCanvasGroup.alpha : 0f;
-        float fadeTransitionDuration = fadeDuration > 0f ? fadeDuration : transitionDuration;
+        float timeScaleTransitionDuration = Mathf.Max(transitionDuration, 0.01f);
+        float fadeTransitionDuration = Mathf.Max(fadeDuration > 0f ? fadeDuration : transitionDuration, 0.01f);
         float elapsed = 0f;
 
-        while (elapsed < transitionDuration)
+        while (elapsed < timeScaleTransitionDuration)
         {
-            float t = Mathf.Clamp01(elapsed / transitionDuration);
+            float t = Mathf.Clamp01(elapsed / timeScaleTransitionDuration);
             float easedT = Mathf.SmoothStep(0f, 1f, t);
             Time.timeScale = Mathf.Lerp(startTimeScale, targetTimeScale, easedT);
+
             float alphaProgress = Mathf.Clamp01(elapsed / fadeTransitionDuration);
             float easedAlpha = Mathf.SmoothStep(0f, 1f, alphaProgress);
             SetOverlayAlpha(Mathf.Lerp(startAlpha, targetAlpha, easedAlpha));
+
             elapsed += Time.unscaledDeltaTime;
             yield return null;
         }
 
         Time.timeScale = targetTimeScale;
         SetOverlayAlpha(targetAlpha);
+
+        if (disablePlayerMovementWhileSleeping && playerMovement != null && !isSleeping)
+        {
+            SetPlayerMovementEnabled(true);
+        }
+
         transitionRoutine = null;
+    }
+
+    private void SetPlayerMovementEnabled(bool enabled)
+    {
+        if (!disablePlayerMovementWhileSleeping || playerMovement == null)
+        {
+            return;
+        }
+
+        playerMovement.enabled = enabled;
+
+        if (!enabled)
+        {
+            Rigidbody2D rb = playerMovement.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+            }
+        }
     }
 
     private void EnsureOverlay()

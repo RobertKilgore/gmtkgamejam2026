@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 106204280945102224}
   - component: {fileID: 5946798960352893448}
   - component: {fileID: 6182449928069060880}
-  - component: {fileID: 8425323257651345682}
   - component: {fileID: 2635984548804072160}
   - component: {fileID: 4182233316568335601}
   - component: {fileID: 172405674841302322}
@@ -32,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.63, y: 5.59, z: 0}
-  m_LocalScale: {x: 0.06918192, y: 0.06918192, z: 0.06918192}
+  m_LocalScale: {x: 0.06918192, y: 0.09653111, z: 0.06918192}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1634430377034701098}
@@ -85,7 +84,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2122107185238573207, guid: 3e1eddc61722d6f488d7730032abe834, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,7 +95,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &6182449928069060880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,52 +142,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 19.248047, y: 8.862101}
   m_EdgeRadius: 0
---- !u!61 &8425323257651345682
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2205462334559001119}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.4681778, y: -14.012173}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 24.079998, y: 19.13}
-    newSize: {x: 24.079998, y: 19.13}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 23.143642, y: 15.266666}
-  m_EdgeRadius: 0
 --- !u!61 &2635984548804072160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -223,7 +176,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 14.014837, y: -5.914842}
+  m_Offset: {x: 14.014837, y: -2.090805}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -233,7 +186,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10.503918, y: 20.13823}
+  m_Size: {x: 10.503918, y: 12.490145}
   m_EdgeRadius: 0
 --- !u!114 &4182233316568335601
 MonoBehaviour:
@@ -253,7 +206,7 @@ MonoBehaviour:
   showPromptOnlyForButtonMode: 1
   maxHighlightDistance: Infinity
   clickCollider: {fileID: 0}
-  sleepGainPerSecond: 0
+  sleepGainPerSecond: 4
   sleepTimeScale: 4
   transitionDuration: 1
   fadeDuration: 1

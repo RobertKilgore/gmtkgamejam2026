@@ -6,35 +6,54 @@ public class TransitionManager : MonoBehaviour
 {
     public GameObject exitBlocker;
     public float checker;
-    public GameObject cabinCamera;
-    public GameObject playerCamera;
+    public CameraManager cameraManager;
     public bool transitionRunning;
     public bool transitionReady;
     BoxCollider2D _exitBlocker;
     public GameObject SnowIn; 
     public GameObject SnowOut; 
 
+        
+    private GameObject cabinCam;
+    private GameObject playerCam;
 
     
     
-    void Start()
+    private void Start()
     {
         _exitBlocker = exitBlocker.GetComponent<BoxCollider2D>();
         _exitBlocker.enabled = false;
-        checker = 1; 
+        checker = 1;
 
+        if (cameraManager == null)
+        {
+            cameraManager = FindFirstObjectByType<CameraManager>(FindObjectsInactive.Include);
+        }
     }
     // Update is called once per frame
     void Update()
     {
-        if (cabinCamera.activeSelf == true && transitionRunning == false && transitionReady == true)
+        if (cameraManager == null) {
+            return;
+        }
+
+        if (cabinCam == null)
+        {
+            cabinCam = cameraManager.GetCabinCamera();
+        }
+
+        if (playerCam == null)
+        {
+            playerCam = cameraManager.GetPlayerCamera();
+        }
+
+        if (cabinCam != null && cabinCam.activeSelf && !transitionRunning && transitionReady)
         {
             checker = 2;
-
             StartTransition();
-
         }
-        if (playerCamera.activeSelf == true)
+
+        if (playerCam != null && playerCam.activeSelf)
         {
             transitionReady = true;
         }

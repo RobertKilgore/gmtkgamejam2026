@@ -33,19 +33,35 @@ public class TimerTextDisplay : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        ResolveTimer();
+    }
+
     private void Update()
     {
-        if (playerTimers == null || textComponent == null)
+        if (textComponent == null)
         {
             return;
         }
 
-        
+        if (playerTimers == null)
+        {
+            playerTimers = FindFirstObjectByType<PlayerTimers>();
+            if (playerTimers == null)
+            {
+                return;
+            }
+        }
+
         if (timer == null)
         {
-            timer = playerTimers.FindTimer(timerKey);
-            textComponent.text = "--";
-            return;
+            ResolveTimer();
+            if (timer == null)
+            {
+                textComponent.text = "--";
+                return;
+            }
         }
 
         int secondsLeft = Mathf.CeilToInt(timer.TimeRemaining);
@@ -56,5 +72,15 @@ public class TimerTextDisplay : MonoBehaviour
             float t = Mathf.Clamp01(secondsLeft / threshold);
             textComponent.color = Color.Lerp(highColor, lowColor, 1f - t);
         }
+    }
+
+    private void ResolveTimer()
+    {
+        if (timer != null || playerTimers == null || string.IsNullOrEmpty(timerKey))
+        {
+            return;
+        }
+
+        timer = playerTimers.FindTimer(timerKey);
     }
 }

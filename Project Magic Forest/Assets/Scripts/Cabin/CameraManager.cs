@@ -1,43 +1,44 @@
 using UnityEngine;
 
 public class CameraManager : MonoBehaviour
-
 {
-    public GameObject cabinCamera;
-    public GameObject playerCamera;
-    public GameObject roof;
-     BoxCollider2D bc_roof;
-     
-  
-   
+    [SerializeField] private GameObject cabinCamera;
+    [SerializeField] private GameObject playerCamera;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-   
-    void Update()
-    
+    public GameObject GetCabinCamera()
     {
-        bc_roof = roof.GetComponent<BoxCollider2D>();
-        if(bc_roof.enabled == true)
-        {
-            PlayerCam();
-        }
-        else
-        {
-            CabinCam();
-        }
-        
-    }
-    void CabinCam()
-    {
-        cabinCamera.SetActive(true);
-        playerCamera.SetActive(false);
+        return cabinCamera;
     }
 
-    // Update is called once per frame
-    void PlayerCam()
+    public GameObject GetPlayerCamera()
     {
-        playerCamera.SetActive(true);
-        cabinCamera.SetActive(false);
+        return playerCamera;
+    }
+
+    public bool IsCabinCameraActive()
+    {
+        return cabinCamera != null && cabinCamera.activeSelf;
+    }
+
+    public bool IsPlayerCameraActive()
+    {
+        return playerCamera != null && playerCamera.activeSelf;
+    }
+
+    public void ActivateCabinCamera()
+    {
+        if (cabinCamera != null)
+            cabinCamera.SetActive(true);
+        if (playerCamera != null)
+            playerCamera.SetActive(false);
+    }
+
+    public void ActivatePlayerCamera()
+    {
+        if (playerCamera != null)
+            playerCamera.SetActive(true);
+        if (cabinCamera != null)
+            cabinCamera.SetActive(false);
     }
 }
+

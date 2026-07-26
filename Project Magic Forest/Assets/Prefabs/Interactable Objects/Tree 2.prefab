@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8563140794530050793}
   - component: {fileID: 3508440039040291742}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,15 +78,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.28689593, y: -0.8568535}
-      - {x: 0.118175514, y: -0.6953579}
-      - {x: 0.107399784, y: -0.37156656}
-      - {x: -0.14914493, y: -0.37936306}
-      - {x: -0.1550527, y: -0.68513393}
-      - {x: -0.2804826, y: -0.8366101}
-      - {x: -0.053277336, y: -0.7115661}
-      - {x: -0.001755774, y: -0.9122942}
-      - {x: 0.06028998, y: -0.78400105}
+    - - {x: 0.25598514, y: -0.7692728}
+      - {x: 0.10272013, y: -0.5923222}
+      - {x: 0.10739978, y: -0.5106649}
+      - {x: -0.15944842, y: -0.50815797}
+      - {x: -0.1550527, y: -0.58724976}
+      - {x: -0.28563416, y: -0.74387753}
+      - {x: -0.058429234, y: -0.6136819}
+      - {x: -0.017211149, y: -0.8144104}
+      - {x: 0.04483459, y: -0.68096536}
   m_UseDelaunayMesh: 1
 --- !u!1 &5137446072587924481
 GameObject:
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7100550369844759260}
   - component: {fileID: 8174073090812469816}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 8548458909530920396}
   - component: {fileID: 1251615686730471496}
   - component: {fileID: 1582380336926026383}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree 2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -320,12 +320,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1775279060087578069, guid: 8ba08350d4e5697448dc946d65197d1d, type: 3}
+  m_Sprite: {fileID: -7809708389347338842, guid: b0e4120823473f846a43b7a63cbd1a46, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.246, y: 1.8250002}
+  m_Size: {x: 3.61, y: 5.27}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -350,10 +350,10 @@ MonoBehaviour:
   clickCollider: {fileID: 0}
   timerKey: Fuel
   timeToAdd: 10
-  untouchedSprite: {fileID: -1775279060087578069, guid: 8ba08350d4e5697448dc946d65197d1d, type: 3}
-  hitOnceSprite: {fileID: -126624560458902785, guid: 8ba08350d4e5697448dc946d65197d1d, type: 3}
-  hitTwiceSprite: {fileID: 3569479702500339053, guid: 8ba08350d4e5697448dc946d65197d1d, type: 3}
-  fallenSprite: {fileID: -6412705602024538834, guid: 8ba08350d4e5697448dc946d65197d1d, type: 3}
+  untouchedSprite: {fileID: -7809708389347338842, guid: b0e4120823473f846a43b7a63cbd1a46, type: 3}
+  hitOnceSprite: {fileID: 7683909986794106630, guid: b0e4120823473f846a43b7a63cbd1a46, type: 3}
+  hitTwiceSprite: {fileID: -7550112624985732020, guid: b0e4120823473f846a43b7a63cbd1a46, type: 3}
+  fallenSprite: {fileID: 5990321956311085353, guid: b0e4120823473f846a43b7a63cbd1a46, type: 3}
   destroyOnInteract: 0
   requiresPlayer: 1
   invokeHookOnInteract: 0

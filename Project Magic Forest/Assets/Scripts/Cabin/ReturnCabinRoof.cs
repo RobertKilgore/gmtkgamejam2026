@@ -9,16 +9,20 @@ public class ReturnCabinRoof : MonoBehaviour
     public GameObject player;
     public string playerTag = "Player";
     public string interiorSortingLayer = "Default";
-    public GameObject doorGlow;
-
     private SpriteRenderer sr_roof;
     private BoxCollider2D[] bc_roof;
+    private CameraManager cameraManager;
 
     private void Awake()
     {
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag(playerTag);
+        }
+
+        if (cameraManager == null)
+        {
+            cameraManager = FindFirstObjectByType<CameraManager>(FindObjectsInactive.Include);
         }
     }
 
@@ -48,10 +52,6 @@ public class ReturnCabinRoof : MonoBehaviour
         {
             outdoorDimmer.SetActive(false);
         }
-        if (doorGlow != null)
-        {
-            doorGlow.SetActive(true);
-        }
 
         if (bc_roof != null)
         {
@@ -63,7 +63,7 @@ public class ReturnCabinRoof : MonoBehaviour
                 }
             }
         }
-        // Disable interior colliders so player can enter interior without colliding with interior geometry
+
         if (interior != null)
         {
             var interiorColliders = interior.GetComponentsInChildren<Collider2D>(true);
@@ -73,6 +73,8 @@ public class ReturnCabinRoof : MonoBehaviour
                     c.enabled = false;
             }
         }
+
+        cameraManager?.ActivatePlayerCamera();
     }
 
     private void EnsurePlayerExists()

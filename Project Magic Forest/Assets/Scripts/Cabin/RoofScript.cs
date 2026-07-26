@@ -6,18 +6,23 @@ public class RoofScript : MonoBehaviour
     public GameObject interior;
     public GameObject player;
     public GameObject outdoorDimmer;
-    public GameObject doorGlow;
     public string playerTag = "Player";
     public string interiorSortingLayer = "Default";
 
     private SpriteRenderer sr_roof;
     private BoxCollider2D[] bc_roof;
+    private CameraManager cameraManager;
 
     private void Awake()
     {
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag(playerTag);
+        }
+
+        if (cameraManager == null)
+        {
+            cameraManager = FindFirstObjectByType<CameraManager>(FindObjectsInactive.Include);
         }
     }
 
@@ -47,14 +52,6 @@ public class RoofScript : MonoBehaviour
             outdoorDimmer.SetActive(true);
         }
 
-        Debug.Log("[RoofScript] Triggered");
-        Debug.Log(doorGlow);
-        if (doorGlow != null)
-        {
-            doorGlow.SetActive(false);
-            Debug.Log("[RoofScript] Door glow disabled");
-        }
-
         if (bc_roof != null)
         {
             foreach (BoxCollider2D collider in bc_roof)
@@ -75,6 +72,8 @@ public class RoofScript : MonoBehaviour
                     c.enabled = true;
             }
         }
+
+        cameraManager?.ActivateCabinCamera();
     }
 
     private void EnsurePlayerExists()

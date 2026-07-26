@@ -14,7 +14,7 @@ public class SceneFlowManager : MonoBehaviour
     public string startSceneName = "Start Menu";
 
     [Tooltip("Scene name used for gameplay.")]
-    public string gameplaySceneName = "PMF_Gameplay";
+    public string gameplaySceneName = "MainScene";
 
     [Tooltip("Scene name used for the end game screen.")]
     public string endSceneName = "Credits";
