@@ -12,19 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c0680eee25e71459d39a7231fd3aa7, type: 3}
   m_Name: AudioClips
   m_EditorClassIdentifier: Assembly-CSharp::AudioClips
-  walkOnWood: {fileID: 0}
-  walkOnSnow: {fileID: 0}
-  uiClick: {fileID: 0}
-  uiHover: {fileID: 0}
-  pauseMenuSound: {fileID: 0}
-  getItemSound: {fileID: 0}
-  grabFruit: {fileID: 0}
-  axeHitTree: {fileID: 0}
-  chestOpen: {fileID: 0}
-  magicStone: {fileID: 0}
-  fire: {fileID: 0}
-  fairyCircleTeleport: {fileID: 0}
-  fountainSound: {fileID: 0}
-  willOWispSound: {fileID: 0}
-  dragonBreathing: {fileID: 0}
-  dragonAngry: {fileID: 0}
+  walkOnWood: {fileID: 8300000, guid: 814c4d0df548f8041b067c19c9e04045, type: 3}
+  walkOnSnow: {fileID: 8300000, guid: 64c12fa03db0cd84bb13539be2022593, type: 3}
+  uiClick: {fileID: 8300000, guid: d63095e16e6224a45b5c52783a6d63ca, type: 3}
+  uiHover: {fileID: 8300000, guid: a49d235a2465d81459d01b9d796857b8, type: 3}
+  pauseMenuSound: {fileID: 8300000, guid: f63e8aee0b42601448574382a454db84, type: 3}
+  getItemSound: {fileID: 8300000, guid: ae7a1db3c22ed384bafb964be1a1ff0c, type: 3}
+  grabFruit: {fileID: 8300000, guid: 8b5257333df936c4da10b58f4b4e4079, type: 3}
+  axeHitTree: {fileID: 8300000, guid: 0cbdab7793cb86145acab1ceff19f3ca, type: 3}
+  chestOpen: {fileID: 8300000, guid: 487e99cf2c2f24f48813ecfeb8616c84, type: 3}
+  magicStone: {fileID: 8300000, guid: df73e2a175a41424bac63e4275925e45, type: 3}
+  fire: {fileID: 8300000, guid: 646f0c1392bce0045aca02ddb8a420ac, type: 3}
+  fairyCircleTeleport: {fileID: 8300000, guid: 2cdef20116166a84cb0752e237c0cda9, type: 3}
+  fountainSound: {fileID: 8300000, guid: 6363a78728a6d5e458dcca38a4941ce3, type: 3}
+  willOWispSound: {fileID: 8300000, guid: 7ba8ad32665ccf84093d6ff8a294813f, type: 3}
+  TeleportSound: {fileID: 8300000, guid: 0a86476b714edf1418dd87da2fa732f9, type: 3}
+  dragonBreathing: {fileID: 8300000, guid: 7ba8ad32665ccf84093d6ff8a294813f, type: 3}
+  dragonAngry: {fileID: 8300000, guid: 89c00e839eb218c4283bc24daf562f74, type: 3}

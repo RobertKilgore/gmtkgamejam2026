@@ -25,6 +25,8 @@ public class AudioClips : ScriptableObject
     public AudioClip fountainSound;
     public AudioClip willOWispSound;
 
+    public AudioClip TeleportSound;
+
     [Header("Creatures")]
     public AudioClip dragonBreathing;
     public AudioClip dragonAngry;

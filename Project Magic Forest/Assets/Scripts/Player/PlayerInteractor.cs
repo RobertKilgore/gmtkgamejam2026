@@ -95,7 +95,21 @@ public sealed class PlayerInteractor : MonoBehaviour
 
     private void UpdateHighlightState()
     {
-        nearbyInteractables.RemoveAll(interactable => interactable == null || !interactable.enabled);
+        nearbyInteractables.RemoveAll(interactable =>
+        {
+            if (interactable == null)
+            {
+                return true;
+            }
+
+            if (!interactable.enabled)
+            {
+                interactable.SetHighlighted(false);
+                return true;
+            }
+
+            return false;
+        });
 
         List<Interactable> inRangeInteractables = new();
         foreach (Interactable interactable in nearbyInteractables)

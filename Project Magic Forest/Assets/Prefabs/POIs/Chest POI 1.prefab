@@ -78,10 +78,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3388843641998020401}
   - component: {fileID: 1029991180903470702}
-  - component: {fileID: 587683943969755868}
   - component: {fileID: 2632266169266780410}
   - component: {fileID: 4829764898835709272}
   - component: {fileID: 1035574075803880315}
+  - component: {fileID: 7544779109103060292}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Interactable
@@ -165,25 +165,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &587683943969755868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251285063026363233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e59c2238d0f8b9f4d9e5e36ebebacbf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PoiBehaviour
-  interactMode: 0
-  interactionKey: 101
-  buttonPrompt: {fileID: 0}
-  showPromptOnlyForButtonMode: 1
-  maxHighlightDistance: Infinity
-  clickCollider: {fileID: 0}
-  definition: {fileID: 11400000, guid: d316e050f5c0dee4b836c6a0ccae7031, type: 2}
 --- !u!114 &2632266169266780410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +267,32 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &7544779109103060292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251285063026363233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9db3fb743c41ce4bb8e69c6d93401b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChestInteractable
+  interactMode: 3
+  interactionKey: 101
+  buttonPrompt: {fileID: 0}
+  showPromptOnlyForButtonMode: 1
+  maxHighlightDistance: Infinity
+  clickCollider: {fileID: 0}
+  chestState: 0
+  shutSprite: {fileID: 5045073161074915229, guid: 0591735e02d47f94e9691465bb42f562, type: 3}
+  openSprite: {fileID: -5503087013248736640, guid: 0c90421973b16714a852e5bbfe44be0d, type: 3}
+  audioClips: {fileID: 11400000, guid: 7b5ee49d15bac2f449c8ace2375e5cb7, type: 2}
+  openSound: {fileID: 0}
+  openVolume: 1
+  audioChannel: interaction
+  itemPool: {fileID: 11400000, guid: 8067317c085ab8d4da7a9e6861b18448, type: 2}
 --- !u!1 &275178444474305082
 GameObject:
   m_ObjectHideFlags: 0
@@ -3944,7 +3951,7 @@ GameObject:
   - component: {fileID: 5326655038775945601}
   - component: {fileID: 3575059616731348984}
   m_Layer: 0
-  m_Name: CHEST POI 1
+  m_Name: Chest POI 1
   m_TagString: POI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3958,7 +3965,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8493473606465467271}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 28.98654, y: 19.190907, z: 0}
   m_LocalScale: {x: 26.228077, y: 15.693849, z: 21.498423}
   m_ConstrainProportionsScale: 0

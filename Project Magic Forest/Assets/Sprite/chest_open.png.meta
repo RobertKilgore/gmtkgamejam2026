@@ -1,34 +1,22 @@
 fileFormatVersion: 2
-guid: 9ade61f31b0125c49bbce0d5ddd16eaf
+guid: 0c90421973b16714a852e5bbfe44be0d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 882382037242370932
-    second: Dragon_Sprite_Sheet_0
+      213: -7420185212081706498
+    second: chest_open_0
   - first:
-      213: 6076533303370819987
-    second: Dragon_Sprite_Sheet_1
+      213: -5503087013248736640
+    second: chest_open_1
   - first:
-      213: -6077227535705431296
-    second: Dragon_Sprite_Sheet_2
+      213: -3733004352285734863
+    second: chest_open_2
   - first:
-      213: 8030859924959706167
-    second: Dragon_Sprite_Sheet_3
+      213: 51654082205470154
+    second: chest_open_3
   - first:
-      213: -3157235843914698529
-    second: Dragon_Sprite_Sheet_4
-  - first:
-      213: 3343997292605587647
-    second: Dragon_Sprite_Sheet_5
-  - first:
-      213: 2941293540546211082
-    second: Dragon_Sprite_Sheet_6
-  - first:
-      213: 4379498278768038231
-    second: Dragon_Sprite_Sheet_7
-  - first:
-      213: 2073942610621195573
-    second: Dragon_Sprite_Sheet_8
+      213: -4458795871001990612
+    second: chest_open_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -137,199 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dragon_Sprite_Sheet_0
+      name: chest_open_0
       rect:
         serializedVersion: 2
-        x: 720
-        y: 488
-        width: 2662
-        height: 2310
+        x: 1429
+        y: 2154
+        width: 21
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 47b540ea9c9de3c00800000000000000
-      internalID: 882382037242370932
+      spriteID: ef9634a0dd4360990800000000000000
+      internalID: -7420185212081706498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dragon_Sprite_Sheet_1
+      name: chest_open_1
       rect:
         serializedVersion: 2
-        x: 4101
-        y: 488
-        width: 2662
-        height: 2310
+        x: 1457
+        y: 944
+        width: 1729
+        height: 1681
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 399af3538de245450800000000000000
-      internalID: 6076533303370819987
+      spriteID: 0826e3f948b11a3b0800000000000000
+      internalID: -5503087013248736640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dragon_Sprite_Sheet_2
+      name: chest_open_2
       rect:
         serializedVersion: 2
-        x: 7482
-        y: 488
-        width: 2662
-        height: 2310
+        x: 1425
+        y: 1877
+        width: 27
+        height: 37
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0032e0b31c959aba0800000000000000
-      internalID: -6077227535705431296
+      spriteID: 1388505e154b13cc0800000000000000
+      internalID: -3733004352285734863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dragon_Sprite_Sheet_3
+      name: chest_open_3
       rect:
         serializedVersion: 2
-        x: 10863
-        y: 488
-        width: 2662
-        height: 2310
+        x: 2043
+        y: 795
+        width: 40
+        height: 45
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73cb42c6d88537f60800000000000000
-      internalID: 8030859924959706167
+      spriteID: acd4e053d1387b000800000000000000
+      internalID: 51654082205470154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dragon_Sprite_Sheet_4
+      name: chest_open_4
       rect:
         serializedVersion: 2
-        x: 14244
-        y: 488
-        width: 2662
-        height: 2310
+        x: 2920
+        y: 802
+        width: 24
+        height: 39
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd0755b4abe3f24d0800000000000000
-      internalID: -3157235843914698529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dragon_Sprite_Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 1179
-        y: 615
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fb0cf9302d3486e20800000000000000
-      internalID: 3343997292605587647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dragon_Sprite_Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 4560
-        y: 615
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a0d686834e291d820800000000000000
-      internalID: 2941293540546211082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dragon_Sprite_Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 11322
-        y: 615
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 75157602b7a17cc30800000000000000
-      internalID: 4379498278768038231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dragon_Sprite_Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 14703
-        y: 615
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5356f9ee0df18cc10800000000000000
-      internalID: 2073942610621195573
+      spriteID: c2aa2fe67cc2f12c0800000000000000
+      internalID: -4458795871001990612
       vertices: []
       indices: 
       edges: []
@@ -338,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d6fca8355c3a08e4bac32cc302ed35a3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -348,15 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dragon_Sprite_Sheet_0: 882382037242370932
-      Dragon_Sprite_Sheet_1: 6076533303370819987
-      Dragon_Sprite_Sheet_2: -6077227535705431296
-      Dragon_Sprite_Sheet_3: 8030859924959706167
-      Dragon_Sprite_Sheet_4: -3157235843914698529
-      Dragon_Sprite_Sheet_5: 3343997292605587647
-      Dragon_Sprite_Sheet_6: 2941293540546211082
-      Dragon_Sprite_Sheet_7: 4379498278768038231
-      Dragon_Sprite_Sheet_8: 2073942610621195573
+      chest_open_0: -7420185212081706498
+      chest_open_1: -5503087013248736640
+      chest_open_2: -3733004352285734863
+      chest_open_3: 51654082205470154
+      chest_open_4: -4458795871001990612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

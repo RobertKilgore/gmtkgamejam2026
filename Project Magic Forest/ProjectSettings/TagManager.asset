@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - POI
+  - home
   layers:
   - Default
   - TransparentFX

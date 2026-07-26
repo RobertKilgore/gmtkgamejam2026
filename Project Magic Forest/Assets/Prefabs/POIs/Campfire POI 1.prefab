@@ -176,11 +176,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1049948371634768598}
   - component: {fileID: 8763734269317284663}
-  - component: {fileID: 2579761232997795193}
   - component: {fileID: 6591448822693997860}
   - component: {fileID: 3848609236375476716}
   - component: {fileID: 4189038400040227031}
   - component: {fileID: 380416524420367981}
+  - component: {fileID: 4221664668911634026}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Interactable
@@ -264,25 +264,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &2579761232997795193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3102735005871807530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e59c2238d0f8b9f4d9e5e36ebebacbf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PoiBehaviour
-  interactMode: 0
-  interactionKey: 101
-  buttonPrompt: {fileID: 0}
-  showPromptOnlyForButtonMode: 1
-  maxHighlightDistance: Infinity
-  clickCollider: {fileID: 0}
-  definition: {fileID: 11400000, guid: 1ad599d2b08140c4e9be4708557ac06a, type: 2}
 --- !u!114 &6591448822693997860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +402,40 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &4221664668911634026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102735005871807530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9a317b302915148983974fe8ebb6cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CampfireInteractable
+  interactMode: 3
+  interactionKey: 101
+  buttonPrompt: {fileID: 0}
+  showPromptOnlyForButtonMode: 1
+  maxHighlightDistance: Infinity
+  clickCollider: {fileID: 0}
+  campfireState: 0
+  unlitSprite: {fileID: -4306872848865932212, guid: 69ec844cb895ac34ea448263874b23aa, type: 3}
+  deactiveSprite: {fileID: 2208395544744724023, guid: 3f71a8e18895f0049811b63ee9d862bb, type: 3}
+  litSprite: {fileID: 6016811235492949072, guid: 665d8ec414e769248a4fe47d2bdc048b, type: 3}
+  litAnimationFrames:
+  - {fileID: -6084711936022183385, guid: 2531f437a1327274c8b616aaf8ce0b43, type: 3}
+  - {fileID: 4050951396788438689, guid: 2531f437a1327274c8b616aaf8ce0b43, type: 3}
+  - {fileID: -8012128868543324901, guid: 2531f437a1327274c8b616aaf8ce0b43, type: 3}
+  litFrameRate: 12
+  campfireLight: {fileID: 380416524420367981}
+  modifierArea: {fileID: 6792441961571027623}
+  audioClips: {fileID: 11400000, guid: 7b5ee49d15bac2f449c8ace2375e5cb7, type: 2}
+  litLoopSound: {fileID: 0}
+  litVolume: 1
+  audioChannel: campfire
+  litDuration: 30
 --- !u!1 &3778024160421330758
 GameObject:
   m_ObjectHideFlags: 0

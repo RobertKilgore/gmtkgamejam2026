@@ -5167,8 +5167,9 @@ GameObject:
   - component: {fileID: 3925159509200619785}
   - component: {fileID: 5381070519061011913}
   - component: {fileID: 1063503954562166246}
-  - component: {fileID: 7301274243853800523}
   - component: {fileID: 3196142370641079165}
+  - component: {fileID: 6611292279031324030}
+  - component: {fileID: 1189812427170656342}
   m_Layer: 0
   m_Name: dragon_0
   m_TagString: Untagged
@@ -5190,6 +5191,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 265598433759093333}
+  - {fileID: 6219824375347450700}
   m_Father: {fileID: 2315517786813679190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5381070519061011913
@@ -5241,7 +5243,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3428391033546482049, guid: 5fafdcb3406acee489afcd46198bfa16, type: 3}
+  m_Sprite: {fileID: -6077227535705431296, guid: 9ade61f31b0125c49bbce0d5ddd16eaf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5303,25 +5305,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &7301274243853800523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6033733566408052450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e59c2238d0f8b9f4d9e5e36ebebacbf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PoiBehaviour
-  interactMode: 0
-  interactionKey: 101
-  buttonPrompt: {fileID: 0}
-  showPromptOnlyForButtonMode: 1
-  maxHighlightDistance: 2.5
-  clickCollider: {fileID: 0}
-  definition: {fileID: 0}
 --- !u!60 &3196142370641079165
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5360,7 +5343,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 26.619999, y: 15.33}
+    oldSize: {x: 26.62, y: 23.122559}
     newSize: {x: 26.619999, y: 15.33}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5368,17 +5351,83 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -10.910646, y: -1.757442}
-      - {x: -8.950613, y: 4.6967025}
-      - {x: -3.5239959, y: 7.996691}
-      - {x: 1.2142794, y: 7.407735}
-      - {x: 6.8773284, y: 3.34916}
-      - {x: 8.666339, y: 1.664727}
-      - {x: 10.397713, y: -2.2885647}
-      - {x: 9.977853, y: -2.6929653}
-      - {x: 6.609654, y: -4.070121}
-      - {x: 0.3122053, y: -5.1420407}
+    - - {x: -3.3730395, y: -6.0186405}
+      - {x: -10.547391, y: -6.093099}
+      - {x: -13.276711, y: -3.334817}
+      - {x: -9.323354, y: -0.2382325}
+      - {x: -6.006186, y: 1.2790565}
+      - {x: -2.314672, y: 4.473887}
+      - {x: 1.2142794, y: 3.7797732}
+      - {x: 3.9854763, y: 1.5614686}
+      - {x: 6.2476983, y: 0.4028265}
+      - {x: 7.2491517, y: -0.6225672}
+      - {x: 10.8682575, y: -3.4302418}
+      - {x: 13.141326, y: -5.348548}
+      - {x: 12.763777, y: -6.1268435}
+      - {x: 10.345905, y: -5.952873}
+      - {x: 9.501506, y: -6.488762}
+      - {x: 6.245834, y: -7.7564945}
+      - {x: -0.0032714903, y: -7.402945}
   m_UseDelaunayMesh: 1
+--- !u!114 &6611292279031324030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033733566408052450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5aeae0c746c0ef47a9df4d21ec84dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragonInteractable
+  interactMode: 3
+  interactionKey: 101
+  buttonPrompt: {fileID: 0}
+  showPromptOnlyForButtonMode: 1
+  maxHighlightDistance: Infinity
+  clickCollider: {fileID: 0}
+  dragonState: 0
+  sleepingSprite: {fileID: -3157235843914698529, guid: 9ade61f31b0125c49bbce0d5ddd16eaf, type: 3}
+  sleepingAnimationFrames:
+  - {fileID: -3157235843914698529, guid: 9ade61f31b0125c49bbce0d5ddd16eaf, type: 3}
+  - {fileID: 6076533303370819987, guid: 9ade61f31b0125c49bbce0d5ddd16eaf, type: 3}
+  sleepingFrameRate: 2.7
+  rewardSprite: {fileID: 8030859924959706167, guid: 9ade61f31b0125c49bbce0d5ddd16eaf, type: 3}
+  positiveOutcomeChance: 60
+  foodRewardRange: {x: 50, y: 100}
+  sleepRewardRange: {x: 50, y: 100}
+  fuelRewardRange: {x: 50, y: 100}
+  foodTimerKey: Food
+  sleepTimerKey: Sleep
+  fuelTimerKey: Fuel
+  scorchAnimationFrames:
+  - {fileID: 6076533303370819987, guid: 9ade61f31b0125c49bbce0d5ddd16eaf, type: 3}
+  - {fileID: -6077227535705431296, guid: 9ade61f31b0125c49bbce0d5ddd16eaf, type: 3}
+  scorchFrameRate: 6.1
+  scorchLoopCount: 6
+  scorchTemperatureBonus: 30
+  scorchLight: {fileID: 103635896739996025}
+  audioClips: {fileID: 11400000, guid: 7b5ee49d15bac2f449c8ace2375e5cb7, type: 2}
+  sleepingBreathSound: {fileID: 0}
+  positiveOutcomeSound: {fileID: 0}
+  negativeOutcomeSound: {fileID: 0}
+  outcomeVolume: 1
+  audioChannel: dragon
+--- !u!114 &1189812427170656342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033733566408052450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90680acaf6242744c866fe3ecd8483d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableHighlightVisualController
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0.1
 --- !u!1 &6100212257477587025
 GameObject:
   m_ObjectHideFlags: 0
@@ -6354,6 +6403,95 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6650729, y: 1.6892331}
   m_EdgeRadius: 0
+--- !u!1 &7312626051490419034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6219824375347450700}
+  - component: {fileID: 103635896739996025}
+  m_Layer: 0
+  m_Name: Freeform Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6219824375347450700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7312626051490419034}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3925159509200619785}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &103635896739996025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7312626051490419034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
+  m_ComponentVersion: 2
+  m_LightType: 1
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 4.63495, y: -7.7211, z: 0}
+    m_Extent: {x: 9.33585, y: 7.8543997, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.8263344, y: -14.043397, z: 0}
+  - {x: 3.3827262, y: -15.076831, z: 0}
+  - {x: 13.4738245, y: -12.169702, z: 0}
+  - {x: 13.201865, y: -9.178187, z: 0}
+  - {x: 8.741793, y: -1.5090343, z: 0}
+  - {x: 5.750279, y: -0.36682028, z: 0}
+  - {x: 1.3702583, y: -0.96856165, z: 0}
+  - {x: -4.2033024, y: -2.3792925, z: 0}
+  - {x: -3.6002953, y: -8.746497, z: 0}
 --- !u!1 &7414086968685502905
 GameObject:
   m_ObjectHideFlags: 0

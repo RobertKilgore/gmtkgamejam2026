@@ -34,6 +34,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private float sfxVolume = 1f;
 
     private readonly Dictionary<string, float> lastPlayedTimes = new Dictionary<string, float>();
+    private readonly Dictionary<string, LoopingAudioSource> loopingAudioSources = new Dictionary<string, LoopingAudioSource>();
     private bool musicPausedByTimeScale;
     private AudioSource activeMusicSource;
     private AudioSource inactiveMusicSource;
@@ -45,6 +46,12 @@ public class AudioManager : MonoBehaviour
     private int volumeCheckFrameInterval = 10;
     private int volumeCheckFrameCounter;
     private const string VolumeSettingsFileName = "audio-settings.json";
+
+    private class LoopingAudioSource
+    {
+        public AudioSource Source;
+        public float VolumeScale;
+    }
 
     [System.Serializable]
     private struct AudioVolumeSettings
@@ -187,6 +194,26 @@ public class AudioManager : MonoBehaviour
         AudioSource.PlayClipAtPoint(clip, position, Mathf.Clamp01(Instance != null ? Instance.GetEffectiveSfxVolume(volumeScale) : volumeScale));
     }
 
+    public static void PlayLoopingSfx(AudioClip clip, float volumeScale = 1f, float pitch = 1f, string channel = "default")
+    {
+        if (clip == null)
+        {
+            Debug.LogWarning("[AudioManager] PlayLoopingSfx called with a null clip.");
+            return;
+        }
+
+        AudioManager manager = EnsureInstance();
+        manager.PlayLoopingSfxInternal(clip, volumeScale, pitch, channel);
+    }
+
+    public static void StopLoopingSfx(string channel)
+    {
+        if (Instance == null || string.IsNullOrEmpty(channel))
+            return;
+
+        Instance.StopLoopingSfxInternal(channel);
+    }
+
     public static void PlayMusic(AudioClip clip, bool loop = true, float fadeDuration = 0.5f)
     {
         if (clip == null)
@@ -317,6 +344,14 @@ public class AudioManager : MonoBehaviour
         sfxSource.volume = Mathf.Clamp01(GetEffectiveSfxVolume(volumeScale));
     }
 
+    private void ApplyLoopingSourceVolume(AudioSource source, float volumeScale = 1f)
+    {
+        if (source == null)
+            return;
+
+        source.volume = Mathf.Clamp01(GetEffectiveSfxVolume(volumeScale));
+    }
+
     private void PlayInventoryOpenSoundInternal()
     {
         if (audioClips != null && audioClips.getItemSound != null)
@@ -409,6 +444,64 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(clip, effectiveSfxVolume);
         lastPlayedTimes[channel] = Time.unscaledTime;
         Debug.Log($"[AudioManager] SFX playback started: '{clip.name}', channel='{channel}', volume={effectiveSfxVolume:0.00}, pitch={pitch:0.00}");
+    }
+
+    private void PlayLoopingSfxInternal(AudioClip clip, float volumeScale, float pitch, string channel)
+    {
+        if (string.IsNullOrEmpty(channel))
+        {
+            channel = "default";
+        }
+
+        if (loopingAudioSources.TryGetValue(channel, out LoopingAudioSource existing))
+        {
+            if (existing.Source != null && existing.Source.clip == clip && existing.Source.isPlaying)
+            {
+                return;
+            }
+
+            if (existing.Source != null)
+            {
+                existing.Source.Stop();
+                Destroy(existing.Source);
+            }
+        }
+
+        AudioSource newSource = gameObject.AddComponent<AudioSource>();
+        newSource.playOnAwake = false;
+        newSource.loop = true;
+        newSource.spatialBlend = 0f;
+        newSource.clip = clip;
+        newSource.pitch = pitch;
+        ApplyLoopingSourceVolume(newSource, volumeScale);
+        newSource.Play();
+
+        loopingAudioSources[channel] = new LoopingAudioSource
+        {
+            Source = newSource,
+            VolumeScale = volumeScale
+        };
+
+        Debug.Log($"[AudioManager] Looping SFX started: '{clip.name}', channel='{channel}', volumeScale={volumeScale:0.00}, pitch={pitch:0.00}");
+    }
+
+    private void StopLoopingSfxInternal(string channel)
+    {
+        if (string.IsNullOrEmpty(channel))
+        {
+            return;
+        }
+
+        if (!loopingAudioSources.TryGetValue(channel, out LoopingAudioSource existing) || existing.Source == null)
+        {
+            return;
+        }
+
+        existing.Source.Stop();
+        Destroy(existing.Source);
+        loopingAudioSources.Remove(channel);
+
+        Debug.Log($"[AudioManager] Looping SFX stopped: channel='{channel}'");
     }
 
     private void PlayMusicInternal(AudioClip clip, bool loop, float fadeDuration)
@@ -572,6 +665,11 @@ public class AudioManager : MonoBehaviour
         }
 
         ApplySfxSourceVolume();
+        foreach (var loopingSource in loopingAudioSources.Values)
+        {
+            ApplyLoopingSourceVolume(loopingSource.Source, loopingSource.VolumeScale);
+        }
+
         lastAppliedMasterVolume = masterVolume;
         lastAppliedMusicVolume = musicVolume;
         lastAppliedSfxVolume = sfxVolume;

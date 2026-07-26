@@ -7,11 +7,13 @@ public class TemperatureTimer : Timer
 
     public override void OnTimerEnd()
     {
-        // GameObject target = playerToKill != null ? playerToKill : gameObject;
+        SceneFlowManager sceneFlowManager = SceneFlowManager.Instance ?? FindFirstObjectByType<SceneFlowManager>();
+        if (sceneFlowManager != null)
+        {
+            sceneFlowManager.LoadStartScene();
+            return;
+        }
 
-        // if (target != null)
-        // {
-        //     Destroy(target);
-        // }
+        Debug.LogWarning("[TemperatureTimer] SceneFlowManager not found. Could not load title screen.");
     }
 }
