@@ -115,6 +115,12 @@ MonoBehaviour:
   targetPadding: 0.15
   targetOffsetMin: 0.35
   targetOffsetMax: 0.95
+  idleSprites: []
+  idleDuration: 2
+  idleFrameRate: 4
+  offCameraDestroyTime: 2.25
+  fadeOutDelay: 33.2
+  fadeOutDuration: 2.25
 --- !u!61 &3247151475113543303
 BoxCollider2D:
   m_ObjectHideFlags: 0
