@@ -115,6 +115,13 @@ MonoBehaviour:
   targetPadding: 0.15
   targetOffsetMin: 0.35
   targetOffsetMax: 0.95
+  idleSprites:
+  - {fileID: 1378984226719556173, guid: 7a223ab488e0ccd4fae825c999ceaa38, type: 3}
+  idleDuration: 2
+  idleFrameRate: 4
+  offCameraDestroyTime: 4.6
+  fadeOutDelay: 1
+  fadeOutDuration: 0.5
 --- !u!61 &3247151475113543303
 BoxCollider2D:
   m_ObjectHideFlags: 0

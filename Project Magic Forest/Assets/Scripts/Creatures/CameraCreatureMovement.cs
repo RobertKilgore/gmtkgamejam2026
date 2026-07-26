@@ -23,6 +23,8 @@ public class CameraCreatureMovement : MonoBehaviour
 
     [Header("Off-Camera")]
     [SerializeField] private float offCameraDestroyTime = 15f;
+    [SerializeField] private float fadeOutDelay = 1f;
+    [SerializeField] private float fadeOutDuration = 0.5f;
 
     private Camera mainCamera;
     private Vector3 targetPosition;
@@ -30,8 +32,10 @@ public class CameraCreatureMovement : MonoBehaviour
     private bool hasInitialized;
     private SpriteRenderer spriteRenderer;
     private float offCameraTimer;
+    private float spawnTime;
     private bool isIdling;
-    private int currentPathPoint;
+    private bool isFadingOut;
+    private float fadeTimer;
 
     private void Awake()
     {
@@ -51,21 +55,43 @@ public class CameraCreatureMovement : MonoBehaviour
             return;
         }
 
-        // Check if on camera
         bool isOnCamera = IsVisibleInCamera();
-        
         if (!isOnCamera)
         {
             offCameraTimer += Time.deltaTime;
-            if (offCameraTimer >= offCameraDestroyTime)
+        }
+        else
+        {
+            offCameraTimer = 0f;
+        }
+
+        float age = Time.time - spawnTime;
+        if (age >= fadeOutDelay && !isFadingOut)
+        {
+            isFadingOut = true;
+            fadeTimer = 0f;
+        }
+
+        if (isFadingOut)
+        {
+            fadeTimer += Time.deltaTime;
+            if (spriteRenderer != null)
+            {
+                float alpha = Mathf.Max(0f, 1f - (fadeTimer / Mathf.Max(fadeOutDuration, 0.0001f)));
+                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, alpha);
+            }
+
+            if (fadeTimer >= fadeOutDuration)
             {
                 Destroy(gameObject);
                 return;
             }
         }
-        else
+
+        if (age >= offCameraDestroyTime && !isOnCamera)
         {
-            offCameraTimer = 0f;
+            Destroy(gameObject);
+            return;
         }
 
         // Handle movement or idling
@@ -167,6 +193,7 @@ public class CameraCreatureMovement : MonoBehaviour
 
         transform.position = GetOffscreenSpawnPosition(mainCamera);
         targetPosition = GetOppositeSideTarget(mainCamera, transform.position);
+        spawnTime = Time.time;
         hasInitialized = true;
     }
 
