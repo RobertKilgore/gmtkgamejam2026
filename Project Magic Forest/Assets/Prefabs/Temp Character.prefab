@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 4355483178808122555}
   - component: {fileID: 6290341402224489621}
   - component: {fileID: 6466273642467733246}
+  - component: {fileID: 7275534768976061355}
   m_Layer: 0
   m_Name: Temp Character
   m_TagString: Player
@@ -166,11 +167,32 @@ MonoBehaviour:
   - {fileID: 1550382765041623750, guid: fb116539d1e00de43a74a29860c248c9, type: 3}
   - {fileID: -2504007115242108253, guid: fb116539d1e00de43a74a29860c248c9, type: 3}
   - {fileID: 5358543088686631413, guid: fb116539d1e00de43a74a29860c248c9, type: 3}
+  axeUpSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  axeDownSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  axeLeftSprites:
+  - {fileID: -2604604810981151390, guid: e72077dbc4e85c949bca888d4397d061, type: 3}
+  - {fileID: -3589916321630921203, guid: e72077dbc4e85c949bca888d4397d061, type: 3}
+  - {fileID: -1736636599660990777, guid: e72077dbc4e85c949bca888d4397d061, type: 3}
+  - {fileID: -49256798438156242, guid: e72077dbc4e85c949bca888d4397d061, type: 3}
+  axeRightSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   idleUpSprite: {fileID: -1907819391525643046, guid: a79a5f3ac68c6d141acd8343eb7e252b, type: 3}
   idleDownSprite: {fileID: -5105795334800164498, guid: 4d3f34f0c111e744193f4defe31bda04, type: 3}
   idleLeftSprite: {fileID: 3267252561075065229, guid: e551b4bf74769c946a351764fe85cb18, type: 3}
   idleRightSprite: {fileID: -2504007115242108253, guid: fb116539d1e00de43a74a29860c248c9, type: 3}
   walkFrameRate: 4
+  axeFrameRate: 12
   useAnimator: 0
   animator: {fileID: 0}
 --- !u!114 &7859935686336777854
@@ -203,6 +225,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   mainCamera: {fileID: 0}
+  playerMovement: {fileID: 0}
 --- !u!114 &8448268910478578167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,9 +390,9 @@ MonoBehaviour:
   m_ComponentVersion: 2
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0
+  m_FalloffIntensity: 0.63
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.38
+  m_Intensity: 0.06
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -421,3 +444,26 @@ MonoBehaviour:
   player: {fileID: 7678230820388406271}
   visibilityRange: 0
   visibilityReductionScale: 10
+--- !u!114 &7275534768976061355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678230820388406271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2233d3bca3aba6a49ac716a27e979d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryUIManager
+  itemUiMappings:
+  - item: {fileID: 11400000, guid: 837acfcc982dacc49a1683d52bd32a80, type: 2}
+    uiElement: {fileID: 0}
+  - item: {fileID: 11400000, guid: 632c39431fe92e04d9692ac3cbd81f00, type: 2}
+    uiElement: {fileID: 0}
+  - item: {fileID: 11400000, guid: ebdc38fae1b891a409f2e5c3cb95a5cc, type: 2}
+    uiElement: {fileID: 0}
+  - item: {fileID: 11400000, guid: 216b82a12af0a954289c028772ec428c, type: 2}
+    uiElement: {fileID: 0}
+  - item: {fileID: 11400000, guid: bcd099dd9cafdec4d8e165c420e38818, type: 2}
+    uiElement: {fileID: 0}

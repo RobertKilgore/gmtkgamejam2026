@@ -172,7 +172,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -170150398997868785, guid: 86d0a846f353b5e458f24d4cc91427aa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WillOWisp
   behavior: 1
-  specialPoiPrefab: {fileID: 0}
+  specialPoiPrefab: {fileID: 7361237347341099582, guid: 7ee4190682e60b34f930bc422abbb1f7, type: 3}
   poiSpawnerSearchDistance: 50
   moveSpeed: 2.5
   acceleration: 8

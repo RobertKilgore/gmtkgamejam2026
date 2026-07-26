@@ -160,6 +160,19 @@ public class PoiSpawner : MonoBehaviour
         return spawnedPoi;
     }
 
+    public GameObject SpawnPrefab(GameObject prefab)
+    {
+        if (prefab == null)
+        {
+            if (logDebug) Debug.LogWarning("[PoiSpawner] SpawnPrefab called with null prefab.");
+            return null;
+        }
+
+        GameObject spawnedPoi = Instantiate(prefab, transform.position, transform.rotation, transform.parent);
+        if (logDebug) Debug.Log($"[PoiSpawner] Spawned special POI: {spawnedPoi.name}");
+        return spawnedPoi;
+    }
+
     public void SetSpawningEnabled(bool enabled)
     {
         spawningEnabled = enabled;

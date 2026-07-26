@@ -62,6 +62,7 @@ public class WillOWisp : MonoBehaviour
     private float originalLightIntensity;
     private float currentMoveSpeed;
     private float targetMoveSpeed;
+    private PoiSpawner selectedPoiSpawner;
 
     private bool isAwakeOnCamera = false;
 
@@ -166,7 +167,6 @@ public class WillOWisp : MonoBehaviour
 
         if (offCamera && playerTransform != null && Vector3.Distance(transform.position, playerTransform.position) > wakeDistanceFromPlayer)
         {
-            EnterIdleState();
             PerformIdleMotion();
             UpdateAnimation();
             return;
@@ -175,6 +175,18 @@ public class WillOWisp : MonoBehaviour
         if (isFadingOut)
         {
             PerformIdleMotion();
+            UpdateFadeAndDespawn();
+            UpdateAnimation();
+            return;
+        }
+
+        if (behavior == BehaviorType.SpawnPoi && hasFinalTarget)
+        {
+            currentTarget = finalTargetPosition;
+            if (currentState != WispState.MovingToTarget)
+                EnterMovingState();
+
+            MoveToward(finalTargetPosition);
             UpdateFadeAndDespawn();
             UpdateAnimation();
             return;
@@ -243,11 +255,15 @@ public class WillOWisp : MonoBehaviour
                 {
                     hasTriggeredSpecialSpawn = true;
                     TrySpawnSpecialPoi();
-                    EnterMovingState();
                     if (hasFinalTarget)
                     {
+                        EnterMovingState();
                         currentTarget = finalTargetPosition;
                         MoveToward(finalTargetPosition);
+                    }
+                    else
+                    {
+                        PerformIdleMotion();
                     }
                 }
                 else
@@ -258,9 +274,12 @@ public class WillOWisp : MonoBehaviour
             return;
         }
 
-        if (currentState == WispState.MovingToTarget && hasFinalTarget)
+        if (hasFinalTarget)
         {
             currentTarget = finalTargetPosition;
+            if (currentState != WispState.MovingToTarget)
+                EnterMovingState();
+
             MoveToward(finalTargetPosition);
         }
         else
@@ -360,7 +379,10 @@ public class WillOWisp : MonoBehaviour
 
     private void UpdateFadeAndDespawn()
     {
-        if (!hasFinalTarget || spriteRenderer == null)
+        if (spriteRenderer == null)
+            return;
+
+        if (!hasFinalTarget)
             return;
 
         float distance = Vector3.Distance(transform.position, finalTargetPosition);
@@ -495,12 +517,13 @@ public class WillOWisp : MonoBehaviour
             return;
 
         PoiSpawner selected = nearby[Random.Range(0, nearby.Count)];
-        if (specialPoiPrefab != null)
+        if (selected != null)
         {
-            Instantiate(specialPoiPrefab, selected.transform.position, selected.transform.rotation, selected.transform.parent);
+            selectedPoiSpawner = selected;
+            selected.SpawnPrefab(specialPoiPrefab);
+            selected.SetSpawningEnabled(false);
+            SetFinalTarget(selected.transform.position);
         }
-
-        SetFinalTarget(selected.transform.position);
     }
 
     private void RegisterActiveWisp()

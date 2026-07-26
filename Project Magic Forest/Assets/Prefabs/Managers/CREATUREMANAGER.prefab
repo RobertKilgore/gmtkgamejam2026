@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8487130941533709136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5810840788957624808}
+  - component: {fileID: 2851015865305328915}
+  - component: {fileID: 1033392920267887993}
+  m_Layer: 0
+  m_Name: CREATUREMANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5810840788957624808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8487130941533709136}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.25297, y: 0.11469, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2851015865305328915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8487130941533709136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703e966bb0fe1c943a3f90091b81b1ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CreatureSpawner
+  creaturePrefabs:
+  - {fileID: 5709653528768557988, guid: 8d2c2c11a5db885449828e572128ab2b, type: 3}
+  - {fileID: 3740252293477587613, guid: 0040990941973cd4fbee81570a015a5f, type: 3}
+  spawnInterval: 2.5
+  spawnChancePercent: 25
+  maxActiveCreatures: 5
+  spawnOnStart: 1
+  autoStartSpawning: 1
+--- !u!114 &1033392920267887993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8487130941533709136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1150abc3df8c14a8f1c6eb2259e89c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WillOWispSpawner
+  followWispPrefab: {fileID: 3030213076338355228, guid: 2e19794f8d45b5b479c0ea24f69091e9, type: 3}
+  spawnPoiWispPrefab: {fileID: 5958898375785022670, guid: 0a4e4fa5381bdc1498c1dde6bc225d9c, type: 3}
+  player: {fileID: 0}
+  cabin: {fileID: 0}
+  mainCamera: {fileID: 0}
+  spawnInterval: 10
+  followWispSpawnChancePercent: 40.3
+  poiWispSpawnChancePercent: 6
+  offscreenMargin: 0.2
+  spawnDepth: 10
+  logDebug: 1
