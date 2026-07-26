@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 27531ad98fbf45445b0d376dd843d977
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8256246170977048979
+    second: Front Axe Swing_0
+  - first:
+      213: -2041561602252780159
+    second: Front Axe Swing_1
+  - first:
+      213: 282868043761225733
+    second: Front Axe Swing_2
+  - first:
+      213: -439967105606237496
+    second: Front Axe Swing_3
+  - first:
+      213: 187241207567282688
+    second: Front Axe Swing_4
+  - first:
+      213: -7076403819646519136
+    second: Front Axe Swing_5
+  - first:
+      213: 6949017336557123985
+    second: Front Axe Swing_6
+  - first:
+      213: 6957148594652605915
+    second: Front Axe Swing_7
+  - first:
+      213: 6094780968982516228
+    second: Front Axe Swing_8
+  - first:
+      213: 1653750293429258308
+    second: Front Axe Swing_9
+  - first:
+      213: 5097233251263128
+    second: Front Axe Swing_10
+  - first:
+      213: -6887255902697127902
+    second: Front Axe Swing_11
+  - first:
+      213: -5632311643256202821
+    second: Front Axe Swing_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Front Axe Swing_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 99
+        width: 370
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d66ebb8d9dbeb6d80800000000000000
+      internalID: -8256246170977048979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Axe Swing_1
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 530
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d45a61a8aeaa3e0800000000000000
+      internalID: -2041561602252780159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Axe Swing_2
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 520
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50092b2bcf2fce300800000000000000
+      internalID: 282868043761225733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Axe Swing_3
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 98
+        width: 351
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c2cb7d9f3ce4e9f0800000000000000
+      internalID: -439967105606237496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Axe Swing_4
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 89
+        width: 357
+        height: 626
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 002fc50e2e6399200800000000000000
+      internalID: 187241207567282688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Axe Swing_5
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 91
+        width: 351
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a870cae7309bcd90800000000000000
+      internalID: -7076403819646519136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Axe Swing_6
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 501
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199b48b337edf6060800000000000000
+      internalID: 6949017336557123985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Axe Swing_7
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 21
+        width: 219
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdd60e949c1cc8060800000000000000
+      internalID: 6957148594652605915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Axe Swing_8
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 24
+        width: 223
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4029300fff2059450800000000000000
+      internalID: 6094780968982516228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Axe Swing_9
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 24
+        width: 214
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4488c03412d43f610800000000000000
+      internalID: 1653750293429258308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Axe Swing_10
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 24
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892674918eb121000800000000000000
+      internalID: 5097233251263128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Axe Swing_11
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 24
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 220868a2f3d8b60a0800000000000000
+      internalID: -6887255902697127902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Axe Swing_12
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 24
+        width: 214
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb9da67d66206d1b0800000000000000
+      internalID: -5632311643256202821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Front Axe Swing_0: -8256246170977048979
+      Front Axe Swing_1: -2041561602252780159
+      Front Axe Swing_10: 5097233251263128
+      Front Axe Swing_11: -6887255902697127902
+      Front Axe Swing_12: -5632311643256202821
+      Front Axe Swing_2: 282868043761225733
+      Front Axe Swing_3: -439967105606237496
+      Front Axe Swing_4: 187241207567282688
+      Front Axe Swing_5: -7076403819646519136
+      Front Axe Swing_6: 6949017336557123985
+      Front Axe Swing_7: 6957148594652605915
+      Front Axe Swing_8: 6094780968982516228
+      Front Axe Swing_9: 1653750293429258308
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
