@@ -27,16 +27,49 @@ public class SceneFlowManager : MonoBehaviour
         SceneFlowManager[] managers = FindObjectsByType<SceneFlowManager>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         if (managers != null && managers.Length > 0)
         {
+            Scene dontDestroyScene = SceneManager.GetSceneByName("DontDestroyOnLoad");
+            SceneFlowManager chosenManager = null;
+
             for (int i = 0; i < managers.Length; i++)
             {
-                if (managers[i] != null && managers[i].gameObject.scene.name == "DontDestroyOnLoad")
+                if (managers[i] == null)
+                    continue;
+
+                if (managers[i].gameObject.scene == dontDestroyScene)
                 {
-                    Instance = managers[i];
-                    return Instance;
+                    chosenManager = managers[i];
+                    break;
                 }
             }
 
-            Instance = managers[0];
+            if (chosenManager == null)
+            {
+                Scene activeScene = SceneManager.GetActiveScene();
+                for (int i = 0; i < managers.Length; i++)
+                {
+                    if (managers[i] != null && managers[i].gameObject.scene == activeScene)
+                    {
+                        chosenManager = managers[i];
+                        break;
+                    }
+                }
+            }
+
+            if (chosenManager == null)
+                chosenManager = managers[0];
+
+            Instance = chosenManager;
+            if (chosenManager.gameObject.scene != dontDestroyScene)
+                DontDestroyOnLoad(chosenManager.gameObject);
+
+            for (int i = 0; i < managers.Length; i++)
+            {
+                if (managers[i] == null || managers[i] == chosenManager)
+                    continue;
+
+                Destroy(managers[i].gameObject);
+            }
+
             return Instance;
         }
 
@@ -50,6 +83,22 @@ public class SceneFlowManager : MonoBehaviour
     {
         if (Instance == null)
         {
+            SceneFlowManager[] existingManagers = FindObjectsByType<SceneFlowManager>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            if (existingManagers != null)
+            {
+                for (int i = 0; i < existingManagers.Length; i++)
+                {
+                    if (existingManagers[i] == null || existingManagers[i] == this)
+                        continue;
+
+                    if (existingManagers[i].gameObject.scene.name == "DontDestroyOnLoad")
+                    {
+                        Destroy(gameObject);
+                        return;
+                    }
+                }
+            }
+
             Instance = this;
             DontDestroyOnLoad(gameObject);
             return;
@@ -57,19 +106,6 @@ public class SceneFlowManager : MonoBehaviour
 
         if (Instance == this)
             return;
-
-        if (Instance.gameObject.scene.name == "DontDestroyOnLoad")
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        if (gameObject.scene.name == "DontDestroyOnLoad")
-        {
-            Destroy(Instance.gameObject);
-            Instance = this;
-            return;
-        }
 
         Destroy(gameObject);
     }

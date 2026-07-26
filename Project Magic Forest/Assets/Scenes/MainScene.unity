@@ -104670,9 +104670,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2054225454369310991, guid: 842fdddf8df30ce4ebbe301f4a95f58e, type: 3}
-      propertyPath: startOnAwake
-      value: 0
+    - target: {fileID: 3721753585158164557, guid: 842fdddf8df30ce4ebbe301f4a95f58e, type: 3}
+      propertyPath: startDuration
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180352636087188644, guid: 842fdddf8df30ce4ebbe301f4a95f58e, type: 3}
+      propertyPath: startDuration
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6290341402224489621, guid: 842fdddf8df30ce4ebbe301f4a95f58e, type: 3}
       propertyPath: m_Intensity
