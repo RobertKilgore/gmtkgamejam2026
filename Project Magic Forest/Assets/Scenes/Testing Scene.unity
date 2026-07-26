@@ -75444,12 +75444,12 @@ Transform:
   m_GameObject: {fileID: 401025927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.22, y: -7.25, z: 0}
+  m_LocalPosition: {x: -11.21, y: -9.52, z: 0}
   m_LocalScale: {x: 0.11305199, y: 0.11305199, z: 0.11305199}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 457377630}
   - {fileID: 1546656262}
+  - {fileID: 457377630}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &401214659 stripped
@@ -87355,8 +87355,7 @@ Transform:
   m_LocalPosition: {x: 16.378923, y: 17.267542, z: 0}
   m_LocalScale: {x: 8.8454895, y: 8.8454895, z: 8.8454895}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2110846337}
+  m_Children: []
   m_Father: {fileID: 401025929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &457475990
@@ -504791,97 +504790,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6024898411787531904, guid: 6feffe3c791fb944798b3479a06871ff, type: 3}
   m_PrefabInstance: {fileID: 1009247535}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2110846336
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2110846337}
-  - component: {fileID: 2110846338}
-  m_Layer: 0
-  m_Name: Square Fruit
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2110846337
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110846336}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 457377630}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2110846338
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110846336}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: de218c166b6e8574fa2deaee8706bffe, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 35, y: 35}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
 --- !u!1001 &2111032912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -511016,25 +510924,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 462225242829923328, guid: bb3d27be48b53b14a93c69f108803f08, type: 3}
-      propertyPath: m_Name
-      value: Round Fruit
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588059723496104102, guid: bb3d27be48b53b14a93c69f108803f08, type: 3}
-      propertyPath: m_Name
-      value: Round Fruit
-      objectReference: {fileID: 0}
-    - target: {fileID: 1860878635276611111, guid: bb3d27be48b53b14a93c69f108803f08, type: 3}
-      propertyPath: m_Name
-      value: Round Fruit
-      objectReference: {fileID: 0}
     - target: {fileID: 1973939231783247434, guid: bb3d27be48b53b14a93c69f108803f08, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.62
+      value: -8.59
       objectReference: {fileID: 0}
     - target: {fileID: 1973939231783247434, guid: bb3d27be48b53b14a93c69f108803f08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.12
+      value: -4.93
       objectReference: {fileID: 0}
     - target: {fileID: 1973939231783247434, guid: bb3d27be48b53b14a93c69f108803f08, type: 3}
       propertyPath: m_LocalPosition.z
@@ -511068,13 +510964,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6833484437472784341, guid: bb3d27be48b53b14a93c69f108803f08, type: 3}
-      propertyPath: m_Name
-      value: Round Fruit
-      objectReference: {fileID: 0}
     - target: {fileID: 7456216832820215302, guid: bb3d27be48b53b14a93c69f108803f08, type: 3}
       propertyPath: m_Name
-      value: Bush 1
+      value: (NEEDS INTERACTABLE)Bush 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

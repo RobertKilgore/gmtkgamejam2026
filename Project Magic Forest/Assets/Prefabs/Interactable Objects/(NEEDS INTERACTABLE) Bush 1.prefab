@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 80764225852015548}
   - component: {fileID: 7457437327347852279}
   m_Layer: 0
-  m_Name: Fruit
+  m_Name: Round Fruit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 2039278291713641716}
   - component: {fileID: 7371915645873573959}
   m_Layer: 0
-  m_Name: Fruit (3)
+  m_Name: Round Fruit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 9201702178349663866}
   - component: {fileID: 7309879496597489075}
   m_Layer: 0
-  m_Name: Fruit (1)
+  m_Name: Round Fruit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 1398100258096931908}
   - component: {fileID: 707083084748800441}
   m_Layer: 0
-  m_Name: Fruit (2)
+  m_Name: Round Fruit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,7 +409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1973939231783247434}
   m_Layer: 0
-  m_Name: Bush 1
+  m_Name: (NEEDS INTERACTABLE) Bush 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -441,6 +441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7611557116306160174}
   - component: {fileID: 3120457762851756717}
+  - component: {fileID: 6918209008569222830}
   m_Layer: 0
   m_Name: Bush Body
   m_TagString: Untagged
@@ -523,3 +524,59 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!60 &6918209008569222830
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8581816104496825836}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 1}
+    oldSize: {x: 35, y: 35}
+    newSize: {x: 35, y: 35}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 9.736378, y: -13.656973}
+      - {x: 6.988122, y: -14.044739}
+      - {x: 7.7354307, y: -12.162934}
+      - {x: 6.682511, y: -10.369218}
+      - {x: 6.927911, y: -8.62039}
+      - {x: 10.440621, y: -8.7104435}
+      - {x: 10.330464, y: -8.976036}
+      - {x: 10.330462, y: -8.976036}
+      - {x: 9.048288, y: -12.067428}
+  m_UseDelaunayMesh: 1
