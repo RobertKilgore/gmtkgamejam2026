@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class Paused : MonoBehaviour
 {
    public GameObject pauseMenu;
+   public GameObject mainMenu;
    public Slider musicControl;
    public Slider sfxControl;
    public AudioMixer audioMixer;
@@ -44,7 +46,8 @@ public class Paused : MonoBehaviour
     }
     public void MenuButton()
     {
-        pauseMenu.SetActive(false);
+        mainMenu.SetActive(false);
+        SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1;
     }   
 }
