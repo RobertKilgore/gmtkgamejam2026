@@ -48,7 +48,7 @@ MonoBehaviour:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.709
-  m_Color: {r: 0.6257577, g: 0.40396938, b: 0.9622642, a: 1}
+  m_Color: {r: 0.9443852, g: 0.9528302, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
@@ -171,8 +171,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -170150398997868785, guid: 86d0a846f353b5e458f24d4cc91427aa, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 1205116910546923735, guid: 10a5524b8a221a54b9b6a16f83a4ae12, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -212,10 +212,10 @@ MonoBehaviour:
   cabinStopDistance: 1.2
   spriteRenderer: {fileID: 0}
   animationSprites:
-  - {fileID: -170150398997868785, guid: 86d0a846f353b5e458f24d4cc91427aa, type: 3}
-  - {fileID: 5515378551605771455, guid: 86d0a846f353b5e458f24d4cc91427aa, type: 3}
-  - {fileID: -4567831889242966271, guid: 86d0a846f353b5e458f24d4cc91427aa, type: 3}
-  - {fileID: 5515378551605771455, guid: 86d0a846f353b5e458f24d4cc91427aa, type: 3}
+  - {fileID: 1205116910546923735, guid: 10a5524b8a221a54b9b6a16f83a4ae12, type: 3}
+  - {fileID: -1633135102190758933, guid: 10a5524b8a221a54b9b6a16f83a4ae12, type: 3}
+  - {fileID: -8352188909953536497, guid: 10a5524b8a221a54b9b6a16f83a4ae12, type: 3}
+  - {fileID: -1633135102190758933, guid: 10a5524b8a221a54b9b6a16f83a4ae12, type: 3}
   animationFrameRate: 15
   offCameraLifetime: 60
   wakeDistanceFromPlayer: 2

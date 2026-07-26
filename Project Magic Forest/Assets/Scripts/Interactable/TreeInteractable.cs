@@ -143,7 +143,18 @@ public class TreeInteractable : Interactable
 
     public override bool CanInteract()
     {
-        return currentTreeState != TreeState.Fallen;
+        if (currentTreeState == TreeState.Fallen)
+        {
+            return false;
+        }
+
+        PlayerItemTracker playerItemTracker = FindFirstObjectByType<PlayerItemTracker>();
+        if (playerItemTracker == null)
+        {
+            return false;
+        }
+
+        return playerItemTracker.HasAxe;
     }
 
     public override void SetState(int stateIndex)
