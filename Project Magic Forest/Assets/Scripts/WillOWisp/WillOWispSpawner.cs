@@ -19,6 +19,11 @@ public class WillOWispSpawner : MonoBehaviour
     [SerializeField] private float spawnDepth = 10f;
     [SerializeField] private bool logDebug = true;
 
+    [Header("Spawn Distance")]
+    [SerializeField] private Transform minimumSpawnDistancePoint;
+    [SerializeField] private float followWispMinimumSpawnDistance = 0f;
+    [SerializeField] private float poiWispMinimumSpawnDistance = 0f;
+
     private float nextSpawnTime;
 
     private void Start()
@@ -44,11 +49,42 @@ public class WillOWispSpawner : MonoBehaviour
         if (player == null || mainCamera == null || cabin == null)
             return;
 
-        if (!WillOWisp.IsActive(WillOWisp.BehaviorType.FollowPlayer) && Random.value * 100f <= followWispSpawnChancePercent)
+        if (!WillOWisp.IsActive(WillOWisp.BehaviorType.FollowPlayer)
+            && ShouldSpawnForDistance(followWispMinimumSpawnDistance)
+            && Random.value * 100f <= followWispSpawnChancePercent)
+        {
             SpawnWisp(WillOWisp.BehaviorType.FollowPlayer);
+        }
 
-        if (!WillOWisp.IsActive(WillOWisp.BehaviorType.SpawnPoi) && Random.value * 100f <= poiWispSpawnChancePercent)
+        if (!WillOWisp.IsActive(WillOWisp.BehaviorType.SpawnPoi)
+            && ShouldSpawnForDistance(poiWispMinimumSpawnDistance)
+            && Random.value * 100f <= poiWispSpawnChancePercent)
+        {
             SpawnWisp(WillOWisp.BehaviorType.SpawnPoi);
+        }
+    }
+
+    private bool ShouldSpawnForDistance(float requiredDistance)
+    {
+        if (minimumSpawnDistancePoint == null || requiredDistance <= 0f)
+            return true;
+
+        float currentDistance = Vector3.Distance(player.transform.position, minimumSpawnDistancePoint.position);
+        if (currentDistance < requiredDistance)
+        {
+            if (logDebug)
+                Debug.Log($"[WillOWispSpawner] Skipping spawn for distance {requiredDistance:F1}: player is {currentDistance:F1} units from point.");
+            return false;
+        }
+
+        return true;
+    }
+
+    public void SetMinimumSpawnDistance(Transform point, float minDistance)
+    {
+        minimumSpawnDistancePoint = point;
+        followWispMinimumSpawnDistance = minDistance;
+        poiWispMinimumSpawnDistance = minDistance;
     }
 
     private void SpawnWisp(WillOWisp.BehaviorType behavior)

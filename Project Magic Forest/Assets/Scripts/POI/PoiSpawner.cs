@@ -168,10 +168,29 @@ public class PoiSpawner : MonoBehaviour
             return null;
         }
 
-        GameObject spawnedPoi = Instantiate(prefab, transform.position, transform.rotation, transform.parent);
-        if (logDebug) Debug.Log($"[PoiSpawner] Spawned special POI: {spawnedPoi.name}");
+        Vector3 spawnPosition = GetSpawnPosition();
+        GameObject spawnedPoi = Instantiate(prefab, spawnPosition, transform.rotation, transform.parent);
+        if (logDebug)
+            Debug.Log($"[PoiSpawner] Spawned special POI at {spawnPosition}: {spawnedPoi.name}");
+
         return spawnedPoi;
     }
+
+    [ContextMenu("Debug Spawn Prefab")]
+    private void DebugSpawnPrefab()
+    {
+        if (specialPrefabToDebug == null)
+        {
+            Debug.LogWarning("[PoiSpawner] DebugSpawnPrefab: no prefab assigned for debug.");
+            return;
+        }
+
+        Vector3 spawnPosition = GetSpawnPosition();
+        GameObject spawnedPoi = Instantiate(specialPrefabToDebug, spawnPosition, transform.rotation, transform.parent);
+        Debug.Log($"[PoiSpawner] Debug spawned special prefab at {spawnPosition}: {spawnedPoi.name}");
+    }
+
+    [SerializeField] private GameObject specialPrefabToDebug;
 
     public void SetSpawningEnabled(bool enabled)
     {

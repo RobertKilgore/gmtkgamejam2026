@@ -215,7 +215,7 @@ public class WillOWisp : MonoBehaviour
         }
 
         float playerDistance = Vector3.Distance(transform.position, playerTransform.position);
-        Debug.Log($"[WillOWisp] playerDistance={playerDistance:F2}, activationDistance={playerDetectionDistance:F2}, wakeDistance={wakeDistanceFromPlayer:F2}");
+        
 
         if (currentState == WispState.Idle)
         {
@@ -249,7 +249,7 @@ public class WillOWisp : MonoBehaviour
             if (playerTransform != null)
             {
                 float playerDistance = Vector3.Distance(transform.position, playerTransform.position);
-                Debug.Log($"[WillOWisp] playerDistance={playerDistance:F2}, activationDistance={playerDetectionDistance:F2}, wakeDistance={wakeDistanceFromPlayer:F2}");
+                
 
                 if (playerDistance <= playerDetectionDistance)
                 {

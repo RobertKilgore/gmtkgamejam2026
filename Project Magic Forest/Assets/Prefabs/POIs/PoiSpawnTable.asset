@@ -22,9 +22,9 @@ MonoBehaviour:
   - prefab: {fileID: 4037889477105434232, guid: fb85baa44b83e7646b0bbf45c55a9b54, type: 3}
     rarity: 0
   - prefab: {fileID: 1650002836424241946, guid: 75db88cc74c264d49938940f455ad9bf, type: 3}
-    rarity: 0
+    rarity: 3
   - prefab: {fileID: 7450936003008724326, guid: 4ea74d20a79c2d740b98f1e1a1e7949b, type: 3}
-    rarity: 0
+    rarity: 3
   - prefab: {fileID: 1650002836424241946, guid: 75db88cc74c264d49938940f455ad9bf, type: 3}
     rarity: 0
   - prefab: {fileID: 8304761024576147505, guid: 3de3debb537e4a14297f66211d5eecd6, type: 3}
@@ -57,8 +57,8 @@ MonoBehaviour:
     rarity: 0
   - prefab: {fileID: 2437611762007499419, guid: ca65f047ba6221a47a930b4baec86304, type: 3}
     rarity: 0
-  minDistanceForRarity: 5
-  maxDistanceForRarity: 100
+  minDistanceForRarity: 54.7
+  maxDistanceForRarity: 250
   rarityDistributionCurve:
     serializedVersion: 2
     m_Curve:
@@ -83,3 +83,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  logDebug: 1
