@@ -510183,7 +510183,7 @@ PrefabInstance:
     - target: {fileID: 6758294619582069087, guid: 1f821871f3a800648854f2399d517f9f, type: 3}
       propertyPath: cabinCamera
       value: 
-      objectReference: {fileID: 7750809654677842973}
+      objectReference: {fileID: 3887686735168586374}
     - target: {fileID: 7309487990728489362, guid: 1f821871f3a800648854f2399d517f9f, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -510290,9 +510290,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 416b5fdf1566b5b4490346a1ea8684ef, type: 3}
---- !u!1 &7750809654677842973 stripped
+--- !u!1 &3887686735168586374 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7447777788478219642, guid: 416b5fdf1566b5b4490346a1ea8684ef, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2411560081005153252, guid: 416b5fdf1566b5b4490346a1ea8684ef, type: 3}
   m_PrefabInstance: {fileID: 3887686735168586373}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
