@@ -25,6 +25,8 @@ public class PoiSpawner : MonoBehaviour
     [SerializeField] private bool spawningEnabled = true;
     [SerializeField] private bool spawnOnAwake = false;
     [SerializeField] private bool disableAfterSpawn = true;
+    [SerializeField] private bool useDistanceBasedRarity = true;
+    [SerializeField] private GameObject cabinReference;
     [SerializeField] private bool logDebug = true;
     [SerializeField] private float resetSpawnLockDuration = 0.25f;
 
@@ -136,7 +138,17 @@ public class PoiSpawner : MonoBehaviour
             return null;
         }
 
-        GameObject prefab = spawnTable.GetRandomPrefab();
+        GameObject prefab;
+        
+        if (useDistanceBasedRarity && cabinReference != null)
+        {
+            prefab = spawnTable.GetRandomPrefabByDistance(cabinReference.transform.position, position);
+        }
+        else
+        {
+            prefab = spawnTable.GetRandomPrefab();
+        }
+
         if (prefab == null)
         {
             Debug.LogWarning("[PoiSpawner] Spawn table returned null prefab.");
@@ -156,6 +168,11 @@ public class PoiSpawner : MonoBehaviour
     public bool IsSpawningEnabled()
     {
         return spawningEnabled;
+    }
+
+    public void SetCabinReference(GameObject cabin)
+    {
+        cabinReference = cabin;
     }
 
     public void ResetSpawner()
