@@ -31,6 +31,8 @@ public class playerMovement : MonoBehaviour
     private int walkFrame;
     private bool isPlayingAxeAnimation;
 
+    public Vector2 LastDirection => lastDirection;
+
     private void Awake()
     {
         baseSpeed = playerSpeed;
@@ -57,7 +59,11 @@ public class playerMovement : MonoBehaviour
         if (isMoving)
         {
             inputDirection.Normalize();
-            lastDirection = inputDirection;
+            if ((inputDirection - lastDirection).sqrMagnitude > 0.0001f)
+            {
+                lastDirection = inputDirection;
+                Debug.Log($"[playerMovement] LastDirection changed to {lastDirection}");
+            }
         }
 
         rb.linearVelocity = inputDirection * playerSpeed;
