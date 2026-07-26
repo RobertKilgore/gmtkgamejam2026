@@ -14,16 +14,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PoiSpawnTable
   entries:
   - prefab: {fileID: 3778024160421330758, guid: 2d19c5880210d7b498aacee9df77ea51, type: 3}
-    weight: 100
+    rarity: 0
   - prefab: {fileID: 5707025433984403555, guid: ecea07f9e1e4dea40a4179a476afaca3, type: 3}
-    weight: 100
+    rarity: 0
   - prefab: {fileID: 8298492706964700087, guid: b5b1a189e2f82ed4ea18de7a3d613180, type: 3}
-    weight: 100
+    rarity: 0
   - prefab: {fileID: 4037889477105434232, guid: fb85baa44b83e7646b0bbf45c55a9b54, type: 3}
-    weight: 100
+    rarity: 0
   - prefab: {fileID: 1650002836424241946, guid: 75db88cc74c264d49938940f455ad9bf, type: 3}
-    weight: 100
+    rarity: 0
   - prefab: {fileID: 7450936003008724326, guid: 4ea74d20a79c2d740b98f1e1a1e7949b, type: 3}
-    weight: 100
+    rarity: 0
   - prefab: {fileID: 1650002836424241946, guid: 75db88cc74c264d49938940f455ad9bf, type: 3}
-    weight: 100
+    rarity: 0
+  - prefab: {fileID: 8304761024576147505, guid: 3de3debb537e4a14297f66211d5eecd6, type: 3}
+    rarity: 0
+  minDistanceForRarity: 5
+  maxDistanceForRarity: 100
+  rarityDistributionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
