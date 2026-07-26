@@ -5333,8 +5333,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This is your remaining food, if it reaches 0 your speed will be heavily
-    reduced
+  m_text: This is your remaining food, if it reaches 0 your temperature will deplete
+    faster
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ab4ebdd758f4e574dafbab4eeb8a2547, type: 2}
   m_sharedMaterial: {fileID: -7775990648988205718, guid: ab4ebdd758f4e574dafbab4eeb8a2547, type: 2}
