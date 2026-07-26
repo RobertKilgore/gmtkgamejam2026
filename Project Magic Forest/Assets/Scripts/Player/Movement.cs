@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
@@ -11,11 +12,16 @@ public class playerMovement : MonoBehaviour
     [SerializeField] private Sprite[] walkDownSprites = new Sprite[4];
     [SerializeField] private Sprite[] walkLeftSprites = new Sprite[4];
     [SerializeField] private Sprite[] walkRightSprites = new Sprite[4];
+    [SerializeField] private Sprite[] axeUpSprites = new Sprite[4];
+    [SerializeField] private Sprite[] axeDownSprites = new Sprite[4];
+    [SerializeField] private Sprite[] axeLeftSprites = new Sprite[4];
+    [SerializeField] private Sprite[] axeRightSprites = new Sprite[4];
     [SerializeField] private Sprite idleUpSprite;
     [SerializeField] private Sprite idleDownSprite;
     [SerializeField] private Sprite idleLeftSprite;
     [SerializeField] private Sprite idleRightSprite;
     [SerializeField] private float walkFrameRate = 10f;
+    [SerializeField] private float axeFrameRate = 12f;
     [SerializeField] private bool useAnimator = false;
     [SerializeField] private Animator animator;
 
@@ -23,6 +29,7 @@ public class playerMovement : MonoBehaviour
     private Vector2 lastDirection = Vector2.down;
     private float walkTimer;
     private int walkFrame;
+    private bool isPlayingAxeAnimation;
 
     private void Awake()
     {
@@ -59,6 +66,11 @@ public class playerMovement : MonoBehaviour
 
     private void UpdateAnimation(bool isMoving, Vector2 inputDirection)
     {
+        if (isPlayingAxeAnimation)
+        {
+            return;
+        }
+
         if (useAnimator && animator != null)
         {
             animator.SetBool("IsMoving", isMoving);
@@ -148,6 +160,16 @@ public class playerMovement : MonoBehaviour
         return lastDirection.x > 0f ? walkRightSprites : walkLeftSprites;
     }
 
+    private Sprite[] GetCurrentAxeSprites()
+    {
+        if (Mathf.Abs(lastDirection.y) > Mathf.Abs(lastDirection.x))
+        {
+            return lastDirection.y > 0f ? axeUpSprites : axeDownSprites;
+        }
+
+        return lastDirection.x > 0f ? axeRightSprites : axeLeftSprites;
+    }
+
     private Sprite GetCurrentIdleSprite()
     {
         if (Mathf.Abs(lastDirection.y) > Mathf.Abs(lastDirection.x))
@@ -156,6 +178,42 @@ public class playerMovement : MonoBehaviour
         }
 
         return lastDirection.x > 0f ? idleRightSprite : idleLeftSprite;
+    }
+
+    public bool IsPlayingAxeAnimation => isPlayingAxeAnimation;
+
+    public bool PlayAxeSwingAnimation()
+    {
+        if (isPlayingAxeAnimation)
+        {
+            return false;
+        }
+
+        Sprite[] axeSprites = GetCurrentAxeSprites();
+        if (spriteRenderer == null || axeSprites == null || axeSprites.Length == 0)
+        {
+            return false;
+        }
+
+        isPlayingAxeAnimation = true;
+        StartCoroutine(PlayAxeAnimationRoutine(axeSprites));
+        return true;
+    }
+
+    private IEnumerator PlayAxeAnimationRoutine(Sprite[] axeSprites)
+    {
+        for (int i = 0; i < axeSprites.Length; i++)
+        {
+            if (spriteRenderer != null && axeSprites[i] != null)
+            {
+                spriteRenderer.sprite = axeSprites[i];
+            }
+
+            yield return new WaitForSeconds(1f / Mathf.Max(1f, axeFrameRate));
+        }
+
+        isPlayingAxeAnimation = false;
+        UpdateAnimation(false, Vector2.zero);
     }
 
     public void MultiplySpeed(float multiplier)
